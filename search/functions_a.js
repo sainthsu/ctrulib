@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['mappablealloc',['mappableAlloc',['../mappable_8h.html#aa57924376b36c85a8aea0c57eeff5ce0',1,'mappable.cpp']]],
+  ['mappablefree',['mappableFree',['../mappable_8h.html#ae5c4f0ba891e3a82b8f76253a8e3ac13',1,'mappable.cpp']]],
+  ['mappablespacefree',['mappableSpaceFree',['../mappable_8h.html#ad2de177d65c49ea3807d1dae1a5b3223',1,'mappable.cpp']]],
+  ['mic_5fcmd3_5finitialize',['MIC_cmd3_Initialize',['../mic_8h.html#a8c15e18747d11a52bc4fd4d57a950972',1,'mic.c']]],
+  ['mic_5fcmd5',['MIC_cmd5',['../mic_8h.html#a4f241475a108114a4c68950ef028b660',1,'mic.c']]],
+  ['mic_5fgetcntbit15',['MIC_GetCNTBit15',['../mic_8h.html#aa0b51d426b389c1eac5b7ba3fcd00267',1,'mic.c']]],
+  ['mic_5fgetcontrol',['MIC_GetControl',['../mic_8h.html#a848e6c2e944a6919febe75c52dbe1475',1,'mic.c']]],
+  ['mic_5fgeteventhandle',['MIC_GetEventHandle',['../mic_8h.html#a3df6ac6a0e3b9493d3c2690c724f68c6',1,'mic.c']]],
+  ['mic_5fgetsharedmemoffsetvalue',['MIC_GetSharedMemOffsetValue',['../mic_8h.html#a21f4144947e781941f8a045c5e6e2a6a',1,'mic.c']]],
+  ['mic_5finitialize',['MIC_Initialize',['../mic_8h.html#a8908c82b113c8b5b5919794dacd8be1e',1,'mic.c']]],
+  ['mic_5fisrecoding',['MIC_IsRecoding',['../mic_8h.html#a54a77ba7353b089d4f84769fff987c8e',1,'mic.c']]],
+  ['mic_5fmapsharedmem',['MIC_MapSharedMem',['../mic_8h.html#a08092b087f0fac45b82dc5c667c55587',1,'mic.c']]],
+  ['mic_5freadaudiodata',['MIC_ReadAudioData',['../mic_8h.html#a71378ceca23876e1100ab66db04559f4',1,'mic.c']]],
+  ['mic_5fsetcontrol',['MIC_SetControl',['../mic_8h.html#a9e59c00cbb8bebd5434a7e84e32122e1',1,'mic.c']]],
+  ['mic_5fsetrecording',['MIC_SetRecording',['../mic_8h.html#ad1cb3af8851f2502d3b244d4635991cd',1,'mic.c']]],
+  ['mic_5fshutdown',['MIC_Shutdown',['../mic_8h.html#a2a5d33b949505aeebb3ecaff7366a924',1,'mic.c']]],
+  ['mic_5funmapsharedmem',['MIC_UnmapSharedMem',['../mic_8h.html#ae0f008930602cd4c77a087cbb7acc419',1,'mic.c']]],
+  ['mvdstdgeneratedefaultconfig',['mvdstdGenerateDefaultConfig',['../mvd_8h.html#ac468d63d48a7ff775a47f1c841f98e37',1,'mvd.c']]],
+  ['mvdstdinit',['mvdstdInit',['../mvd_8h.html#aaa841d93c56d71979be7669e163d3ff3',1,'mvd.c']]],
+  ['mvdstdprocessframe',['mvdstdProcessFrame',['../mvd_8h.html#ac56601ec8ce487b4629ca92d21cb7f0e',1,'mvd.c']]],
+  ['mvdstdsetconfig',['mvdstdSetConfig',['../mvd_8h.html#afdeff66f1ef3b3f16e3ecf4764e2a267',1,'mvd.c']]],
+  ['mvdstdshutdown',['mvdstdShutdown',['../mvd_8h.html#a3b86e694f7776cd102d10d3cffd3f693',1,'mvd.c']]]
+];
