@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libctru
-   &#160;<span id="projectnumber">great-refactor b5009a3430d009c686fb6df89c9533a6acbe2f92</span>
+   &#160;<span id="projectnumber">great-refactor 5e7fe49422e8e631d83e6eca7dea74dab720de53</span>
    </div>
   </td>
  </tr>
@@ -456,48 +456,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment"> * @param vol The volume, ranges from 0.0 to 1.0 included.</span></div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment"> * @param pan The pan, ranges from -1.0 to 1.0 included.</span></div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment"> * @param data0 First block of sound data.</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment"> * @param data1 Second block of sound data. Used as a loop destination.</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment"> * @param data1 Second block of sound data. This is the block that will be looped over.</span></div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment"> * @param size Size of the sound data.</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(<span class="keywordtype">int</span> chn, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> flags, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> sampleRate, <span class="keywordtype">float</span> vol, <span class="keywordtype">float</span> pan, <span class="keywordtype">void</span>* data0, <span class="keywordtype">void</span>* data1, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment"> * @brief Gets CSND&#39;s DSP flags.</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment"> * @param outSemFlags Pointer to write semaphore flags to.</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment"> * @param outIrqFlags Pointer to write interrupt flags to.</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keywordtype">void</span> <a class="code" href="csnd_8h.html#abaa253c6b0eb61e1d212fb06d2e7ddaf">csndGetDspFlags</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* outSemFlags, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* outIrqFlags);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment"> * @brief Gets a channel&#39;s information.</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment"> * @param channel Channel to get information for.</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment"> * @return The channel&#39;s information.</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<a class="code" href="unionCSND__ChnInfo.html">CSND_ChnInfo</a>* <a class="code" href="csnd_8h.html#a671d2fc550793382612c79301ed31af2">csndGetChnInfo</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment"> * @brief Gets a capture unit&#39;s information.</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment"> * @param capUnit Capture unit to get information for.</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment"> * @return The capture unit&#39;s information.</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<a class="code" href="unionCSND__CapInfo.html">CSND_CapInfo</a>* <a class="code" href="csnd_8h.html#a1cac1cc8e1a0e994832e653c55ce6380">csndGetCapInfo</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> capUnit);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment"> * @brief Gets a channel&#39;s state.</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment"> * @param channel Channel to get the state of.</span></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment"> * @param out Pointer to output channel information to.</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#a4f0b8357d5629ea8df4a8e9cb5f975cd">csndGetState</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel, <a class="code" href="unionCSND__ChnInfo.html">CSND_ChnInfo</a>* out);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="comment"> * @brief Gets whether a channel is playing.</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment"> * @param channel Channel to check.</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="comment"> * @param status Pointer to output the channel status to.</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#ad11c3246b1f30c98297f29046f2e2357">csndIsPlaying</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* status);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment"> * In this implementation if the loop mode is used, data1 must be in the range [data0 ; data0 + size]. Sound will be played once from data0 to data0 + size and then loop between data1 and data0+size.</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(<span class="keywordtype">int</span> chn, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> flags, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> sampleRate, <span class="keywordtype">float</span> vol, <span class="keywordtype">float</span> pan, <span class="keywordtype">void</span>* data0, <span class="keywordtype">void</span>* data1, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment"> * @brief Gets CSND&#39;s DSP flags.</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment"> * @param outSemFlags Pointer to write semaphore flags to.</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment"> * @param outIrqFlags Pointer to write interrupt flags to.</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="keywordtype">void</span> <a class="code" href="csnd_8h.html#abaa253c6b0eb61e1d212fb06d2e7ddaf">csndGetDspFlags</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* outSemFlags, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* outIrqFlags);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment"> * @brief Gets a channel&#39;s information.</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment"> * @param channel Channel to get information for.</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment"> * @return The channel&#39;s information.</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<a class="code" href="unionCSND__ChnInfo.html">CSND_ChnInfo</a>* <a class="code" href="csnd_8h.html#a671d2fc550793382612c79301ed31af2">csndGetChnInfo</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment"> * @brief Gets a capture unit&#39;s information.</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment"> * Note: Requires previous CSND_UpdateInfo()</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment"> * @param capUnit Capture unit to get information for.</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment"> * @return The capture unit&#39;s information.</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<a class="code" href="unionCSND__CapInfo.html">CSND_CapInfo</a>* <a class="code" href="csnd_8h.html#a1cac1cc8e1a0e994832e653c55ce6380">csndGetCapInfo</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> capUnit);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment"> * @brief Gets a channel&#39;s state.</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment"> * @param channel Channel to get the state of.</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="comment"> * @param out Pointer to output channel information to.</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#a4f0b8357d5629ea8df4a8e9cb5f975cd">csndGetState</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel, <a class="code" href="unionCSND__ChnInfo.html">CSND_ChnInfo</a>* out);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="comment"> * @brief Gets whether a channel is playing.</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment"> * @param channel Channel to check.</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment"> * @param status Pointer to output the channel status to.</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="csnd_8h.html#ad11c3246b1f30c98297f29046f2e2357">csndIsPlaying</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> channel, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* status);</div>
 <div class="ttc" id="csnd_8h_html_a05589fbab0657f08285ebdfe93f5ec9ea582f62792044dd0e04d049c46c703e05"><div class="ttname"><a href="csnd_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea582f62792044dd0e04d049c46c703e05">CSND_ENCODING_ADPCM</a></div><div class="ttdoc">IMA-ADPCM. </div><div class="ttdef"><b>Definition:</b> csnd.h:40</div></div>
 <div class="ttc" id="csnd_8h_html_aaf105ae5beaca1dee30ae54530691fcea67e19d25612016e24117411de7768c6d"><div class="ttname"><a href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fcea67e19d25612016e24117411de7768c6d">CAPTURE_REPEAT</a></div><div class="ttdoc">Repeat capture. </div><div class="ttdef"><b>Definition:</b> csnd.h:78</div></div>
 <div class="ttc" id="csnd_8h_html_abe4af849d05cbf051cad0eb47ac14757"><div class="ttname"><a href="csnd_8h.html#abe4af849d05cbf051cad0eb47ac14757">CSND_SetInterp</a></div><div class="ttdeci">void CSND_SetInterp(u32 channel, bool interp)</div><div class="ttdoc">Sets whether a channel should use interpolation. </div><div class="ttdef"><b>Definition:</b> csnd.c:313</div></div>
