@@ -139,7 +139,7 @@ Functions</h2></td></tr>
 <tr class="separator:a354a90dd921879724d62d325c0128d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">IIR filters</div></td></tr>
 <tr class="memitem:a1da3b363c2edfd318c92276b527daae6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="channel_8h.html#a1da3b363c2edfd318c92276b527daae6">ndspChnIirMonoSetEnable</a> (int id, bool enable)</td></tr>
-<tr class="memdesc:a1da3b363c2edfd318c92276b527daae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures whether the IIR mono filter of a channel is enabled.  <a href="#a1da3b363c2edfd318c92276b527daae6">More...</a><br /></td></tr>
+<tr class="memdesc:a1da3b363c2edfd318c92276b527daae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures whether the IIR monopole filter of a channel is enabled.  <a href="#a1da3b363c2edfd318c92276b527daae6">More...</a><br /></td></tr>
 <tr class="separator:a1da3b363c2edfd318c92276b527daae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb95ce3188816694c51e30d7a64d8af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="channel_8h.html#aafb95ce3188816694c51e30d7a64d8af">ndspChnIirBiquadSetEnable</a> (int id, bool enable)</td></tr>
 <tr class="memdesc:aafb95ce3188816694c51e30d7a64d8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures whether the IIR biquad filter of a channel is enabled.  <a href="#aafb95ce3188816694c51e30d7a64d8af">More...</a><br /></td></tr>
@@ -189,6 +189,16 @@ Data types</h2></td></tr>
 <br />
  }<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel format flags for use with ndspChnSetFormat.  <a href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5ac8e204d77e18ef8913e2eab1b18e002b">NDSP_INTERP_POLYPHASE</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a0d5a9ea8e53a246b1ac65dc294a5fd53">NDSP_INTERP_LINEAR</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5ad9872be8d23d3d2023e205d5f5fb388c">NDSP_INTERP_NONE</a> = 2
+<br />
+ }<tr class="memdesc:a99fb83031ce9923c84392b4e92f956b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolation types.  <a href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5">More...</a><br /></td></tr>
+<tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -258,6 +268,31 @@ Data types</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a7af2e3b4de379053f3edde298c3391ed"></a>NDSP_3D_SURROUND_PREPROCESSED&#160;</td><td class="fielddoc">
 <p>(?) Unknown, under research </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interpolation types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5ac8e204d77e18ef8913e2eab1b18e002b"></a>NDSP_INTERP_POLYPHASE&#160;</td><td class="fielddoc">
+<p>Polyphase interpolation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a0d5a9ea8e53a246b1ac65dc294a5fd53"></a>NDSP_INTERP_LINEAR&#160;</td><td class="fielddoc">
+<p>Linear interpolation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5ad9872be8d23d3d2023e205d5f5fb388c"></a>NDSP_INTERP_NONE&#160;</td><td class="fielddoc">
+<p>No interpolation. </p>
 </td></tr>
 </table>
 
@@ -373,11 +408,11 @@ Data types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Configures whether the IIR mono filter of a channel is enabled. </p>
+<p>Configures whether the IIR monopole filter of a channel is enabled. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>ID of the channel (0..23). </td></tr>
-    <tr><td class="paramname">enable</td><td>Whether to enable the IIR mono filter. </td></tr>
+    <tr><td class="paramname">enable</td><td>Whether to enable the IIR monopole filter. </td></tr>
   </table>
   </dd>
 </dl>
