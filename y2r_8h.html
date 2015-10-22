@@ -109,6 +109,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structY2R__ConversionParams.html">Y2R_ConversionParams</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure used to configure all parameters at once.  <a href="structY2R__ConversionParams.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structY2R__DitheringWeightParams.html">Y2R_DitheringWeightParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dithering weights.  <a href="structY2R__DitheringWeightParams.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -182,33 +185,78 @@ Functions</h2></td></tr>
 <tr class="memitem:a7271679b91d142253b9a2f6c88c209c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a7271679b91d142253b9a2f6c88c209c2">Y2RU_SetInputFormat</a> (<a class="el" href="y2r_8h.html#a08460da15f3e09eee1bcfc825396150d">Y2R_InputFormat</a> format)</td></tr>
 <tr class="memdesc:a7271679b91d142253b9a2f6c88c209c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the input format.  <a href="#a7271679b91d142253b9a2f6c88c209c2">More...</a><br /></td></tr>
 <tr class="separator:a7271679b91d142253b9a2f6c88c209c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa0908977356732006a70ade0638b7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fa0908977356732006a70ade0638b7f"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetInputFormat</b> (<a class="el" href="y2r_8h.html#a08460da15f3e09eee1bcfc825396150d">Y2R_InputFormat</a> *format)</td></tr>
+<tr class="separator:a1fa0908977356732006a70ade0638b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1071dc9892e7e8b3fb0405721af17cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a1071dc9892e7e8b3fb0405721af17cdd">Y2RU_SetOutputFormat</a> (<a class="el" href="y2r_8h.html#addb21574adf9c9e9aada655eab31b842">Y2R_OutputFormat</a> format)</td></tr>
 <tr class="memdesc:a1071dc9892e7e8b3fb0405721af17cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the output format.  <a href="#a1071dc9892e7e8b3fb0405721af17cdd">More...</a><br /></td></tr>
 <tr class="separator:a1071dc9892e7e8b3fb0405721af17cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af110a7b101a8df07318f0acbb30b18fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af110a7b101a8df07318f0acbb30b18fb"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetOutputFormat</b> (<a class="el" href="y2r_8h.html#addb21574adf9c9e9aada655eab31b842">Y2R_OutputFormat</a> *format)</td></tr>
+<tr class="separator:af110a7b101a8df07318f0acbb30b18fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc422e1d0ccecee2956dd6d6b3ec2bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#acc422e1d0ccecee2956dd6d6b3ec2bd2">Y2RU_SetRotation</a> (<a class="el" href="y2r_8h.html#a8708e10900f512068040be677c677982">Y2R_Rotation</a> rotation)</td></tr>
 <tr class="memdesc:acc422e1d0ccecee2956dd6d6b3ec2bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the rotation of the output.  <a href="#acc422e1d0ccecee2956dd6d6b3ec2bd2">More...</a><br /></td></tr>
 <tr class="separator:acc422e1d0ccecee2956dd6d6b3ec2bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c75731cf2f477d02602753a8a3123c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c75731cf2f477d02602753a8a3123c2"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetRotation</b> (<a class="el" href="y2r_8h.html#a8708e10900f512068040be677c677982">Y2R_Rotation</a> *rotation)</td></tr>
+<tr class="separator:a1c75731cf2f477d02602753a8a3123c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9a85b3540f23166a41914777c28428f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#ab9a85b3540f23166a41914777c28428f">Y2RU_SetBlockAlignment</a> (<a class="el" href="y2r_8h.html#a920c1ca6427fe9b1f5845e928e456b1d">Y2R_BlockAlignment</a> alignment)</td></tr>
 <tr class="memdesc:ab9a85b3540f23166a41914777c28428f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the alignment of the output buffer.  <a href="#ab9a85b3540f23166a41914777c28428f">More...</a><br /></td></tr>
 <tr class="separator:ab9a85b3540f23166a41914777c28428f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0779fb1d222600fcb36178dbc0cdd9b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0779fb1d222600fcb36178dbc0cdd9b4"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetBlockAlignment</b> (<a class="el" href="y2r_8h.html#a920c1ca6427fe9b1f5845e928e456b1d">Y2R_BlockAlignment</a> *alignment)</td></tr>
+<tr class="separator:a0779fb1d222600fcb36178dbc0cdd9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c231acacba2947d10511f54e4398db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86c231acacba2947d10511f54e4398db"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a86c231acacba2947d10511f54e4398db">Y2RU_SetSpacialDithering</a> (bool enable)</td></tr>
+<tr class="memdesc:a86c231acacba2947d10511f54e4398db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the usage of spacial dithering. <br /></td></tr>
+<tr class="separator:a86c231acacba2947d10511f54e4398db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be7c67b842f8a1ba58515a4f7363065"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4be7c67b842f8a1ba58515a4f7363065"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetSpacialDithering</b> (bool *enabled)</td></tr>
+<tr class="separator:a4be7c67b842f8a1ba58515a4f7363065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39862239db0e4f9f2a325e0295c5fc8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39862239db0e4f9f2a325e0295c5fc8c"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a39862239db0e4f9f2a325e0295c5fc8c">Y2RU_SetTemporalDithering</a> (bool enable)</td></tr>
+<tr class="memdesc:a39862239db0e4f9f2a325e0295c5fc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the usage of temporal dithering. <br /></td></tr>
+<tr class="separator:a39862239db0e4f9f2a325e0295c5fc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a781113c37731cc978fe9d3aaf0a9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9a781113c37731cc978fe9d3aaf0a9b"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetTemporalDithering</b> (bool *enabled)</td></tr>
+<tr class="separator:ad9a781113c37731cc978fe9d3aaf0a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad129184fd6d7b1e2284456f1131c8c3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#ad129184fd6d7b1e2284456f1131c8c3d">Y2RU_SetInputLineWidth</a> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> line_width)</td></tr>
 <tr class="memdesc:ad129184fd6d7b1e2284456f1131c8c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the width of the image.  <a href="#ad129184fd6d7b1e2284456f1131c8c3d">More...</a><br /></td></tr>
 <tr class="separator:ad129184fd6d7b1e2284456f1131c8c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703303edbdc586f5915c8995c9488185"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a703303edbdc586f5915c8995c9488185"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetInputLineWidth</b> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> *line_width)</td></tr>
+<tr class="separator:a703303edbdc586f5915c8995c9488185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ca51f0f41dee4e74740e20c710589f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a95ca51f0f41dee4e74740e20c710589f">Y2RU_SetInputLines</a> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> num_lines)</td></tr>
 <tr class="memdesc:a95ca51f0f41dee4e74740e20c710589f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the height of the image.  <a href="#a95ca51f0f41dee4e74740e20c710589f">More...</a><br /></td></tr>
 <tr class="separator:a95ca51f0f41dee4e74740e20c710589f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67cafce32952c532badb71b8d37a930"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad67cafce32952c532badb71b8d37a930"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetInputLines</b> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> *num_lines)</td></tr>
+<tr class="separator:ad67cafce32952c532badb71b8d37a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d60a86f0cced7905e58400465ad3c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a62d60a86f0cced7905e58400465ad3c4">Y2RU_SetCoefficients</a> (const <a class="el" href="structY2R__ColorCoefficients.html">Y2R_ColorCoefficients</a> *coefficients)</td></tr>
 <tr class="memdesc:a62d60a86f0cced7905e58400465ad3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the color conversion formula.  <a href="#a62d60a86f0cced7905e58400465ad3c4">More...</a><br /></td></tr>
 <tr class="separator:a62d60a86f0cced7905e58400465ad3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c64c2b7c37b36cd85390221c1da5ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06c64c2b7c37b36cd85390221c1da5ca"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetCoefficients</b> (<a class="el" href="structY2R__ColorCoefficients.html">Y2R_ColorCoefficients</a> *coefficients)</td></tr>
+<tr class="separator:a06c64c2b7c37b36cd85390221c1da5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add01388924b8acb5b9211dcb749f59cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#add01388924b8acb5b9211dcb749f59cf">Y2RU_SetStandardCoefficient</a> (<a class="el" href="y2r_8h.html#a1dee7552be1aee29dd494dbab1400aa3">Y2R_StandardCoefficient</a> coefficient)</td></tr>
 <tr class="memdesc:add01388924b8acb5b9211dcb749f59cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the color conversion formula with ITU stantards coefficients.  <a href="#add01388924b8acb5b9211dcb749f59cf">More...</a><br /></td></tr>
 <tr class="separator:add01388924b8acb5b9211dcb749f59cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebeb72f97ab568766714ccc593ba06f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ebeb72f97ab568766714ccc593ba06f"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a3ebeb72f97ab568766714ccc593ba06f">Y2RU_GetStandardCoefficient</a> (<a class="el" href="structY2R__ColorCoefficients.html">Y2R_ColorCoefficients</a> *coefficients, <a class="el" href="y2r_8h.html#a1dee7552be1aee29dd494dbab1400aa3">Y2R_StandardCoefficient</a> standardCoeff)</td></tr>
+<tr class="memdesc:a3ebeb72f97ab568766714ccc593ba06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the coeeficients associated to the given standard. <br /></td></tr>
+<tr class="separator:a3ebeb72f97ab568766714ccc593ba06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff67ccdaee8787b226f9af783d8acafc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#aff67ccdaee8787b226f9af783d8acafc">Y2RU_SetAlpha</a> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> alpha)</td></tr>
 <tr class="memdesc:aff67ccdaee8787b226f9af783d8acafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to configure the alpha value of the output.  <a href="#aff67ccdaee8787b226f9af783d8acafc">More...</a><br /></td></tr>
 <tr class="separator:aff67ccdaee8787b226f9af783d8acafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4959a4dca810008c53198a4a16a55f5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4959a4dca810008c53198a4a16a55f5d"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetAlpha</b> (<a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> *alpha)</td></tr>
+<tr class="separator:a4959a4dca810008c53198a4a16a55f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b7d1ff83c91410b373da5f62a5b7047"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a5b7d1ff83c91410b373da5f62a5b7047">Y2RU_SetTransferEndInterrupt</a> (bool should_interrupt)</td></tr>
 <tr class="memdesc:a5b7d1ff83c91410b373da5f62a5b7047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to enable the end of conversion interrupt.  <a href="#a5b7d1ff83c91410b373da5f62a5b7047">More...</a><br /></td></tr>
 <tr class="separator:a5b7d1ff83c91410b373da5f62a5b7047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e90c86821d5272631cd509001d3cbba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e90c86821d5272631cd509001d3cbba"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Y2RU_GetTransferEndInterrupt</b> (bool *should_interrupt)</td></tr>
+<tr class="separator:a5e90c86821d5272631cd509001d3cbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea14c7577fe4fad30581f30ca6973705"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#aea14c7577fe4fad30581f30ca6973705">Y2RU_GetTransferEndEvent</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> *end_event)</td></tr>
 <tr class="memdesc:aea14c7577fe4fad30581f30ca6973705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an handle to the end of conversion event.  <a href="#aea14c7577fe4fad30581f30ca6973705">More...</a><br /></td></tr>
 <tr class="separator:aea14c7577fe4fad30581f30ca6973705"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,9 +290,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f1869e8a424c495a9dcd42866affb22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a0f1869e8a424c495a9dcd42866affb22">Y2RU_IsDoneReceiving</a> (bool *is_done)</td></tr>
 <tr class="memdesc:a0f1869e8a424c495a9dcd42866affb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the DMA has finished sending the converted result.  <a href="#a0f1869e8a424c495a9dcd42866affb22">More...</a><br /></td></tr>
 <tr class="separator:a0f1869e8a424c495a9dcd42866affb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0cd5078af08de4be5a6e3b5ddb1d19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a9b0cd5078af08de4be5a6e3b5ddb1d19">Y2RU_SetUnknownParams</a> (const <a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> params[16])</td></tr>
-<tr class="memdesc:a9b0cd5078af08de4be5a6e3b5ddb1d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets currently unknown parameters.  <a href="#a9b0cd5078af08de4be5a6e3b5ddb1d19">More...</a><br /></td></tr>
-<tr class="separator:a9b0cd5078af08de4be5a6e3b5ddb1d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a520d5fde3a1cbf434691ecfffd40a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a520d5fde3a1cbf434691ecfffd40a7"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a6a520d5fde3a1cbf434691ecfffd40a7">Y2RU_SetDitheringWeightParams</a> (const <a class="el" href="structY2R__DitheringWeightParams.html">Y2R_DitheringWeightParams</a> *params)</td></tr>
+<tr class="memdesc:a6a520d5fde3a1cbf434691ecfffd40a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dithering weights. <br /></td></tr>
+<tr class="separator:a6a520d5fde3a1cbf434691ecfffd40a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a962181e43904d6dfb8760049598f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04a962181e43904d6dfb8760049598f7"></a>
+<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a04a962181e43904d6dfb8760049598f7">Y2RU_GetDitheringWeightParams</a> (<a class="el" href="structY2R__DitheringWeightParams.html">Y2R_DitheringWeightParams</a> *params)</td></tr>
+<tr class="memdesc:a04a962181e43904d6dfb8760049598f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the dithering weights. <br /></td></tr>
+<tr class="separator:a04a962181e43904d6dfb8760049598f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0980434e0cdf86d0436e85fd4814c72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="y2r_8h.html#a0980434e0cdf86d0436e85fd4814c72b">Y2RU_SetConversionParams</a> (const <a class="el" href="structY2R__ConversionParams.html">Y2R_ConversionParams</a> *params)</td></tr>
 <tr class="memdesc:a0980434e0cdf86d0436e85fd4814c72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the parameters of <a class="el" href="structY2R__ConversionParams.html" title="Structure used to configure all parameters at once. ">Y2R_ConversionParams</a> at once.  <a href="#a0980434e0cdf86d0436e85fd4814c72b">More...</a><br /></td></tr>
 <tr class="separator:a0980434e0cdf86d0436e85fd4814c72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1117,30 +1170,6 @@ Setting a transfer_unit of 4 or 8 lines seems to bring the best results in terms
 <p>It is possible to fire an interrupt when the conversion is finished, and that the DMA is done copying the data. This interrupt will then be used to fire an event. See <a class="el" href="y2r_8h.html#aea14c7577fe4fad30581f30ca6973705">Y2RU_GetTransferEndEvent</a>. By default the interrupt is enabled.</p>
 <dl class="section note"><dt>Note</dt><dd>It seems that the event can be fired too soon in some cases, depending the transfer_unit size.<br />
  Please see the note at <a class="el" href="y2r_8h.html#ac53d0e553fda7d6e3b80e6f7bd0fe7e4">Y2RU_SetReceiving</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9b0cd5078af08de4be5a6e3b5ddb1d19"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> Y2RU_SetUnknownParams </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="types_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>&#160;</td>
-          <td class="paramname"><em>params</em>[16]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets currently unknown parameters. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">params</td><td>Unknown parameters. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
