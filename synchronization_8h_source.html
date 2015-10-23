@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/// Performs a clrex operation.</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="synchronization_8h.html#af5fdce28704bc8d418fe9aaed04d4e90">   19</a></span>&#160;<span class="comment"></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#af5fdce28704bc8d418fe9aaed04d4e90">__clrex</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    __asm__ __volatile__(<span class="stringliteral">&quot;clrex&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    __asm__ __volatile__(<span class="stringliteral">&quot;clrex&quot;</span> ::: <span class="stringliteral">&quot;memory&quot;</span>);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/**</span></div>
