@@ -108,9 +108,9 @@ Functions</h2></td></tr>
 <a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ac_8h.html#a70bec5c9b2d2f86ff49ca7fde2752134">acExit</a> (void)</td></tr>
 <tr class="memdesc:a70bec5c9b2d2f86ff49ca7fde2752134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits AC. <br /></td></tr>
 <tr class="separator:a70bec5c9b2d2f86ff49ca7fde2752134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac659408a07b416bd9e9dcd29b83d3d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ac_8h.html#ac659408a07b416bd9e9dcd29b83d3d95">ACU_GetWifiStatus</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> *servhandle, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *out)</td></tr>
-<tr class="memdesc:ac659408a07b416bd9e9dcd29b83d3d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current Wifi status.  <a href="#ac659408a07b416bd9e9dcd29b83d3d95">More...</a><br /></td></tr>
-<tr class="separator:ac659408a07b416bd9e9dcd29b83d3d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7493b0d60b8711ef8b4c2d495b4a4e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ac_8h.html#a7493b0d60b8711ef8b4c2d495b4a4e72">ACU_GetWifiStatus</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *out)</td></tr>
+<tr class="memdesc:a7493b0d60b8711ef8b4c2d495b4a4e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current Wifi status.  <a href="#a7493b0d60b8711ef8b4c2d495b4a4e72">More...</a><br /></td></tr>
+<tr class="separator:a7493b0d60b8711ef8b4c2d495b4a4e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf70d7f0733f41425667dd466f0ed7ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf70d7f0733f41425667dd466f0ed7ce"></a>
 <a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ac_8h.html#acf70d7f0733f41425667dd466f0ed7ce">ACU_WaitInternetConnection</a> (void)</td></tr>
 <tr class="memdesc:acf70d7f0733f41425667dd466f0ed7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the system to connect to the internet. <br /></td></tr>
@@ -119,26 +119,16 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AC service. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac659408a07b416bd9e9dcd29b83d3d95"></a>
+<a class="anchor" id="a7493b0d60b8711ef8b4c2d495b4a4e72"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> ACU_GetWifiStatus </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> *&#160;</td>
-          <td class="paramname"><em>servhandle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -146,7 +136,6 @@ Functions</h2></td></tr>
 <p>Gets the current Wifi status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">servhandle</td><td>Optional pointer to the service handle to use. </td></tr>
     <tr><td class="paramname">out</td><td>Pointer to output the current Wifi status to. (0 = not connected, 1 = O3DS Internet, 2 = N3DS Internet) </td></tr>
   </table>
   </dd>
