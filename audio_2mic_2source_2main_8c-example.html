@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">                printf(<span class="stringliteral">&quot;Playing the recorded sample\n&quot;</span>);</div>
 <div class="line">                <a class="code" href="mic_8h.html#ad1cb3af8851f2502d3b244d4635991cd">MIC_SetRecording</a>(0);</div>
 <div class="line">                <a name="a21"></a><a class="code" href="gsp_8h.html#a24f1c78fad4e1108ddc56fb3674cdba2">GSPGPU_FlushDataCache</a>(NULL, audiobuf, audiobuf_pos);</div>
-<div class="line">                <a name="a22"></a><a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(0x8, <a name="a23"></a><a class="code" href="csnd_8h.html#a05589fbab0657f08285ebdfe93f5ec9eaf96c5965b6990d82a1db630720c904b0">SOUND_ONE_SHOT</a> | <a name="a24"></a><a class="code" href="csnd_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea5f8b8383f728e9dabef5efa486e08fd4">SOUND_FORMAT_16BIT</a>, 16000, 1.0, 0.0, (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)audiobuf, NULL, audiobuf_pos);</div>
+<div class="line">                <a name="a22"></a><a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(0x8, <a name="a23"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fceaf96c5965b6990d82a1db630720c904b0">SOUND_ONE_SHOT</a> | <a name="a24"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fcea5f8b8383f728e9dabef5efa486e08fd4">SOUND_FORMAT_16BIT</a>, 16000, 1.0, 0.0, (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)audiobuf, NULL, audiobuf_pos);</div>
 <div class="line"></div>
 <div class="line">                memset(framebuf, 0xe0, 0x46500);</div>
 <div class="line"></div>
@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <a name="a27"></a><a class="code" href="mic_8h.html#a2a5d33b949505aeebb3ecaff7366a924">MIC_Shutdown</a>();</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">if</span>(audio_initialized)<a name="a28"></a><a class="code" href="csnd_8h.html#a0ea18096947eb749d511aa93d2fd944f">csndExit</a>();</div>
+<div class="line">    <span class="keywordflow">if</span>(audio_initialized)<a name="a28"></a><a class="code" href="csnd_8h.html#af5dc91e98b2182aa71f45dca52e42ad3">csndExit</a>();</div>
 <div class="line"></div>
 <div class="line">    free(sharedmem);</div>
 <div class="line">    <a name="a29"></a><a class="code" href="linear_8h.html#aeb28d4069fd209e0067ac185fb9b83e2">linearFree</a>(audiobuf);</div>
