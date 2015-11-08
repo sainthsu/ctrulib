@@ -141,14 +141,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">                <span class="keywordflow">if</span>(<a class="code" href="result_8h.html#a0b5d96e53599ca10d46297ba05e20b62">R_FAILED</a>(<a name="a15"></a><a class="code" href="csnd_8h.html#a29f403e7faa5c335375e938dd0a242ad">CSND_UpdateInfo</a>(0))) printf(<span class="stringliteral">&quot;Failed to stop audio playback.\n&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">                printf(<span class="stringliteral">&quot;Starting sampling...\n&quot;</span>);</div>
-<div class="line">                <span class="keywordflow">if</span>(<a name="a16"></a><a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a17"></a><a class="code" href="mic_8h.html#a3a26bd2ff5eeaaf538df29230b3fda61">MICU_SetPower</a>(<span class="keyword">true</span>)) &amp;&amp; <a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a18"></a><a class="code" href="mic_8h.html#a79266af4aa50d790fba3680d423f6ff0">MICU_StartSampling</a>(<a name="a19"></a><a class="code" href="mic_8h.html#a3ead458d1aabf74550446b463b4fb54fab94c760d37cb05a0f9b35dfe308adf92">MICU_ENCODING_PCM16_SIGNED</a>, <a name="a20"></a><a class="code" href="mic_8h.html#ae126d52922918356ed810bcc398ad62ba2b9d600ba6fd888107ddcf0fabc1f5bf">MICU_SAMPLE_RATE_16360</a>, 0, micbuf_datasize, <span class="keyword">true</span>))) printf(<span class="stringliteral">&quot;Now recording.\n&quot;</span>);</div>
+<div class="line">                <span class="keywordflow">if</span>(<a name="a16"></a><a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a17"></a><a class="code" href="mic_8h.html#a79266af4aa50d790fba3680d423f6ff0">MICU_StartSampling</a>(<a name="a18"></a><a class="code" href="mic_8h.html#a3ead458d1aabf74550446b463b4fb54fab94c760d37cb05a0f9b35dfe308adf92">MICU_ENCODING_PCM16_SIGNED</a>, <a name="a19"></a><a class="code" href="mic_8h.html#ae126d52922918356ed810bcc398ad62ba2b9d600ba6fd888107ddcf0fabc1f5bf">MICU_SAMPLE_RATE_16360</a>, 0, micbuf_datasize, <span class="keyword">true</span>))) printf(<span class="stringliteral">&quot;Now recording.\n&quot;</span>);</div>
 <div class="line">                <span class="keywordflow">else</span> printf(<span class="stringliteral">&quot;Failed to start sampling.\n&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span>((<a name="a21"></a><a class="code" href="hid_8h.html#a68e8fd75a99650db835f045676a47949">hidKeysHeld</a>() &amp; KEY_A) &amp;&amp; audiobuf_pos &lt; audiobuf_size)</div>
+<div class="line">            <span class="keywordflow">if</span>((<a name="a20"></a><a class="code" href="hid_8h.html#a68e8fd75a99650db835f045676a47949">hidKeysHeld</a>() &amp; KEY_A) &amp;&amp; audiobuf_pos &lt; audiobuf_size)</div>
 <div class="line">            {</div>
 <div class="line">                <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> micbuf_readpos = micbuf_pos;</div>
-<div class="line">                micbuf_pos = <a name="a22"></a><a class="code" href="mic_8h.html#aa2590afec7ac205e877ab94c9203a4c9">micGetLastSampleOffset</a>();</div>
+<div class="line">                micbuf_pos = <a name="a21"></a><a class="code" href="mic_8h.html#aa2590afec7ac205e877ab94c9203a4c9">micGetLastSampleOffset</a>();</div>
 <div class="line">                <span class="keywordflow">while</span>(audiobuf_pos &lt; audiobuf_size &amp;&amp; micbuf_readpos != micbuf_pos)</div>
 <div class="line">                {</div>
 <div class="line">                    audiobuf[audiobuf_pos] = micbuf[micbuf_readpos];</div>
@@ -157,28 +157,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span>(<a name="a23"></a><a class="code" href="hid_8h.html#acefc6e65ac14a7e02c1c1fd72279eed4">hidKeysUp</a>() &amp; <a class="code" href="hid_8h.html#a11f9ec8ae52d2145fbbd1e9fb1ccb752aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a>)</div>
+<div class="line">            <span class="keywordflow">if</span>(<a name="a22"></a><a class="code" href="hid_8h.html#acefc6e65ac14a7e02c1c1fd72279eed4">hidKeysUp</a>() &amp; <a class="code" href="hid_8h.html#a11f9ec8ae52d2145fbbd1e9fb1ccb752aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a>)</div>
 <div class="line">            {</div>
 <div class="line">                printf(<span class="stringliteral">&quot;Stoping sampling...\n&quot;</span>);</div>
-<div class="line">                <span class="keywordflow">if</span>(<a class="code" href="result_8h.html#a0b5d96e53599ca10d46297ba05e20b62">R_FAILED</a>(<a name="a24"></a><a class="code" href="mic_8h.html#a7ea7f514ee9e50db3bc49bd3106fa967">MICU_StopSampling</a>()) || <a class="code" href="result_8h.html#a0b5d96e53599ca10d46297ba05e20b62">R_FAILED</a>(<a class="code" href="mic_8h.html#a3a26bd2ff5eeaaf538df29230b3fda61">MICU_SetPower</a>(<span class="keyword">false</span>))) printf(<span class="stringliteral">&quot;Failed to stop sampling.\n&quot;</span>);</div>
+<div class="line">                <span class="keywordflow">if</span>(<a class="code" href="result_8h.html#a0b5d96e53599ca10d46297ba05e20b62">R_FAILED</a>(<a name="a23"></a><a class="code" href="mic_8h.html#a7ea7f514ee9e50db3bc49bd3106fa967">MICU_StopSampling</a>())) printf(<span class="stringliteral">&quot;Failed to stop sampling.\n&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">                printf(<span class="stringliteral">&quot;Starting audio playback...\n&quot;</span>);</div>
-<div class="line">                <span class="keywordflow">if</span>(<a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a25"></a><a class="code" href="gsp_8h.html#a24f1c78fad4e1108ddc56fb3674cdba2">GSPGPU_FlushDataCache</a>(audiobuf, audiobuf_pos)) &amp;&amp; <a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a26"></a><a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(0x8, <a name="a27"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fceaf96c5965b6990d82a1db630720c904b0">SOUND_ONE_SHOT</a> | <a name="a28"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fcea5f8b8383f728e9dabef5efa486e08fd4">SOUND_FORMAT_16BIT</a>, 16360, 1.0, 0.0, (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)audiobuf, NULL, audiobuf_pos))) printf(<span class="stringliteral">&quot;Now playing.\n&quot;</span>);</div>
+<div class="line">                <span class="keywordflow">if</span>(<a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a24"></a><a class="code" href="gsp_8h.html#a24f1c78fad4e1108ddc56fb3674cdba2">GSPGPU_FlushDataCache</a>(audiobuf, audiobuf_pos)) &amp;&amp; <a class="code" href="result_8h.html#af3fc09d5b7503ddfc46c0d5464acb0f4">R_SUCCEEDED</a>(<a name="a25"></a><a class="code" href="csnd_8h.html#a3752f884792b439bcec34837b374a46d">csndPlaySound</a>(0x8, <a name="a26"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fceaf96c5965b6990d82a1db630720c904b0">SOUND_ONE_SHOT</a> | <a name="a27"></a><a class="code" href="csnd_8h.html#aaf105ae5beaca1dee30ae54530691fcea5f8b8383f728e9dabef5efa486e08fd4">SOUND_FORMAT_16BIT</a>, 16360, 1.0, 0.0, (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)audiobuf, NULL, audiobuf_pos))) printf(<span class="stringliteral">&quot;Now playing.\n&quot;</span>);</div>
 <div class="line">                <span class="keywordflow">else</span> printf(<span class="stringliteral">&quot;Failed to start playback.\n&quot;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <a name="a29"></a><a class="code" href="gfx_8h.html#aea1808bd74fe0c00f9794e455fc8499b">gfxFlushBuffers</a>();</div>
-<div class="line">        <a name="a30"></a><a class="code" href="gfx_8h.html#a0f338920111994110975dc0d1360bb1f">gfxSwapBuffers</a>();</div>
+<div class="line">        <a name="a28"></a><a class="code" href="gfx_8h.html#aea1808bd74fe0c00f9794e455fc8499b">gfxFlushBuffers</a>();</div>
+<div class="line">        <a name="a29"></a><a class="code" href="gfx_8h.html#a0f338920111994110975dc0d1360bb1f">gfxSwapBuffers</a>();</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <a name="a31"></a><a class="code" href="linear_8h.html#aeb28d4069fd209e0067ac185fb9b83e2">linearFree</a>(audiobuf);</div>
+<div class="line">    <a name="a30"></a><a class="code" href="linear_8h.html#aeb28d4069fd209e0067ac185fb9b83e2">linearFree</a>(audiobuf);</div>
 <div class="line"></div>
-<div class="line">    <a name="a32"></a><a class="code" href="mic_8h.html#a5de3831a1aa13b444a812ebfef218361">micExit</a>();</div>
+<div class="line">    <a name="a31"></a><a class="code" href="mic_8h.html#a5de3831a1aa13b444a812ebfef218361">micExit</a>();</div>
 <div class="line">    free(micbuf);</div>
 <div class="line"></div>
-<div class="line">    <a name="a33"></a><a class="code" href="csnd_8h.html#af5dc91e98b2182aa71f45dca52e42ad3">csndExit</a>();</div>
-<div class="line">    <a name="a34"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
+<div class="line">    <a name="a32"></a><a class="code" href="csnd_8h.html#af5dc91e98b2182aa71f45dca52e42ad3">csndExit</a>();</div>
+<div class="line">    <a name="a33"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="line"></div>
