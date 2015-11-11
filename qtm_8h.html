@@ -101,11 +101,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqtmHeadtrackingInfoCoord.html">qtmHeadtrackingInfoCoord</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head tracking coordinate pair.  <a href="structqtmHeadtrackingInfoCoord.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQTM__HeadTrackingInfoCoord.html">QTM_HeadTrackingInfoCoord</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head tracking coordinate pair.  <a href="structQTM__HeadTrackingInfoCoord.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head tracking info.  <a href="structqtmHeadtrackingInfo.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQTM__HeadTrackingInfo.html">QTM_HeadTrackingInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head tracking info.  <a href="structQTM__HeadTrackingInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -121,27 +121,62 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_
 <tr class="memitem:a2be6829e253a5486702014e175a5110d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a2be6829e253a5486702014e175a5110d">qtmCheckInitialized</a> (void)</td></tr>
 <tr class="memdesc:a2be6829e253a5486702014e175a5110d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether QTM is initialized.  <a href="#a2be6829e253a5486702014e175a5110d">More...</a><br /></td></tr>
 <tr class="separator:a2be6829e253a5486702014e175a5110d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e85fcc8aea2a1b3b9330317ad7f676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a16e85fcc8aea2a1b3b9330317ad7f676">qtmGetHeadtrackingInfo</a> (<a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a> val, <a class="el" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a> *out)</td></tr>
-<tr class="memdesc:a16e85fcc8aea2a1b3b9330317ad7f676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current head tracking info.  <a href="#a16e85fcc8aea2a1b3b9330317ad7f676">More...</a><br /></td></tr>
-<tr class="separator:a16e85fcc8aea2a1b3b9330317ad7f676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa56a42402c8dec100cab01e2392c3e92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#aa56a42402c8dec100cab01e2392c3e92">qtmCheckHeadFullyDetected</a> (<a class="el" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a> *info)</td></tr>
-<tr class="memdesc:aa56a42402c8dec100cab01e2392c3e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a head is fully detected.  <a href="#aa56a42402c8dec100cab01e2392c3e92">More...</a><br /></td></tr>
-<tr class="separator:aa56a42402c8dec100cab01e2392c3e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01dbfd7a6b7710577bec510e30cf692e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a01dbfd7a6b7710577bec510e30cf692e">qtmConvertCoordToScreen</a> (<a class="el" href="structqtmHeadtrackingInfoCoord.html">qtmHeadtrackingInfoCoord</a> *coord, float *screen_width, float *screen_height, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *x, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *y)</td></tr>
-<tr class="memdesc:a01dbfd7a6b7710577bec510e30cf692e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts QTM coordinates to screen coordinates.  <a href="#a01dbfd7a6b7710577bec510e30cf692e">More...</a><br /></td></tr>
-<tr class="separator:a01dbfd7a6b7710577bec510e30cf692e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eda8f29392a18ea6839cce9de4685e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a8eda8f29392a18ea6839cce9de4685e8">qtmCheckHeadFullyDetected</a> (<a class="el" href="structQTM__HeadTrackingInfo.html">QTM_HeadTrackingInfo</a> *info)</td></tr>
+<tr class="memdesc:a8eda8f29392a18ea6839cce9de4685e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a head is fully detected.  <a href="#a8eda8f29392a18ea6839cce9de4685e8">More...</a><br /></td></tr>
+<tr class="separator:a8eda8f29392a18ea6839cce9de4685e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590c17d8fade12a313673522bbdb1507"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a590c17d8fade12a313673522bbdb1507">qtmConvertCoordToScreen</a> (<a class="el" href="structQTM__HeadTrackingInfoCoord.html">QTM_HeadTrackingInfoCoord</a> *coord, float *screen_width, float *screen_height, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *x, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *y)</td></tr>
+<tr class="memdesc:a590c17d8fade12a313673522bbdb1507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts QTM coordinates to screen coordinates.  <a href="#a590c17d8fade12a313673522bbdb1507">More...</a><br /></td></tr>
+<tr class="separator:a590c17d8fade12a313673522bbdb1507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fcb6d843cb74e79f0464d0548c8d9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_8h.html#a84fcb6d843cb74e79f0464d0548c8d9b">QTM_GetHeadTrackingInfo</a> (<a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a> val, <a class="el" href="structQTM__HeadTrackingInfo.html">QTM_HeadTrackingInfo</a> *out)</td></tr>
+<tr class="memdesc:a84fcb6d843cb74e79f0464d0548c8d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current head tracking info.  <a href="#a84fcb6d843cb74e79f0464d0548c8d9b">More...</a><br /></td></tr>
+<tr class="separator:a84fcb6d843cb74e79f0464d0548c8d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>QTM service. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa56a42402c8dec100cab01e2392c3e92"></a>
+<a class="anchor" id="a84fcb6d843cb74e79f0464d0548c8d9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> QTM_GetHeadTrackingInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structQTM__HeadTrackingInfo.html">QTM_HeadTrackingInfo</a> *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current head tracking info. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Normally 0. </td></tr>
+    <tr><td class="paramname">out</td><td>Pointer to write head tracking info to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8eda8f29392a18ea6839cce9de4685e8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool qtmCheckHeadFullyDetected </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structQTM__HeadTrackingInfo.html">QTM_HeadTrackingInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em></td><td>)</td>
           <td></td>
         </tr>
@@ -155,7 +190,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a21">qtm/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a14">qtm/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -175,18 +210,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_
 
 <p>Checks whether QTM is initialized. </p>
 <dl class="section return"><dt>Returns</dt><dd>Whether QTM is initialized. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a5">qtm/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a4">qtm/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a01dbfd7a6b7710577bec510e30cf692e"></a>
+<a class="anchor" id="a590c17d8fade12a313673522bbdb1507"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> qtmConvertCoordToScreen </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structqtmHeadtrackingInfoCoord.html">qtmHeadtrackingInfoCoord</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structQTM__HeadTrackingInfoCoord.html">QTM_HeadTrackingInfoCoord</a> *&#160;</td>
           <td class="paramname"><em>coord</em>, </td>
         </tr>
         <tr>
@@ -232,43 +267,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="qtm_
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a22">qtm/source/main.c</a>.</dd>
-</dl>
-</div>
-</div>
-<a class="anchor" id="a16e85fcc8aea2a1b3b9330317ad7f676"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> qtmGetHeadtrackingInfo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a> *&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the current head tracking info. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>Normally 0. </td></tr>
-    <tr><td class="paramname">out</td><td>Pointer to write head tracking info to. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a14">qtm/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="qtm_2source_2main_8c-example.html#a15">qtm/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>

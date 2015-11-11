@@ -90,63 +90,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> x, y;</div>
 <div class="line">    <a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> ret;</div>
 <div class="line">    <span class="keywordtype">bool</span> qtm_usable;</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structqtmHeadtrackingInfo.html">qtmHeadtrackingInfo</a> qtminfo;</div>
+<div class="line">    qtmHeadtrackingInfo qtminfo;</div>
 <div class="line">    <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> colors[4] = {0x0000FF, 0x00FF00, 0xFF0000, 0xFFFFFF};</div>
 <div class="line"></div>
-<div class="line">    <a name="a1"></a><a class="code" href="gfx_8h.html#a236a005ae029247c8bfe4a4a649206fc">gfxInitDefault</a>();</div>
+<div class="line">    <a name="a0"></a><a class="code" href="gfx_8h.html#a236a005ae029247c8bfe4a4a649206fc">gfxInitDefault</a>();</div>
 <div class="line">    <span class="comment">//gfxSet3D(true); // uncomment if using stereoscopic 3D</span></div>
 <div class="line"></div>
-<div class="line">    <a name="a2"></a><a class="code" href="qtm_8h.html#a2dd262c03c0d2feed98edfe1a7fd2dfe">qtmInit</a>();</div>
+<div class="line">    <a name="a1"></a><a class="code" href="qtm_8h.html#a2dd262c03c0d2feed98edfe1a7fd2dfe">qtmInit</a>();</div>
 <div class="line"></div>
-<div class="line">    <a name="a3"></a><a class="code" href="console_8h.html#a8e014e84f81ff901ca62d7669a8c8de8">consoleInit</a>(<a name="a4"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09cac1be8c2dee1ab5520b30ba069afa7541">GFX_BOTTOM</a>, NULL);</div>
+<div class="line">    <a name="a2"></a><a class="code" href="console_8h.html#a8e014e84f81ff901ca62d7669a8c8de8">consoleInit</a>(<a name="a3"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09cac1be8c2dee1ab5520b30ba069afa7541">GFX_BOTTOM</a>, NULL);</div>
 <div class="line"></div>
 <div class="line">    printf(<span class="stringliteral">&quot;qtm example\n&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    qtm_usable = <a name="a5"></a><a class="code" href="qtm_8h.html#a2be6829e253a5486702014e175a5110d">qtmCheckInitialized</a>();</div>
+<div class="line">    qtm_usable = <a name="a4"></a><a class="code" href="qtm_8h.html#a2be6829e253a5486702014e175a5110d">qtmCheckInitialized</a>();</div>
 <div class="line">    <span class="keywordflow">if</span>(!qtm_usable)printf(<span class="stringliteral">&quot;QTM is not usable, therefore this example won&#39;t do anything with QTM.\n&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Main loop</span></div>
-<div class="line">    <span class="keywordflow">while</span> (<a name="a6"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
+<div class="line">    <span class="keywordflow">while</span> (<a name="a5"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a7"></a><a class="code" href="gsp_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();</div>
-<div class="line">        <a name="a8"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();</div>
+<div class="line">        <a name="a6"></a><a class="code" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();</div>
+<div class="line">        <a name="a7"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> kDown = <a name="a9"></a><a class="code" href="hid_8h.html#aa2cababf764bf0b4297dc2e2fffe2a76">hidKeysDown</a>();</div>
-<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a10"></a><a class="code" href="hid_8h.html#a11f9ec8ae52d2145fbbd1e9fb1ccb752a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
+<div class="line">        <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> kDown = <a name="a8"></a><a class="code" href="hid_8h.html#aa2cababf764bf0b4297dc2e2fffe2a76">hidKeysDown</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a9"></a><a class="code" href="hid_8h.html#af9bdc3014f3d54c426b6d2df10de4960a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
 <div class="line">            <span class="keywordflow">break</span>; <span class="comment">// break in order to return to hbmenu</span></div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span>(qtm_usable)</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* fb = <a name="a11"></a><a class="code" href="gfx_8h.html#a332447352568e250a75397a1b2e452db">gfxGetFramebuffer</a>(<a name="a12"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09caf9d44178134d07cf9c5923200e14af09">GFX_TOP</a>, <a name="a13"></a><a class="code" href="gfx_8h.html#ab9bacc1d598f0f6e4d5ef8bbeb466b03a1bfda6a35adc49eb4631246ea4e637e1">GFX_LEFT</a>, NULL, NULL);</div>
+<div class="line">            <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* fb = <a name="a10"></a><a class="code" href="gfx_8h.html#a332447352568e250a75397a1b2e452db">gfxGetFramebuffer</a>(<a name="a11"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09caf9d44178134d07cf9c5923200e14af09">GFX_TOP</a>, <a name="a12"></a><a class="code" href="gfx_8h.html#ab9bacc1d598f0f6e4d5ef8bbeb466b03a1bfda6a35adc49eb4631246ea4e637e1">GFX_LEFT</a>, NULL, NULL);</div>
 <div class="line">            memset(fb, 0, 400*240*3);</div>
 <div class="line"></div>
-<div class="line">            ret = <a name="a14"></a><a class="code" href="qtm_8h.html#a16e85fcc8aea2a1b3b9330317ad7f676">qtmGetHeadtrackingInfo</a>(0, &amp;qtminfo);</div>
+<div class="line">            ret = qtmGetHeadtrackingInfo(0, &amp;qtminfo);</div>
 <div class="line">            <span class="keywordflow">if</span>(ret==0)</div>
 <div class="line">            {</div>
-<div class="line">                <a name="a15"></a><a class="code" href="console_8h.html#ac62c34a3fa2a6403c690dd80022b3e34">consoleClear</a>();</div>
+<div class="line">                <a name="a13"></a><a class="code" href="console_8h.html#ac62c34a3fa2a6403c690dd80022b3e34">consoleClear</a>();</div>
 <div class="line"></div>
 <div class="line">                <span class="keywordflow">for</span>(pos=0; pos&lt;5; pos++)</div>
 <div class="line">                {</div>
-<div class="line">                    printf(<span class="stringliteral">&quot;flags[%x]=0x%x&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)pos, qtminfo.<a name="a16"></a><a class="code" href="structqtmHeadtrackingInfo.html#ac7465a5ee61e9445102373873b13c490">flags</a>[pos]);</div>
+<div class="line">                    printf(<span class="stringliteral">&quot;flags[%x]=0x%x&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)pos, qtminfo.flags[pos]);</div>
 <div class="line">                    <span class="keywordflow">if</span>(pos&lt;4)printf(<span class="stringliteral">&quot;, &quot;</span>);</div>
 <div class="line">                }</div>
 <div class="line"></div>
-<div class="line">                printf(<span class="stringliteral">&quot;\nfloatdata_x08: %f\n&quot;</span>, qtminfo.<a name="a17"></a><a class="code" href="structqtmHeadtrackingInfo.html#ac77c21099b2c4f4ba59a9785675cc416">floatdata_x08</a>);</div>
+<div class="line">                printf(<span class="stringliteral">&quot;\nfloatdata_x08: %f\n&quot;</span>, qtminfo.floatdata_x08);</div>
 <div class="line"></div>
 <div class="line">                printf(<span class="stringliteral">&quot;coords0: &quot;</span>);</div>
 <div class="line">                <span class="keywordflow">for</span>(pos=0; pos&lt;4; pos++)</div>
 <div class="line">                {</div>
-<div class="line">                    printf(<span class="stringliteral">&quot;[%x].x=%f, y=%f&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)pos, qtminfo.<a name="a18"></a><a class="code" href="structqtmHeadtrackingInfo.html#a627a1838eed2a9afc01b3b5a58d1deec">coords0</a>[pos].<a name="a19"></a><a class="code" href="structqtmHeadtrackingInfoCoord.html#abcf7bf2e7d0fe20d83a8e572b844849e">x</a>, qtminfo.<a class="code" href="structqtmHeadtrackingInfo.html#a627a1838eed2a9afc01b3b5a58d1deec">coords0</a>[pos].<a name="a20"></a><a class="code" href="structqtmHeadtrackingInfoCoord.html#abe5e10046027e0a07c8162e2373585ff">y</a>);</div>
+<div class="line">                    printf(<span class="stringliteral">&quot;[%x].x=%f, y=%f&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)pos, qtminfo.coords0[pos].x, qtminfo.coords0[pos].y);</div>
 <div class="line">                    <span class="keywordflow">if</span>(pos&lt;3)printf(<span class="stringliteral">&quot;, &quot;</span>);</div>
 <div class="line">                }</div>
 <div class="line"></div>
 <div class="line">                printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">                <span class="keywordflow">if</span>(<a name="a21"></a><a class="code" href="qtm_8h.html#aa56a42402c8dec100cab01e2392c3e92">qtmCheckHeadFullyDetected</a>(&amp;qtminfo))</div>
+<div class="line">                <span class="keywordflow">if</span>(<a name="a14"></a><a class="code" href="qtm_8h.html#a8eda8f29392a18ea6839cce9de4685e8">qtmCheckHeadFullyDetected</a>(&amp;qtminfo))</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">for</span>(pos=0; pos&lt;4; pos++)</div>
 <div class="line">                    {</div>
-<div class="line">                        ret = <a name="a22"></a><a class="code" href="qtm_8h.html#a01dbfd7a6b7710577bec510e30cf692e">qtmConvertCoordToScreen</a>(&amp;qtminfo.<a class="code" href="structqtmHeadtrackingInfo.html#a627a1838eed2a9afc01b3b5a58d1deec">coords0</a>[pos], NULL, NULL, &amp;x, &amp;y);</div>
+<div class="line">                        ret = <a name="a15"></a><a class="code" href="qtm_8h.html#a590c17d8fade12a313673522bbdb1507">qtmConvertCoordToScreen</a>(&amp;qtminfo.coords0[pos], NULL, NULL, &amp;x, &amp;y);</div>
 <div class="line"></div>
 <div class="line">                        <span class="keywordflow">if</span>(ret==0)memcpy(&amp;fb[(x*240 + y) * 3], &amp;colors[pos], 3);</div>
 <div class="line">                    }</div>
@@ -155,13 +155,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Flush and swap framebuffers</span></div>
-<div class="line">        <a name="a23"></a><a class="code" href="gfx_8h.html#aea1808bd74fe0c00f9794e455fc8499b">gfxFlushBuffers</a>();</div>
-<div class="line">        <a name="a24"></a><a class="code" href="gfx_8h.html#a0f338920111994110975dc0d1360bb1f">gfxSwapBuffers</a>();</div>
+<div class="line">        <a name="a16"></a><a class="code" href="gfx_8h.html#aea1808bd74fe0c00f9794e455fc8499b">gfxFlushBuffers</a>();</div>
+<div class="line">        <a name="a17"></a><a class="code" href="gfx_8h.html#a0f338920111994110975dc0d1360bb1f">gfxSwapBuffers</a>();</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Exit services</span></div>
-<div class="line">    <a name="a25"></a><a class="code" href="qtm_8h.html#a1c7d237388833868fb1e282d8a64e354">qtmExit</a>();</div>
-<div class="line">    <a name="a26"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
+<div class="line">    <a name="a18"></a><a class="code" href="qtm_8h.html#a1c7d237388833868fb1e282d8a64e354">qtmExit</a>();</div>
+<div class="line">    <a name="a19"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="line"></div>

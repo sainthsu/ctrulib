@@ -116,13 +116,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a85133a49885df86e509e6f25315216f3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a> { <br />
-&#160;&#160;<a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3ace8cae9a80c3e32fddea1ddc1651b7df">HTTPCREQSTAT_INPROGRESS_REQSENT</a> = 0x5, 
+<tr class="memitem:acf1d4f75e50ea1f3d391d4260f91d64d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a> { <br />
+&#160;&#160;<a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64dad210be04b032dbcebec1d139ec446885">HTTPC_STATUS_REQUEST_IN_PROGRESS</a> = 0x5, 
 <br />
-&#160;&#160;<a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3ab072d29d4cdfdae67c39551803330976">HTTPCREQSTAT_DLREADY</a> = 0x7
+&#160;&#160;<a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64da2e62946f93c0092d62c20577c6be1c19">HTTPC_STATUS_DOWNLOAD_READY</a> = 0x7
 <br />
- }<tr class="memdesc:a85133a49885df86e509e6f25315216f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP request status.  <a href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">More...</a><br /></td></tr>
-<tr class="separator:a85133a49885df86e509e6f25315216f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:acf1d4f75e50ea1f3d391d4260f91d64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP request status.  <a href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">More...</a><br /></td></tr>
+<tr class="separator:acf1d4f75e50ea1f3d391d4260f91d64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -150,9 +150,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
 <tr class="memitem:a6af4c5a10432a68c705adac29c50e1e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a6af4c5a10432a68c705adac29c50e1e4">httpcReceiveData</a> (<a class="el" href="structhttpcContext.html">httpcContext</a> *context, <a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> *buffer, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size)</td></tr>
 <tr class="memdesc:a6af4c5a10432a68c705adac29c50e1e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives data from a HTTP context.  <a href="#a6af4c5a10432a68c705adac29c50e1e4">More...</a><br /></td></tr>
 <tr class="separator:a6af4c5a10432a68c705adac29c50e1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3dba4a5e89fa18a69c305ad7aa99dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a4c3dba4a5e89fa18a69c305ad7aa99dc">httpcGetRequestState</a> (<a class="el" href="structhttpcContext.html">httpcContext</a> *context, <a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a> *out)</td></tr>
-<tr class="memdesc:a4c3dba4a5e89fa18a69c305ad7aa99dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request state of a HTTP context.  <a href="#a4c3dba4a5e89fa18a69c305ad7aa99dc">More...</a><br /></td></tr>
-<tr class="separator:a4c3dba4a5e89fa18a69c305ad7aa99dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a9e219190bacbb11eb95094ee8c3f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a70a9e219190bacbb11eb95094ee8c3f1">httpcGetRequestState</a> (<a class="el" href="structhttpcContext.html">httpcContext</a> *context, <a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a> *out)</td></tr>
+<tr class="memdesc:a70a9e219190bacbb11eb95094ee8c3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request state of a HTTP context.  <a href="#a70a9e219190bacbb11eb95094ee8c3f1">More...</a><br /></td></tr>
+<tr class="separator:a70a9e219190bacbb11eb95094ee8c3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b8077d1e1f871f340f6d93d4731c666"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a1b8077d1e1f871f340f6d93d4731c666">httpcGetDownloadSizeState</a> (<a class="el" href="structhttpcContext.html">httpcContext</a> *context, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *downloadedsize, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *contentsize)</td></tr>
 <tr class="memdesc:a1b8077d1e1f871f340f6d93d4731c666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the download size state of a HTTP context.  <a href="#a1b8077d1e1f871f340f6d93d4731c666">More...</a><br /></td></tr>
 <tr class="separator:a1b8077d1e1f871f340f6d93d4731c666"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,9 +189,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
 <tr class="memitem:a03bb4970e6508b4f418d2997e9be85a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a03bb4970e6508b4f418d2997e9be85a1">HTTPC_ReceiveData</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> handle, <a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> contextHandle, <a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> *buffer, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size)</td></tr>
 <tr class="memdesc:a03bb4970e6508b4f418d2997e9be85a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives data from a HTTP context.  <a href="#a03bb4970e6508b4f418d2997e9be85a1">More...</a><br /></td></tr>
 <tr class="separator:a03bb4970e6508b4f418d2997e9be85a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af442ae2d2f3a4fbf2c48b18b6ac26c81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#af442ae2d2f3a4fbf2c48b18b6ac26c81">HTTPC_GetRequestState</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> handle, <a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> contextHandle, <a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a> *out)</td></tr>
-<tr class="memdesc:af442ae2d2f3a4fbf2c48b18b6ac26c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request state of a HTTP context.  <a href="#af442ae2d2f3a4fbf2c48b18b6ac26c81">More...</a><br /></td></tr>
-<tr class="separator:af442ae2d2f3a4fbf2c48b18b6ac26c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82aa13dd7ebd77f8bfadc7d9765a35b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a82aa13dd7ebd77f8bfadc7d9765a35b0">HTTPC_GetRequestState</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> handle, <a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> contextHandle, <a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a> *out)</td></tr>
+<tr class="memdesc:a82aa13dd7ebd77f8bfadc7d9765a35b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request state of a HTTP context.  <a href="#a82aa13dd7ebd77f8bfadc7d9765a35b0">More...</a><br /></td></tr>
+<tr class="separator:a82aa13dd7ebd77f8bfadc7d9765a35b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a663a41aba64f481110314ce9902c2315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="httpc_8h.html#a663a41aba64f481110314ce9902c2315">HTTPC_GetDownloadSizeState</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> handle, <a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> contextHandle, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *downloadedsize, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *contentsize)</td></tr>
 <tr class="memdesc:a663a41aba64f481110314ce9902c2315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the download size state of a HTTP context.  <a href="#a663a41aba64f481110314ce9902c2315">More...</a><br /></td></tr>
 <tr class="separator:a663a41aba64f481110314ce9902c2315"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,22 +205,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HTTP service. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a85133a49885df86e509e6f25315216f3"></a>
+<a class="anchor" id="acf1d4f75e50ea1f3d391d4260f91d64d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a></td>
+          <td class="memname">enum <a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>HTTP request status. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a85133a49885df86e509e6f25315216f3ace8cae9a80c3e32fddea1ddc1651b7df"></a>HTTPCREQSTAT_INPROGRESS_REQSENT&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="acf1d4f75e50ea1f3d391d4260f91d64dad210be04b032dbcebec1d139ec446885"></a>HTTPC_STATUS_REQUEST_IN_PROGRESS&#160;</td><td class="fielddoc">
 <p>Request in progress. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a85133a49885df86e509e6f25315216f3ab072d29d4cdfdae67c39551803330976"></a>HTTPCREQSTAT_DLREADY&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="acf1d4f75e50ea1f3d391d4260f91d64da2e62946f93c0092d62c20577c6be1c19"></a>HTTPC_STATUS_DOWNLOAD_READY&#160;</td><td class="fielddoc">
 <p>Download ready. </p>
 </td></tr>
 </table>
@@ -438,7 +438,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
 
 </div>
 </div>
-<a class="anchor" id="af442ae2d2f3a4fbf2c48b18b6ac26c81"></a>
+<a class="anchor" id="a82aa13dd7ebd77f8bfadc7d9765a35b0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -457,7 +457,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a> *&#160;</td>
           <td class="paramname"><em>out</em>&#160;</td>
         </tr>
         <tr>
@@ -906,7 +906,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
 </dl>
 </div>
 </div>
-<a class="anchor" id="a4c3dba4a5e89fa18a69c305ad7aa99dc"></a>
+<a class="anchor" id="a70a9e219190bacbb11eb95094ee8c3f1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -919,7 +919,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="httpc_8h.html#a85133a49885df86e509e6f25315216f3">httpcReqStatus</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="httpc_8h.html#acf1d4f75e50ea1f3d391d4260f91d64d">HTTPC_RequestStatus</a> *&#160;</td>
           <td class="paramname"><em>out</em>&#160;</td>
         </tr>
         <tr>

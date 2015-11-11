@@ -122,10 +122,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a043d12cf104a679be3476ee13b06ca1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a043d12cf104a679be3476ee13b06ca1b"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a043d12cf104a679be3476ee13b06ca1b">aptHookFn</a>) (int hook, void *param)</td></tr>
-<tr class="memdesc:a043d12cf104a679be3476ee13b06ca1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT hook function. <br /></td></tr>
-<tr class="separator:a043d12cf104a679be3476ee13b06ca1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab9ede8bc76064b9da878b9bf9626f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abab9ede8bc76064b9da878b9bf9626f5"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#abab9ede8bc76064b9da878b9bf9626f5">aptHookFn</a>) (<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6">APT_HookType</a> hook, void *param)</td></tr>
+<tr class="memdesc:abab9ede8bc76064b9da878b9bf9626f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT hook function. <br /></td></tr>
+<tr class="separator:abab9ede8bc76064b9da878b9bf9626f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -173,65 +173,65 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a932c939a3c27fefb8eadfd97704f8867"><td class="mdescLeft">&#160;</td><td class="mdescRight">NS Application IDs.  <a href="apt_8h.html#a932c939a3c27fefb8eadfd97704f8867">More...</a><br /></td></tr>
 <tr class="separator:a932c939a3c27fefb8eadfd97704f8867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:ad0cd7c4ceb43643f0765e991bc413e54"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a> { <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54a89cf5389dbaa1450c13c06add477a5ff">APP_NOTINITIALIZED</a>, 
+<tr class="memitem:af758bda479df7ac72bc891fb7c068f47"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a> { <br />
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47a89cf5389dbaa1450c13c06add477a5ff">APP_NOTINITIALIZED</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54a71b026b3a2b676e4176ee9f8dae22f1d">APP_RUNNING</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47a71b026b3a2b676e4176ee9f8dae22f1d">APP_RUNNING</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54a424275934bd427edfec40795fd3dfc87">APP_SUSPENDED</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47a424275934bd427edfec40795fd3dfc87">APP_SUSPENDED</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54aee012b4f899fb0d3885f261b6c8f6302">APP_EXITING</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47aee012b4f899fb0d3885f261b6c8f6302">APP_EXITING</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54a95c4af5ec1843b957bcf1389d17a9ac1">APP_SUSPENDING</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47a95c4af5ec1843b957bcf1389d17a9ac1">APP_SUSPENDING</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54ad69419936a7afd06c6767cad6341e058">APP_SLEEPMODE</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47ad69419936a7afd06c6767cad6341e058">APP_SLEEPMODE</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54a80154eb5cf9d6e4a50b6842e3372793f">APP_PREPARE_SLEEPMODE</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47a80154eb5cf9d6e4a50b6842e3372793f">APP_PREPARE_SLEEPMODE</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54aa6ae16e4812f03d3cf7d0109c4fe166f">APP_APPLETSTARTED</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47aa6ae16e4812f03d3cf7d0109c4fe166f">APP_APPLETSTARTED</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54ac95725568a2a4bc7bbff2c892b8ad119">APP_APPLETCLOSED</a>
+&#160;&#160;<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47ac95725568a2a4bc7bbff2c892b8ad119">APP_APPLETCLOSED</a>
 <br />
- }<tr class="memdesc:ad0cd7c4ceb43643f0765e991bc413e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">App status values.  <a href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">More...</a><br /></td></tr>
-<tr class="separator:ad0cd7c4ceb43643f0765e991bc413e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:af758bda479df7ac72bc891fb7c068f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">App status values.  <a href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">More...</a><br /></td></tr>
+<tr class="separator:af758bda479df7ac72bc891fb7c068f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:ac36f475ca5b446f4fde4c9b90bec77c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ae56c10181fe655bfd60690c5d32866a2">APTSIGNAL_HOMEBUTTON</a> = 1, 
+<tr class="memitem:a2722d05c62173b5d6e4a22a4666a6873"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873">APT_Signal</a> { <br />
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873ae56c10181fe655bfd60690c5d32866a2">APTSIGNAL_HOMEBUTTON</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a046b52a126ac897dc193379ed860d06a">APTSIGNAL_PREPARESLEEP</a> = 3, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a046b52a126ac897dc193379ed860d06a">APTSIGNAL_PREPARESLEEP</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8af8166042874c4fdb924214cdd5896c6e">APTSIGNAL_ENTERSLEEP</a> = 5, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873af8166042874c4fdb924214cdd5896c6e">APTSIGNAL_ENTERSLEEP</a> = 5, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ae944de692c8d9ef085d909e138e21bc9">APTSIGNAL_WAKEUP</a> = 6, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873ae944de692c8d9ef085d909e138e21bc9">APTSIGNAL_WAKEUP</a> = 6, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a32a307f57737ea8366297b23f550bb7f">APTSIGNAL_ENABLE</a> = 7, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a32a307f57737ea8366297b23f550bb7f">APTSIGNAL_ENABLE</a> = 7, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a079561f459d1f1838a33834beffb8aed">APTSIGNAL_POWERBUTTON</a> = 8, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a079561f459d1f1838a33834beffb8aed">APTSIGNAL_POWERBUTTON</a> = 8, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a6475f5b012c2f4a00c2db6ca44a19b4f">APTSIGNAL_UTILITY</a> = 9, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a6475f5b012c2f4a00c2db6ca44a19b4f">APTSIGNAL_UTILITY</a> = 9, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a3031c83ed6b3b7e51277daa1802bbdca">APTSIGNAL_SLEEPSYSTEM</a> = 10, 
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a3031c83ed6b3b7e51277daa1802bbdca">APTSIGNAL_SLEEPSYSTEM</a> = 10, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a000d03422313d6646d8d749606aced0c">APTSIGNAL_ERROR</a> = 11
+&#160;&#160;<a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873a000d03422313d6646d8d749606aced0c">APTSIGNAL_ERROR</a> = 11
 <br />
- }<tr class="memdesc:ac36f475ca5b446f4fde4c9b90bec77c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT signals.  <a href="apt_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8">More...</a><br /></td></tr>
-<tr class="separator:ac36f475ca5b446f4fde4c9b90bec77c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a2722d05c62173b5d6e4a22a4666a6873"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT signals.  <a href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873">More...</a><br /></td></tr>
+<tr class="separator:a2722d05c62173b5d6e4a22a4666a6873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a05589fbab0657f08285ebdfe93f5ec9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea13c5520f05c890c64de9cd26a46e5ce6">APTHOOK_ONSUSPEND</a> = 0, 
+<tr class="memitem:a65688ade2995260aadd4ab7539df58a6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6">APT_HookType</a> { <br />
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6a13c5520f05c890c64de9cd26a46e5ce6">APTHOOK_ONSUSPEND</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9eaa8d5c3b92880336828fd56f93993d3a4">APTHOOK_ONRESTORE</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6aa8d5c3b92880336828fd56f93993d3a4">APTHOOK_ONRESTORE</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea4446865116acaacdf4a8ccf2b5623fbc">APTHOOK_ONSLEEP</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6a4446865116acaacdf4a8ccf2b5623fbc">APTHOOK_ONSLEEP</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea7ef5107c13070dc06c86ad334b78d6bd">APTHOOK_ONWAKEUP</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6a7ef5107c13070dc06c86ad334b78d6bd">APTHOOK_ONWAKEUP</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea0dad384082914a54947b2407dc5edf75">APTHOOK_ONEXIT</a>, 
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6a0dad384082914a54947b2407dc5edf75">APTHOOK_ONEXIT</a>, 
 <br />
-&#160;&#160;<a class="el" href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9eaea6700f7e5b06741e63478592f756645">APTHOOK_COUNT</a>
+&#160;&#160;<a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6aea6700f7e5b06741e63478592f756645">APTHOOK_COUNT</a>
 <br />
- }<tr class="memdesc:a05589fbab0657f08285ebdfe93f5ec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT hook types.  <a href="apt_8h.html#a05589fbab0657f08285ebdfe93f5ec9e">More...</a><br /></td></tr>
-<tr class="separator:a05589fbab0657f08285ebdfe93f5ec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a65688ade2995260aadd4ab7539df58a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">APT hook types.  <a href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6">More...</a><br /></td></tr>
+<tr class="separator:a65688ade2995260aadd4ab7539df58a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -252,12 +252,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a43496c7fd1323be638e32f81456484e6">aptCloseSession</a> (void)</td></tr>
 <tr class="memdesc:a43496c7fd1323be638e32f81456484e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes an APT session. <br /></td></tr>
 <tr class="separator:a43496c7fd1323be638e32f81456484e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae368991bccc21c18551fb8fe4fefc5c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#ae368991bccc21c18551fb8fe4fefc5c2">aptSetStatus</a> (<a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a> status)</td></tr>
-<tr class="memdesc:ae368991bccc21c18551fb8fe4fefc5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the app's status.  <a href="#ae368991bccc21c18551fb8fe4fefc5c2">More...</a><br /></td></tr>
-<tr class="separator:ae368991bccc21c18551fb8fe4fefc5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2187ea470a48f15ebb4137eaf3c865c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a2187ea470a48f15ebb4137eaf3c865c9">aptGetStatus</a> (void)</td></tr>
-<tr class="memdesc:a2187ea470a48f15ebb4137eaf3c865c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the app's status.  <a href="#a2187ea470a48f15ebb4137eaf3c865c9">More...</a><br /></td></tr>
-<tr class="separator:a2187ea470a48f15ebb4137eaf3c865c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbd3ed72a947d50ca8b38c7f685f668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a9fbd3ed72a947d50ca8b38c7f685f668">aptSetStatus</a> (<a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a> status)</td></tr>
+<tr class="memdesc:a9fbd3ed72a947d50ca8b38c7f685f668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the app's status.  <a href="#a9fbd3ed72a947d50ca8b38c7f685f668">More...</a><br /></td></tr>
+<tr class="separator:a9fbd3ed72a947d50ca8b38c7f685f668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934a994022b502b18074661ed41edfff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a934a994022b502b18074661ed41edfff">aptGetStatus</a> (void)</td></tr>
+<tr class="memdesc:a934a994022b502b18074661ed41edfff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the app's status.  <a href="#a934a994022b502b18074661ed41edfff">More...</a><br /></td></tr>
+<tr class="separator:a934a994022b502b18074661ed41edfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0182d88ee69776fa23be4ec014cb9448"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a0182d88ee69776fa23be4ec014cb9448">aptGetStatusPower</a> (void)</td></tr>
 <tr class="memdesc:a0182d88ee69776fa23be4ec014cb9448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the app's power status.  <a href="#a0182d88ee69776fa23be4ec014cb9448">More...</a><br /></td></tr>
 <tr class="separator:a0182d88ee69776fa23be4ec014cb9448"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,7 +281,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_
 <tr class="memitem:a84808c36d9a8c389896ecf241c7f89cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a> (void)</td></tr>
 <tr class="memdesc:a84808c36d9a8c389896ecf241c7f89cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the current APT status.  <a href="#a84808c36d9a8c389896ecf241c7f89cb">More...</a><br /></td></tr>
 <tr class="separator:a84808c36d9a8c389896ecf241c7f89cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8985e95b252207e1adfa32ec8b943ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#ab8985e95b252207e1adfa32ec8b943ea">aptHook</a> (<a class="el" href="structaptHookCookie.html">aptHookCookie</a> *cookie, <a class="el" href="apt_8h.html#a043d12cf104a679be3476ee13b06ca1b">aptHookFn</a> callback, void *param)</td></tr>
+<tr class="memitem:ab8985e95b252207e1adfa32ec8b943ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#ab8985e95b252207e1adfa32ec8b943ea">aptHook</a> (<a class="el" href="structaptHookCookie.html">aptHookCookie</a> *cookie, <a class="el" href="apt_8h.html#abab9ede8bc76064b9da878b9bf9626f5">aptHookFn</a> callback, void *param)</td></tr>
 <tr class="memdesc:ab8985e95b252207e1adfa32ec8b943ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up an APT status hook.  <a href="#ab8985e95b252207e1adfa32ec8b943ea">More...</a><br /></td></tr>
 <tr class="separator:ab8985e95b252207e1adfa32ec8b943ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63034559615a68c7b390ac2912ad38f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a63034559615a68c7b390ac2912ad38f4">aptUnhook</a> (<a class="el" href="structaptHookCookie.html">aptHookCookie</a> *cookie)</td></tr>
@@ -331,9 +331,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_
 <tr class="memitem:a3877c4a86d4e491557e7e9bf86b8da95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a3877c4a86d4e491557e7e9bf86b8da95">APT_IsRegistered</a> (<a class="el" href="apt_8h.html#a932c939a3c27fefb8eadfd97704f8867">NS_APPID</a> appID, <a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> *out)</td></tr>
 <tr class="memdesc:a3877c4a86d4e491557e7e9bf86b8da95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether an application is registered.  <a href="#a3877c4a86d4e491557e7e9bf86b8da95">More...</a><br /></td></tr>
 <tr class="separator:a3877c4a86d4e491557e7e9bf86b8da95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26ac4ae36b5504b5820be7fe0661ad26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a26ac4ae36b5504b5820be7fe0661ad26">APT_InquireNotification</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> appID, <a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> *signalType)</td></tr>
-<tr class="memdesc:a26ac4ae36b5504b5820be7fe0661ad26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inquires as to whether a signal has been received.  <a href="#a26ac4ae36b5504b5820be7fe0661ad26">More...</a><br /></td></tr>
-<tr class="separator:a26ac4ae36b5504b5820be7fe0661ad26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9c84201b13a43c3417d7e2f61b231b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a6d9c84201b13a43c3417d7e2f61b231b">APT_InquireNotification</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> appID, <a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873">APT_Signal</a> *signalType)</td></tr>
+<tr class="memdesc:a6d9c84201b13a43c3417d7e2f61b231b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inquires as to whether a signal has been received.  <a href="#a6d9c84201b13a43c3417d7e2f61b231b">More...</a><br /></td></tr>
+<tr class="separator:a6d9c84201b13a43c3417d7e2f61b231b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99188445583d14b149c898f8fb10f16f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apt_8h.html#a99188445583d14b149c898f8fb10f16f">APT_NotifyToWait</a> (<a class="el" href="apt_8h.html#a932c939a3c27fefb8eadfd97704f8867">NS_APPID</a> appID)</td></tr>
 <tr class="memdesc:a99188445583d14b149c898f8fb10f16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies an application to wait.  <a href="#a99188445583d14b149c898f8fb10f16f">More...</a><br /></td></tr>
 <tr class="separator:a99188445583d14b149c898f8fb10f16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,121 +411,121 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>APT (Applet) service. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8"></a>
+<a class="anchor" id="af758bda479df7ac72bc891fb7c068f47"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>APT signals. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8ae56c10181fe655bfd60690c5d32866a2"></a>APTSIGNAL_HOMEBUTTON&#160;</td><td class="fielddoc">
-<p>Home button pressed. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a046b52a126ac897dc193379ed860d06a"></a>APTSIGNAL_PREPARESLEEP&#160;</td><td class="fielddoc">
-<p>Prepare to enter sleep mode. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8af8166042874c4fdb924214cdd5896c6e"></a>APTSIGNAL_ENTERSLEEP&#160;</td><td class="fielddoc">
-<p>Enter sleep mode. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8ae944de692c8d9ef085d909e138e21bc9"></a>APTSIGNAL_WAKEUP&#160;</td><td class="fielddoc">
-<p>Wake from sleep mode. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a32a307f57737ea8366297b23f550bb7f"></a>APTSIGNAL_ENABLE&#160;</td><td class="fielddoc">
-<p>Enable. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a079561f459d1f1838a33834beffb8aed"></a>APTSIGNAL_POWERBUTTON&#160;</td><td class="fielddoc">
-<p>Power button pressed. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a6475f5b012c2f4a00c2db6ca44a19b4f"></a>APTSIGNAL_UTILITY&#160;</td><td class="fielddoc">
-<p>Utility called. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a3031c83ed6b3b7e51277daa1802bbdca"></a>APTSIGNAL_SLEEPSYSTEM&#160;</td><td class="fielddoc">
-<p>System sleeping. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac36f475ca5b446f4fde4c9b90bec77c8a000d03422313d6646d8d749606aced0c"></a>APTSIGNAL_ERROR&#160;</td><td class="fielddoc">
-<p>Error occurred. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>APT hook types. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9ea13c5520f05c890c64de9cd26a46e5ce6"></a>APTHOOK_ONSUSPEND&#160;</td><td class="fielddoc">
-<p>App suspended. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9eaa8d5c3b92880336828fd56f93993d3a4"></a>APTHOOK_ONRESTORE&#160;</td><td class="fielddoc">
-<p>App restored. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9ea4446865116acaacdf4a8ccf2b5623fbc"></a>APTHOOK_ONSLEEP&#160;</td><td class="fielddoc">
-<p>App sleeping. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9ea7ef5107c13070dc06c86ad334b78d6bd"></a>APTHOOK_ONWAKEUP&#160;</td><td class="fielddoc">
-<p>App waking up. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9ea0dad384082914a54947b2407dc5edf75"></a>APTHOOK_ONEXIT&#160;</td><td class="fielddoc">
-<p>App exiting. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a05589fbab0657f08285ebdfe93f5ec9eaea6700f7e5b06741e63478592f756645"></a>APTHOOK_COUNT&#160;</td><td class="fielddoc">
-<p>Number of APT hook types. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a></td>
+          <td class="memname">enum <a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>App status values. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54a89cf5389dbaa1450c13c06add477a5ff"></a>APP_NOTINITIALIZED&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47a89cf5389dbaa1450c13c06add477a5ff"></a>APP_NOTINITIALIZED&#160;</td><td class="fielddoc">
 <p>App not initialized. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54a71b026b3a2b676e4176ee9f8dae22f1d"></a>APP_RUNNING&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47a71b026b3a2b676e4176ee9f8dae22f1d"></a>APP_RUNNING&#160;</td><td class="fielddoc">
 <p>App running. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54a424275934bd427edfec40795fd3dfc87"></a>APP_SUSPENDED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47a424275934bd427edfec40795fd3dfc87"></a>APP_SUSPENDED&#160;</td><td class="fielddoc">
 <p>App suspended. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54aee012b4f899fb0d3885f261b6c8f6302"></a>APP_EXITING&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47aee012b4f899fb0d3885f261b6c8f6302"></a>APP_EXITING&#160;</td><td class="fielddoc">
 <p>App exiting. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54a95c4af5ec1843b957bcf1389d17a9ac1"></a>APP_SUSPENDING&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47a95c4af5ec1843b957bcf1389d17a9ac1"></a>APP_SUSPENDING&#160;</td><td class="fielddoc">
 <p>App suspending. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54ad69419936a7afd06c6767cad6341e058"></a>APP_SLEEPMODE&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47ad69419936a7afd06c6767cad6341e058"></a>APP_SLEEPMODE&#160;</td><td class="fielddoc">
 <p>App in sleep mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54a80154eb5cf9d6e4a50b6842e3372793f"></a>APP_PREPARE_SLEEPMODE&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47a80154eb5cf9d6e4a50b6842e3372793f"></a>APP_PREPARE_SLEEPMODE&#160;</td><td class="fielddoc">
 <p>App preparing to enter sleep mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54aa6ae16e4812f03d3cf7d0109c4fe166f"></a>APP_APPLETSTARTED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47aa6ae16e4812f03d3cf7d0109c4fe166f"></a>APP_APPLETSTARTED&#160;</td><td class="fielddoc">
 <p>Applet started. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad0cd7c4ceb43643f0765e991bc413e54ac95725568a2a4bc7bbff2c892b8ad119"></a>APP_APPLETCLOSED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af758bda479df7ac72bc891fb7c068f47ac95725568a2a4bc7bbff2c892b8ad119"></a>APP_APPLETCLOSED&#160;</td><td class="fielddoc">
 <p>Applet closed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a65688ade2995260aadd4ab7539df58a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="apt_8h.html#a65688ade2995260aadd4ab7539df58a6">APT_HookType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APT hook types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6a13c5520f05c890c64de9cd26a46e5ce6"></a>APTHOOK_ONSUSPEND&#160;</td><td class="fielddoc">
+<p>App suspended. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6aa8d5c3b92880336828fd56f93993d3a4"></a>APTHOOK_ONRESTORE&#160;</td><td class="fielddoc">
+<p>App restored. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6a4446865116acaacdf4a8ccf2b5623fbc"></a>APTHOOK_ONSLEEP&#160;</td><td class="fielddoc">
+<p>App sleeping. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6a7ef5107c13070dc06c86ad334b78d6bd"></a>APTHOOK_ONWAKEUP&#160;</td><td class="fielddoc">
+<p>App waking up. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6a0dad384082914a54947b2407dc5edf75"></a>APTHOOK_ONEXIT&#160;</td><td class="fielddoc">
+<p>App exiting. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65688ade2995260aadd4ab7539df58a6aea6700f7e5b06741e63478592f756645"></a>APTHOOK_COUNT&#160;</td><td class="fielddoc">
+<p>Number of APT hook types. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873">APT_Signal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APT signals. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873ae56c10181fe655bfd60690c5d32866a2"></a>APTSIGNAL_HOMEBUTTON&#160;</td><td class="fielddoc">
+<p>Home button pressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a046b52a126ac897dc193379ed860d06a"></a>APTSIGNAL_PREPARESLEEP&#160;</td><td class="fielddoc">
+<p>Prepare to enter sleep mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873af8166042874c4fdb924214cdd5896c6e"></a>APTSIGNAL_ENTERSLEEP&#160;</td><td class="fielddoc">
+<p>Enter sleep mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873ae944de692c8d9ef085d909e138e21bc9"></a>APTSIGNAL_WAKEUP&#160;</td><td class="fielddoc">
+<p>Wake from sleep mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a32a307f57737ea8366297b23f550bb7f"></a>APTSIGNAL_ENABLE&#160;</td><td class="fielddoc">
+<p>Enable. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a079561f459d1f1838a33834beffb8aed"></a>APTSIGNAL_POWERBUTTON&#160;</td><td class="fielddoc">
+<p>Power button pressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a6475f5b012c2f4a00c2db6ca44a19b4f"></a>APTSIGNAL_UTILITY&#160;</td><td class="fielddoc">
+<p>Utility called. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a3031c83ed6b3b7e51277daa1802bbdca"></a>APTSIGNAL_SLEEPSYSTEM&#160;</td><td class="fielddoc">
+<p>System sleeping. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2722d05c62173b5d6e4a22a4666a6873a000d03422313d6646d8d749606aced0c"></a>APTSIGNAL_ERROR&#160;</td><td class="fielddoc">
+<p>Error occurred. </p>
 </td></tr>
 </table>
 
@@ -1235,7 +1235,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a26ac4ae36b5504b5820be7fe0661ad26"></a>
+<a class="anchor" id="a6d9c84201b13a43c3417d7e2f61b231b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1248,7 +1248,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="apt_8h.html#a2722d05c62173b5d6e4a22a4666a6873">APT_Signal</a> *&#160;</td>
           <td class="paramname"><em>signalType</em>&#160;</td>
         </tr>
         <tr>
@@ -1956,12 +1956,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2187ea470a48f15ebb4137eaf3c865c9"></a>
+<a class="anchor" id="a934a994022b502b18074661ed41edfff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a> aptGetStatus </td>
+          <td class="memname"><a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a> aptGetStatus </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -2007,7 +2007,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="apt_8h.html#a043d12cf104a679be3476ee13b06ca1b">aptHookFn</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="apt_8h.html#abab9ede8bc76064b9da878b9bf9626f5">aptHookFn</a>&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
@@ -2052,7 +2052,7 @@ Variables</h2></td></tr>
 
 <p>Processes the current APT status. </p>
 <p>Generally used within a main loop. </p><dl class="section return"><dt>Returns</dt><dd>Whether the application is closing. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="app_launch_2source_2main_8c-example.html#a1">app_launch/source/main.c</a>, <a class="el" href="audio_2mic_2source_2main_8c-example.html#a8">audio/mic/source/main.c</a>, <a class="el" href="get_system_language_2source_2main_8c-example.html#a3">get_system_language/source/main.c</a>, <a class="el" href="graphics_2bitmap_224bit-color_2source_2main_8c-example.html#a7">graphics/bitmap/24bit-color/source/main.c</a>, <a class="el" href="graphics_2gpu_2geoshader_2source_2main_8c-example.html#a69">graphics/gpu/geoshader/source/main.c</a>, <a class="el" href="graphics_2gpu_2simple_tri_2source_2main_8c-example.html#a68">graphics/gpu/simple_tri/source/main.c</a>, <a class="el" href="graphics_2gpu_2textured_cube_2source_2main_8c-example.html#a79">graphics/gpu/textured_cube/source/main.c</a>, <a class="el" href="graphics_2printing_2both-screen-text_2source_2main_8c-example.html#a6">graphics/printing/both-screen-text/source/main.c</a>, <a class="el" href="graphics_2printing_2colored-text_2source_2main_8c-example.html#a3">graphics/printing/colored-text/source/main.c</a>, <a class="el" href="graphics_2printing_2hello-world_2source_2main_8c-example.html#a3">graphics/printing/hello-world/source/main.c</a>, <a class="el" href="graphics_2printing_2multiple-windows-text_2source_2main_8c-example.html#a6">graphics/printing/multiple-windows-text/source/main.c</a>, <a class="el" href="http_2source_2main_8c-example.html#a17">http/source/main.c</a>, <a class="el" href="input_2read-controls_2source_2main_8c-example.html#a3">input/read-controls/source/main.c</a>, <a class="el" href="input_2touch-screen_2source_2main_8c-example.html#a3">input/touch-screen/source/main.c</a>, <a class="el" href="libapplet_launch_2source_2main_8c-example.html#a3">libapplet_launch/source/main.c</a>, <a class="el" href="mvd_2source_2main_8c-example.html#a19">mvd/source/main.c</a>, <a class="el" href="qtm_2source_2main_8c-example.html#a6">qtm/source/main.c</a>, <a class="el" href="sdmc_2source_2main_8c-example.html#a4">sdmc/source/main.c</a>, <a class="el" href="threads_2event_2source_2main_8c-example.html#a9">threads/event/source/main.c</a>, and <a class="el" href="time_2rtc_2source_2main_8c-example.html#a3">time/rtc/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="app_launch_2source_2main_8c-example.html#a1">app_launch/source/main.c</a>, <a class="el" href="audio_2mic_2source_2main_8c-example.html#a8">audio/mic/source/main.c</a>, <a class="el" href="get_system_language_2source_2main_8c-example.html#a3">get_system_language/source/main.c</a>, <a class="el" href="graphics_2bitmap_224bit-color_2source_2main_8c-example.html#a7">graphics/bitmap/24bit-color/source/main.c</a>, <a class="el" href="graphics_2gpu_2geoshader_2source_2main_8c-example.html#a69">graphics/gpu/geoshader/source/main.c</a>, <a class="el" href="graphics_2gpu_2simple_tri_2source_2main_8c-example.html#a68">graphics/gpu/simple_tri/source/main.c</a>, <a class="el" href="graphics_2gpu_2textured_cube_2source_2main_8c-example.html#a79">graphics/gpu/textured_cube/source/main.c</a>, <a class="el" href="graphics_2printing_2both-screen-text_2source_2main_8c-example.html#a6">graphics/printing/both-screen-text/source/main.c</a>, <a class="el" href="graphics_2printing_2colored-text_2source_2main_8c-example.html#a3">graphics/printing/colored-text/source/main.c</a>, <a class="el" href="graphics_2printing_2hello-world_2source_2main_8c-example.html#a3">graphics/printing/hello-world/source/main.c</a>, <a class="el" href="graphics_2printing_2multiple-windows-text_2source_2main_8c-example.html#a6">graphics/printing/multiple-windows-text/source/main.c</a>, <a class="el" href="http_2source_2main_8c-example.html#a17">http/source/main.c</a>, <a class="el" href="input_2read-controls_2source_2main_8c-example.html#a3">input/read-controls/source/main.c</a>, <a class="el" href="input_2touch-screen_2source_2main_8c-example.html#a3">input/touch-screen/source/main.c</a>, <a class="el" href="libapplet_launch_2source_2main_8c-example.html#a3">libapplet_launch/source/main.c</a>, <a class="el" href="mvd_2source_2main_8c-example.html#a16">mvd/source/main.c</a>, <a class="el" href="qtm_2source_2main_8c-example.html#a5">qtm/source/main.c</a>, <a class="el" href="sdmc_2source_2main_8c-example.html#a4">sdmc/source/main.c</a>, <a class="el" href="threads_2event_2source_2main_8c-example.html#a9">threads/event/source/main.c</a>, and <a class="el" href="time_2rtc_2source_2main_8c-example.html#a3">time/rtc/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2071,18 +2071,18 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Triggers a return to the home menu. </p>
-<p>This should be called by the user application when <a class="el" href="apt_8h.html#a2187ea470a48f15ebb4137eaf3c865c9" title="Gets the app&#39;s status. ">aptGetStatus()</a> returns APP_SUSPENDING, not calling this will result in return-to-menu being disabled with the status left at APP_SUSPENDING. This function will not return until the system returns to the application, or when the status was changed to APP_EXITING. </p>
+<p>This should be called by the user application when <a class="el" href="apt_8h.html#a934a994022b502b18074661ed41edfff" title="Gets the app&#39;s status. ">aptGetStatus()</a> returns APP_SUSPENDING, not calling this will result in return-to-menu being disabled with the status left at APP_SUSPENDING. This function will not return until the system returns to the application, or when the status was changed to APP_EXITING. </p>
 
 </div>
 </div>
-<a class="anchor" id="ae368991bccc21c18551fb8fe4fefc5c2"></a>
+<a class="anchor" id="a9fbd3ed72a947d50ca8b38c7f685f668"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void aptSetStatus </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="apt_8h.html#ad0cd7c4ceb43643f0765e991bc413e54">APP_STATUS</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="apt_8h.html#af758bda479df7ac72bc891fb7c068f47">APT_AppStatus</a>&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
           <td></td>
         </tr>

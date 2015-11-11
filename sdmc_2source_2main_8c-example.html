@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        <span class="comment">//exit when user hits B</span></div>
 <div class="line">        <a name="a5"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();</div>
-<div class="line">        <span class="keywordflow">if</span>(<a name="a6"></a><a class="code" href="hid_8h.html#ab34b448187933ef0752cac666453a6e4">keysHeld</a>()&amp;<a name="a7"></a><a class="code" href="hid_8h.html#a11f9ec8ae52d2145fbbd1e9fb1ccb752a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a>)<span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">if</span>(<a name="a6"></a><a class="code" href="hid_8h.html#ab34b448187933ef0752cac666453a6e4">keysHeld</a>()&amp;<a name="a7"></a><a class="code" href="hid_8h.html#af9bdc3014f3d54c426b6d2df10de4960a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a>)<span class="keywordflow">break</span>;</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//render rainbow</span></div>
 <div class="line">        renderEffect();</div>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">        <span class="comment">//wait &amp; swap</span></div>
 <div class="line">        <a name="a9"></a><a class="code" href="gfx_8h.html#a3306df28835a647734cf8e299f041527">gfxSwapBuffersGpu</a>();</div>
-<div class="line">        <a name="a10"></a><a class="code" href="gsp_8h.html#a7c3dfd1d134848ea148e34c7d8380e83">gspWaitForEvent</a>(<a name="a11"></a><a class="code" href="gsp_8h.html#aa73ea529a1363f7018e7f68788655e8bae62393a747a9161da356f931bac13d4d">GSPEVENT_VBlank0</a>, <span class="keyword">false</span>);</div>
+<div class="line">        <a name="a10"></a><a class="code" href="gspgpu_8h.html#a91a03ad378747bc554ff611742727958">gspWaitForEvent</a>(GSPEVENT_VBlank0, <span class="keyword">false</span>);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//cleanup and return</span></div>
@@ -175,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    exit:</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//closing all services even more so</span></div>
-<div class="line">    <a name="a12"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
+<div class="line">    <a name="a11"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->

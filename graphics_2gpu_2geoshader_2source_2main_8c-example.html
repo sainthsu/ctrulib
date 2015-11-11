@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a7"></a><a class="code" href="gx_8h.html#aa6e39b328383930b64eaa230bc9bc6a0">GX_MemoryFill</a>(</div>
 <div class="line">        colorBuf, clearColor, &amp;colorBuf[240*400], <a name="a8"></a><a class="code" href="gx_8h.html#af2a0de60baddb7fc1528a62e4e555273a2b6413914fd7889d0ad0610ed4bb5efd">GX_FILL_TRIGGER</a> | <a name="a9"></a><a class="code" href="gx_8h.html#af2a0de60baddb7fc1528a62e4e555273a2642ecb73c80fe5272c041350c08134d">GX_FILL_32BIT_DEPTH</a>,</div>
 <div class="line">        depthBuf, 0,          &amp;depthBuf[240*400], <a class="code" href="gx_8h.html#af2a0de60baddb7fc1528a62e4e555273a2b6413914fd7889d0ad0610ed4bb5efd">GX_FILL_TRIGGER</a> | <a class="code" href="gx_8h.html#af2a0de60baddb7fc1528a62e4e555273a2642ecb73c80fe5272c041350c08134d">GX_FILL_32BIT_DEPTH</a>);</div>
-<div class="line">    <a name="a10"></a><a class="code" href="gsp_8h.html#a704e891a5d988f4964c24dc2b8bac787">gspWaitForPSC0</a>(); <span class="comment">// Wait for the fill to complete</span></div>
+<div class="line">    <a name="a10"></a><a class="code" href="gspgpu_8h.html#a704e891a5d988f4964c24dc2b8bac787">gspWaitForPSC0</a>(); <span class="comment">// Wait for the fill to complete</span></div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> gpuFrameBegin(<span class="keywordtype">void</span>)</div>
@@ -176,14 +176,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a33"></a><a class="code" href="gpu-old_8h.html#a0c6bf377d3b218402cca69bb16778fd5">GPU_FinishDrawing</a>();</div>
 <div class="line">    <a name="a34"></a><a class="code" href="gpu_8h.html#a418b5471dc141d47267cbc9b8facc4a3">GPUCMD_Finalize</a>();</div>
 <div class="line">    <a name="a35"></a><a class="code" href="gpu_8h.html#a7a806155f4e52af7775737d45d9342d5">GPUCMD_FlushAndRun</a>();</div>
-<div class="line">    <a name="a36"></a><a class="code" href="gsp_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">gspWaitForP3D</a>(); <span class="comment">// Wait for the rendering to complete</span></div>
+<div class="line">    <a name="a36"></a><a class="code" href="gspgpu_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">gspWaitForP3D</a>(); <span class="comment">// Wait for the rendering to complete</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Transfer the GPU output to the framebuffer</span></div>
 <div class="line">    <a name="a37"></a><a class="code" href="gx_8h.html#a4de1f2c27d7984b8cf5b93c8913a499b">GX_DisplayTransfer</a>(</div>
 <div class="line">        colorBuf, <a name="a38"></a><a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
 <div class="line">        (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)<a name="a39"></a><a class="code" href="gfx_8h.html#a332447352568e250a75397a1b2e452db">gfxGetFramebuffer</a>(<a name="a40"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09caf9d44178134d07cf9c5923200e14af09">GFX_TOP</a>, <a name="a41"></a><a class="code" href="gfx_8h.html#ab9bacc1d598f0f6e4d5ef8bbeb466b03a1bfda6a35adc49eb4631246ea4e637e1">GFX_LEFT</a>, NULL, NULL), <a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
 <div class="line">        DISPLAY_TRANSFER_FLAGS);</div>
-<div class="line">    <a name="a42"></a><a class="code" href="gsp_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">gspWaitForPPF</a>(); <span class="comment">// Wait for the transfer to complete</span></div>
+<div class="line">    <a name="a42"></a><a class="code" href="gspgpu_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">gspWaitForPPF</a>(); <span class="comment">// Wait for the transfer to complete</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Reset the command buffer</span></div>
 <div class="line">    <a name="a43"></a><a class="code" href="gpu_8h.html#a42142a7ec0fd6ac9941d454f7e18415a">GPUCMD_SetBufferOffset</a>(0);</div>
@@ -655,13 +655,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">// Main loop</span></div>
 <div class="line">    <span class="keywordflow">while</span> (<a name="a69"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a70"></a><a class="code" href="gsp_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();  <span class="comment">// Synchronize with the start of VBlank</span></div>
+<div class="line">        <a name="a70"></a><a class="code" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();  <span class="comment">// Synchronize with the start of VBlank</span></div>
 <div class="line">        <a name="a71"></a><a class="code" href="gfx_8h.html#a3306df28835a647734cf8e299f041527">gfxSwapBuffersGpu</a>(); <span class="comment">// Swap the framebuffers so that the frame that we rendered last frame is now visible</span></div>
 <div class="line">        <a name="a72"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();      <span class="comment">// Read the user input</span></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Respond to user input</span></div>
 <div class="line">        <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> kDown = <a name="a73"></a><a class="code" href="hid_8h.html#aa2cababf764bf0b4297dc2e2fffe2a76">hidKeysDown</a>();</div>
-<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a74"></a><a class="code" href="hid_8h.html#a11f9ec8ae52d2145fbbd1e9fb1ccb752a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
+<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a74"></a><a class="code" href="hid_8h.html#af9bdc3014f3d54c426b6d2df10de4960a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
 <div class="line">            <span class="keywordflow">break</span>; <span class="comment">// break in order to return to hbmenu</span></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Render the scene</span></div>

@@ -100,12 +100,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac6e3edf55aafd5eff1a5c2d58b97581c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="soc_8h.html#ac6e3edf55aafd5eff1a5c2d58b97581c">SOC_Initialize</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *context_addr, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> context_size)</td></tr>
-<tr class="memdesc:ac6e3edf55aafd5eff1a5c2d58b97581c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SOC service.  <a href="#ac6e3edf55aafd5eff1a5c2d58b97581c">More...</a><br /></td></tr>
-<tr class="separator:ac6e3edf55aafd5eff1a5c2d58b97581c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70982d69afcdd486bea45c93b19a702b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="soc_8h.html#a70982d69afcdd486bea45c93b19a702b">SOC_Shutdown</a> (void)</td></tr>
-<tr class="memdesc:a70982d69afcdd486bea45c93b19a702b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the soc service.  <a href="#a70982d69afcdd486bea45c93b19a702b">More...</a><br /></td></tr>
-<tr class="separator:a70982d69afcdd486bea45c93b19a702b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c15255d27f548252f23860e1f7fe39b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="soc_8h.html#a0c15255d27f548252f23860e1f7fe39b">socInit</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *context_addr, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> context_size)</td></tr>
+<tr class="memdesc:a0c15255d27f548252f23860e1f7fe39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SOC service.  <a href="#a0c15255d27f548252f23860e1f7fe39b">More...</a><br /></td></tr>
+<tr class="separator:a0c15255d27f548252f23860e1f7fe39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c165678b18a16dccc315220ec61e1ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="soc_8h.html#a4c165678b18a16dccc315220ec61e1ee">socExit</a> (void)</td></tr>
+<tr class="memdesc:a4c165678b18a16dccc315220ec61e1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the soc service.  <a href="#a4c165678b18a16dccc315220ec61e1ee">More...</a><br /></td></tr>
+<tr class="separator:a4c165678b18a16dccc315220ec61e1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b49a1dc7a37a50ea146982bc01eee1"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="soc_8h.html#ab7b49a1dc7a37a50ea146982bc01eee1">gethostid</a> (void)</td></tr>
 <tr class="memdesc:ab7b49a1dc7a37a50ea146982bc01eee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the system's host ID.  <a href="#ab7b49a1dc7a37a50ea146982bc01eee1">More...</a><br /></td></tr>
 <tr class="separator:ab7b49a1dc7a37a50ea146982bc01eee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,12 +133,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac6e3edf55aafd5eff1a5c2d58b97581c"></a>
+<a class="anchor" id="a4c165678b18a16dccc315220ec61e1ee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> SOC_Initialize </td>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> socExit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Closes the soc service. </p>
+<dl class="section note"><dt>Note</dt><dd>You need to call this in order to be able to use the buffer again. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c15255d27f548252f23860e1f7fe39b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> socInit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *&#160;</td>
           <td class="paramname"><em>context_addr</em>, </td>
@@ -166,25 +185,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The specified context buffer can no longer be accessed by the process which called this function, since the userland permissions for this block are set to no-access. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a70982d69afcdd486bea45c93b19a702b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> SOC_Shutdown </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Closes the soc service. </p>
-<dl class="section note"><dt>Note</dt><dd>You need to call this in order to be able to use the buffer again. </dd></dl>
 
 </div>
 </div>
