@@ -157,38 +157,38 @@ Data types</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="channel_8h.html#a6a3d697b96706c5e9750122d9db592cd">NDSP_ENCODING</a>(n)&#160;&#160;&#160;(((<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>)(n) &amp; 3) &lt;&lt; 2)</td></tr>
 <tr class="memdesc:a6a3d697b96706c5e9750122d9db592cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the encoding used in a sample. <br /></td></tr>
 <tr class="separator:a6a3d697b96706c5e9750122d9db592cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="channel_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae4f3bbb73c75334eed7c63bb947e3ec1">NDSP_ENCODING_PCM8</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="channel_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba641b555f1e09eb8ab7e684df4cdd463a">NDSP_ENCODING_PCM16</a>, 
-<br />
-&#160;&#160;<a class="el" href="channel_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac588413fc3520d386b805e6db0c23c96">NDSP_ENCODING_ADPCM</a>
-<br />
- }<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
 <tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4d9a3eff8fae0658ed120ebadd5c6f42">NDSP_FORMAT_MONO_PCM8</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_PCM8), 
+&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ae4f3bbb73c75334eed7c63bb947e3ec1">NDSP_ENCODING_PCM8</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af9368c39428fe9513f993ee4e9444cb6">NDSP_FORMAT_MONO_PCM16</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_PCM16), 
+&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a641b555f1e09eb8ab7e684df4cdd463a">NDSP_ENCODING_PCM16</a>, 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9e89ff35ab28474c60a4a642b3da2494">NDSP_FORMAT_MONO_ADPCM</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_ADPCM), 
+&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ac588413fc3520d386b805e6db0c23c96">NDSP_ENCODING_ADPCM</a>
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a5c451e1cb286465f8467767bc33696a3">NDSP_FORMAT_STEREO_PCM8</a> = NDSP_CHANNELS(2) | NDSP_ENCODING(NDSP_ENCODING_PCM8), 
+ }<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a4d9a3eff8fae0658ed120ebadd5c6f42">NDSP_FORMAT_MONO_PCM8</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_PCM8), 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a834e1e072bc81fa728389d8759fc51b3">NDSP_FORMAT_STEREO_PCM16</a> = NDSP_CHANNELS(2) | NDSP_ENCODING(NDSP_ENCODING_PCM16), 
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5af9368c39428fe9513f993ee4e9444cb6">NDSP_FORMAT_MONO_PCM16</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_PCM16), 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7afa20b191a6601f6634c5851b685da433">NDSP_FORMAT_PCM8</a> = NDSP_FORMAT_MONO_PCM8, 
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a9e89ff35ab28474c60a4a642b3da2494">NDSP_FORMAT_MONO_ADPCM</a> = NDSP_CHANNELS(1) | NDSP_ENCODING(NDSP_ENCODING_ADPCM), 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a462360a2e9ccc2ccd634f1751c653477">NDSP_FORMAT_PCM16</a> = NDSP_FORMAT_MONO_PCM16, 
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a5c451e1cb286465f8467767bc33696a3">NDSP_FORMAT_STEREO_PCM8</a> = NDSP_CHANNELS(2) | NDSP_ENCODING(NDSP_ENCODING_PCM8), 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4b28453b73b164bd85d5deaa084c357e">NDSP_FORMAT_ADPCM</a> = NDSP_FORMAT_MONO_ADPCM, 
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a834e1e072bc81fa728389d8759fc51b3">NDSP_FORMAT_STEREO_PCM16</a> = NDSP_CHANNELS(2) | NDSP_ENCODING(NDSP_ENCODING_PCM16), 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a21a2e8f1b3fea65d9d636ebae1df2533">NDSP_FRONT_BYPASS</a> = BIT(4), 
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5afa20b191a6601f6634c5851b685da433">NDSP_FORMAT_PCM8</a> = NDSP_FORMAT_MONO_PCM8, 
 <br />
-&#160;&#160;<a class="el" href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7af2e3b4de379053f3edde298c3391ed">NDSP_3D_SURROUND_PREPROCESSED</a> = BIT(6)
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a462360a2e9ccc2ccd634f1751c653477">NDSP_FORMAT_PCM16</a> = NDSP_FORMAT_MONO_PCM16, 
 <br />
- }<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel format flags for use with ndspChnSetFormat.  <a href="channel_8h.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
-<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a4b28453b73b164bd85d5deaa084c357e">NDSP_FORMAT_ADPCM</a> = NDSP_FORMAT_MONO_ADPCM, 
+<br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a21a2e8f1b3fea65d9d636ebae1df2533">NDSP_FRONT_BYPASS</a> = BIT(4), 
+<br />
+&#160;&#160;<a class="el" href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5a7af2e3b4de379053f3edde298c3391ed">NDSP_3D_SURROUND_PREPROCESSED</a> = BIT(6)
+<br />
+ }<tr class="memdesc:a99fb83031ce9923c84392b4e92f956b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel format flags for use with ndspChnSetFormat.  <a href="channel_8h.html#a99fb83031ce9923c84392b4e92f956b5">More...</a><br /></td></tr>
+<tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a6319005cb21b18395a1452e95aabbec3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="channel_8h.html#a6319005cb21b18395a1452e95aabbec3">ndspInterpType</a> { <br />
 &#160;&#160;<a class="el" href="channel_8h.html#a6319005cb21b18395a1452e95aabbec3ac8e204d77e18ef8913e2eab1b18e002b">NDSP_INTERP_POLYPHASE</a> = 0, 
@@ -204,7 +204,7 @@ Data types</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions for interacting with DSP audio channels. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -214,20 +214,20 @@ Data types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55bae4f3bbb73c75334eed7c63bb947e3ec1"></a>NDSP_ENCODING_PCM8&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7ae4f3bbb73c75334eed7c63bb947e3ec1"></a>NDSP_ENCODING_PCM8&#160;</td><td class="fielddoc">
 <p>PCM8. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55ba641b555f1e09eb8ab7e684df4cdd463a"></a>NDSP_ENCODING_PCM16&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a641b555f1e09eb8ab7e684df4cdd463a"></a>NDSP_ENCODING_PCM16&#160;</td><td class="fielddoc">
 <p>PCM16. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55bac588413fc3520d386b805e6db0c23c96"></a>NDSP_ENCODING_ADPCM&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7ac588413fc3520d386b805e6db0c23c96"></a>NDSP_ENCODING_ADPCM&#160;</td><td class="fielddoc">
 <p>DSPADPCM (GameCube format) </p>
 </td></tr>
 </table>
 
 </div>
 </div>
-<a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7"></a>
+<a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -239,34 +239,34 @@ Data types</h2></td></tr>
 
 <p>Channel format flags for use with ndspChnSetFormat. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a4d9a3eff8fae0658ed120ebadd5c6f42"></a>NDSP_FORMAT_MONO_PCM8&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a4d9a3eff8fae0658ed120ebadd5c6f42"></a>NDSP_FORMAT_MONO_PCM8&#160;</td><td class="fielddoc">
 <p>Buffer contains Mono PCM8. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7af9368c39428fe9513f993ee4e9444cb6"></a>NDSP_FORMAT_MONO_PCM16&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5af9368c39428fe9513f993ee4e9444cb6"></a>NDSP_FORMAT_MONO_PCM16&#160;</td><td class="fielddoc">
 <p>Buffer contains Mono PCM16. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a9e89ff35ab28474c60a4a642b3da2494"></a>NDSP_FORMAT_MONO_ADPCM&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a9e89ff35ab28474c60a4a642b3da2494"></a>NDSP_FORMAT_MONO_ADPCM&#160;</td><td class="fielddoc">
 <p>Buffer contains Mono ADPCM. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a5c451e1cb286465f8467767bc33696a3"></a>NDSP_FORMAT_STEREO_PCM8&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a5c451e1cb286465f8467767bc33696a3"></a>NDSP_FORMAT_STEREO_PCM8&#160;</td><td class="fielddoc">
 <p>Buffer contains Stereo PCM8. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a834e1e072bc81fa728389d8759fc51b3"></a>NDSP_FORMAT_STEREO_PCM16&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a834e1e072bc81fa728389d8759fc51b3"></a>NDSP_FORMAT_STEREO_PCM16&#160;</td><td class="fielddoc">
 <p>Buffer contains Stereo PCM16. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7afa20b191a6601f6634c5851b685da433"></a>NDSP_FORMAT_PCM8&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5afa20b191a6601f6634c5851b685da433"></a>NDSP_FORMAT_PCM8&#160;</td><td class="fielddoc">
 <p>(Alias) Buffer contains Mono PCM8. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a462360a2e9ccc2ccd634f1751c653477"></a>NDSP_FORMAT_PCM16&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a462360a2e9ccc2ccd634f1751c653477"></a>NDSP_FORMAT_PCM16&#160;</td><td class="fielddoc">
 <p>(Alias) Buffer contains Mono PCM16. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a4b28453b73b164bd85d5deaa084c357e"></a>NDSP_FORMAT_ADPCM&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a4b28453b73b164bd85d5deaa084c357e"></a>NDSP_FORMAT_ADPCM&#160;</td><td class="fielddoc">
 <p>(Alias) Buffer contains Mono ADPCM. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a21a2e8f1b3fea65d9d636ebae1df2533"></a>NDSP_FRONT_BYPASS&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a21a2e8f1b3fea65d9d636ebae1df2533"></a>NDSP_FRONT_BYPASS&#160;</td><td class="fielddoc">
 <p>Front bypass. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a7af2e3b4de379053f3edde298c3391ed"></a>NDSP_3D_SURROUND_PREPROCESSED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a99fb83031ce9923c84392b4e92f956b5a7af2e3b4de379053f3edde298c3391ed"></a>NDSP_3D_SURROUND_PREPROCESSED&#160;</td><td class="fielddoc">
 <p>(?) Unknown, under research </p>
 </td></tr>
 </table>

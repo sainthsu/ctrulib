@@ -104,15 +104,15 @@ Functions</h2></td></tr>
 <a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#ab5a2d7fec1477e7bd90c0b91095c4842">srvInit</a> (void)</td></tr>
 <tr class="memdesc:ab5a2d7fec1477e7bd90c0b91095c4842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the service API. <br /></td></tr>
 <tr class="separator:ab5a2d7fec1477e7bd90c0b91095c4842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09c3496345090e80ec9d424618ae9a6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09c3496345090e80ec9d424618ae9a6b"></a>
-<a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#a09c3496345090e80ec9d424618ae9a6b">srvExit</a> (void)</td></tr>
-<tr class="memdesc:a09c3496345090e80ec9d424618ae9a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits the service API. <br /></td></tr>
-<tr class="separator:a09c3496345090e80ec9d424618ae9a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a1b72e01488a9d26a94421164a971a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41a1b72e01488a9d26a94421164a971a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#a41a1b72e01488a9d26a94421164a971a">srvExit</a> (void)</td></tr>
+<tr class="memdesc:a41a1b72e01488a9d26a94421164a971a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits the service API. <br /></td></tr>
+<tr class="separator:a41a1b72e01488a9d26a94421164a971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab6cdc04019fc64b219add4013e02b65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#aab6cdc04019fc64b219add4013e02b65">srvGetSessionHandle</a> (void)</td></tr>
 <tr class="memdesc:aab6cdc04019fc64b219add4013e02b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current service API session handle.  <a href="#aab6cdc04019fc64b219add4013e02b65">More...</a><br /></td></tr>
 <tr class="separator:aab6cdc04019fc64b219add4013e02b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a640c3109cd4bfa4bd226fae6485c2c38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#a640c3109cd4bfa4bd226fae6485c2c38">srvGetServiceHandle</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> *out, const char *name)</td></tr>
-<tr class="memdesc:a640c3109cd4bfa4bd226fae6485c2c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a service handle, retrieving from the launcher handle list if possible.  <a href="#a640c3109cd4bfa4bd226fae6485c2c38">More...</a><br /></td></tr>
+<tr class="memdesc:a640c3109cd4bfa4bd226fae6485c2c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a service handle, retrieving from the environment handle list if possible.  <a href="#a640c3109cd4bfa4bd226fae6485c2c38">More...</a><br /></td></tr>
 <tr class="separator:a640c3109cd4bfa4bd226fae6485c2c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5578aec324fdb8bcff2c9c8e31cab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef5578aec324fdb8bcff2c9c8e31cab5"></a>
 <a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srv_8h.html#aef5578aec324fdb8bcff2c9c8e31cab5">srvRegisterClient</a> (void)</td></tr>
@@ -244,7 +244,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieves a service handle, retrieving from the launcher handle list if possible. </p>
+<p>Retrieves a service handle, retrieving from the environment handle list if possible. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Pointer to write the handle to. </td></tr>
