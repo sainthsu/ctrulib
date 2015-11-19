@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -99,6 +100,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><a href="os_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a>.  <a href="structOS__VersionBin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aceac399d08eb60be9497b16a9bc7c287"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aceac399d08eb60be9497b16a9bc7c287"></a>
@@ -147,6 +154,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a7484b739da8ae26a3df6d363eeb13d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#a7484b739da8ae26a3df6d363eeb13d98">osSetSpeedupEnable</a> (bool enable)</td></tr>
 <tr class="memdesc:a7484b739da8ae26a3df6d363eeb13d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the New 3DS speedup.  <a href="#a7484b739da8ae26a3df6d363eeb13d98">More...</a><br /></td></tr>
 <tr class="separator:a7484b739da8ae26a3df6d363eeb13d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bc6073f0b8a41926ad0de5a2a4d4cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#ac3bc6073f0b8a41926ad0de5a2a4d4cb">osGetSystemVersionData</a> (<a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *nver_versionbin, <a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *cver_versionbin)</td></tr>
+<tr class="memdesc:ac3bc6073f0b8a41926ad0de5a2a4d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the NAND system-version stored in NVer/CVer.  <a href="#ac3bc6073f0b8a41926ad0de5a2a4d4cb">More...</a><br /></td></tr>
+<tr class="separator:ac3bc6073f0b8a41926ad0de5a2a4d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb74bb5b93330aff04bf10d317aa9d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#abeb74bb5b93330aff04bf10d317aa9d3">osGetSystemVersionDataString</a> (<a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *nver_versionbin, <a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *cver_versionbin, char *sysverstr, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> sysverstr_maxsize)</td></tr>
+<tr class="memdesc:abeb74bb5b93330aff04bf10d317aa9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a wrapper for osGetSystemVersionData.  <a href="#abeb74bb5b93330aff04bf10d317aa9d3">More...</a><br /></td></tr>
+<tr class="separator:abeb74bb5b93330aff04bf10d317aa9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OS related stuff. </p>
@@ -284,6 +297,92 @@ Functions</h2></td></tr>
 <p>This can be used to compare system versions easily with <a class="el" href="os_8h.html#aceac399d08eb60be9497b16a9bc7c287">SYSTEM_VERSION</a>.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;if(osGetKernelVersion() &gt; SYSTEM_VERSION(2,46,0)) printf(&quot;You are running 9.0 or higher\n&quot;);</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ac3bc6073f0b8a41926ad0de5a2a4d4cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> osGetSystemVersionData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *&#160;</td>
+          <td class="paramname"><em>nver_versionbin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *&#160;</td>
+          <td class="paramname"><em>cver_versionbin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the NAND system-version stored in NVer/CVer. </p>
+<p>The romfs device must not be already initialized(via romfsInit*()) at the time this function is called, since this code uses the romfs device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from NVer. </td></tr>
+    <tr><td class="paramname">cver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from CVer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result-code. This value can be positive if opening "romfs:/version.bin" fails with stdio, since errno would be returned in that case. In some cases the error can be special negative values as well. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abeb74bb5b93330aff04bf10d317aa9d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> osGetSystemVersionDataString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *&#160;</td>
+          <td class="paramname"><em>nver_versionbin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a> *&#160;</td>
+          <td class="paramname"><em>cver_versionbin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sysverstr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td>
+          <td class="paramname"><em>sysverstr_maxsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is a wrapper for osGetSystemVersionData. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from NVer, can be NULL. </td></tr>
+    <tr><td class="paramname">cver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from CVer, can be NULL. </td></tr>
+    <tr><td class="paramname">sysverstr</td><td>Output string where the printed system-version will be written, in the same format displayed by the System Settings title. </td></tr>
+    <tr><td class="paramname">sysverstr_maxsize</td><td>Max size of the above string buffer, <em>including</em> NULL-terminator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>See osGetSystemVersionData. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a05661250c79188dc1c54cd2776d9fb21"></a>
