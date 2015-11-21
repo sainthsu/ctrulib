@@ -168,28 +168,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#ae75aac6e4bfe30037c8a9de916a6ddb8">LightLock_Lock</a>(<a class="code" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a>* lock);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @brief Unlocks a light lock.</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @brief Attempts to lock a light lock.</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a82283ae772ec2eac3a193b1431a681af">LightLock_Unlock</a>(<a class="code" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a>* lock);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> * @brief Initializes a recursive lock.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a1bbbe87bf212a32850ac9f0b6aa73408">RecursiveLock_Init</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * @brief Locks a recursive lock.</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#afea61e6ff137d96934bb145d44095ccb">RecursiveLock_Lock</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> * @brief Unlocks a recursive lock.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a529b21c4a974abeea24b1dcceb75cf62">RecursiveLock_Unlock</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * @return Zero on success, non-zero on failure.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">int</span> <a class="code" href="synchronization_8h.html#a1a1d677c021a8487d567f832dea9d9db">LightLock_TryLock</a>(<a class="code" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a>* lock);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * @brief Unlocks a light lock.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a82283ae772ec2eac3a193b1431a681af">LightLock_Unlock</a>(<a class="code" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a>* lock);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * @brief Initializes a recursive lock.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a1bbbe87bf212a32850ac9f0b6aa73408">RecursiveLock_Init</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * @brief Locks a recursive lock.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#afea61e6ff137d96934bb145d44095ccb">RecursiveLock_Lock</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> * @brief Attempts to lock a recursive lock.</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> * @return Zero on success, non-zero on failure.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">int</span> <a class="code" href="synchronization_8h.html#a8808924fdee80220f83b6992bc5e104d">RecursiveLock_TryLock</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * @brief Unlocks a recursive lock.</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> * @param lock Pointer to the lock.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">void</span> <a class="code" href="synchronization_8h.html#a529b21c4a974abeea24b1dcceb75cf62">RecursiveLock_Unlock</a>(<a class="code" href="structRecursiveLock.html">RecursiveLock</a>* lock);</div>
 <div class="ttc" id="synchronization_8h_html_a940e6c13ff4d7870c4b3825a3fb131c9"><div class="ttname"><a href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a></div><div class="ttdeci">s32 LightLock</div><div class="ttdoc">A light lock. </div><div class="ttdef"><b>Definition:</b> synchronization.h:8</div></div>
 <div class="ttc" id="synchronization_8h_html_a81f625fde46405c1d539b1581d54fb05"><div class="ttname"><a href="synchronization_8h.html#a81f625fde46405c1d539b1581d54fb05">LightLock_Init</a></div><div class="ttdeci">void LightLock_Init(LightLock *lock)</div><div class="ttdoc">Initializes a light lock. </div></div>
 <div class="ttc" id="structRecursiveLock_html_a220a9a3d2e6e3dc187d789417c68872f"><div class="ttname"><a href="structRecursiveLock.html#a220a9a3d2e6e3dc187d789417c68872f">RecursiveLock::counter</a></div><div class="ttdeci">u32 counter</div><div class="ttdoc">Lock count. </div><div class="ttdef"><b>Definition:</b> synchronization.h:15</div></div>
@@ -204,7 +218,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="synchronization_8h_html_ae75aac6e4bfe30037c8a9de916a6ddb8"><div class="ttname"><a href="synchronization_8h.html#ae75aac6e4bfe30037c8a9de916a6ddb8">LightLock_Lock</a></div><div class="ttdeci">void LightLock_Lock(LightLock *lock)</div><div class="ttdoc">Locks a light lock. </div></div>
 <div class="ttc" id="synchronization_8h_html_a9fe83ca3ec3c6ae269203acf367ad5a9"><div class="ttname"><a href="synchronization_8h.html#a9fe83ca3ec3c6ae269203acf367ad5a9">__ldrex</a></div><div class="ttdeci">static s32 __ldrex(s32 *addr)</div><div class="ttdoc">Performs a ldrex operation. </div><div class="ttdef"><b>Definition:</b> synchronization.h:35</div></div>
 <div class="ttc" id="synchronization_8h_html_af5fdce28704bc8d418fe9aaed04d4e90"><div class="ttname"><a href="synchronization_8h.html#af5fdce28704bc8d418fe9aaed04d4e90">__clrex</a></div><div class="ttdeci">static void __clrex(void)</div><div class="ttdoc">Performs a clrex operation. </div><div class="ttdef"><b>Definition:</b> synchronization.h:25</div></div>
+<div class="ttc" id="synchronization_8h_html_a1a1d677c021a8487d567f832dea9d9db"><div class="ttname"><a href="synchronization_8h.html#a1a1d677c021a8487d567f832dea9d9db">LightLock_TryLock</a></div><div class="ttdeci">int LightLock_TryLock(LightLock *lock)</div><div class="ttdoc">Attempts to lock a light lock. </div></div>
 <div class="ttc" id="synchronization_8h_html_afea61e6ff137d96934bb145d44095ccb"><div class="ttname"><a href="synchronization_8h.html#afea61e6ff137d96934bb145d44095ccb">RecursiveLock_Lock</a></div><div class="ttdeci">void RecursiveLock_Lock(RecursiveLock *lock)</div><div class="ttdoc">Locks a recursive lock. </div></div>
+<div class="ttc" id="synchronization_8h_html_a8808924fdee80220f83b6992bc5e104d"><div class="ttname"><a href="synchronization_8h.html#a8808924fdee80220f83b6992bc5e104d">RecursiveLock_TryLock</a></div><div class="ttdeci">int RecursiveLock_TryLock(RecursiveLock *lock)</div><div class="ttdoc">Attempts to lock a recursive lock. </div></div>
 <div class="ttc" id="synchronization_8h_html_a82283ae772ec2eac3a193b1431a681af"><div class="ttname"><a href="synchronization_8h.html#a82283ae772ec2eac3a193b1431a681af">LightLock_Unlock</a></div><div class="ttdeci">void LightLock_Unlock(LightLock *lock)</div><div class="ttdoc">Unlocks a light lock. </div></div>
 <div class="ttc" id="structRecursiveLock_html_a0ba18c8f557e21aa1888404ea86c8f4b"><div class="ttname"><a href="structRecursiveLock.html#a0ba18c8f557e21aa1888404ea86c8f4b">RecursiveLock::thread_tag</a></div><div class="ttdeci">u32 thread_tag</div><div class="ttdoc">Tag of the thread that currently has the lock. </div><div class="ttdef"><b>Definition:</b> synchronization.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -159,6 +159,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ae75aac6e4bfe30037c8a9de916a6ddb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#ae75aac6e4bfe30037c8a9de916a6ddb8">LightLock_Lock</a> (<a class="el" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a> *lock)</td></tr>
 <tr class="memdesc:ae75aac6e4bfe30037c8a9de916a6ddb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks a light lock.  <a href="#ae75aac6e4bfe30037c8a9de916a6ddb8">More...</a><br /></td></tr>
 <tr class="separator:ae75aac6e4bfe30037c8a9de916a6ddb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1d677c021a8487d567f832dea9d9db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#a1a1d677c021a8487d567f832dea9d9db">LightLock_TryLock</a> (<a class="el" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a> *lock)</td></tr>
+<tr class="memdesc:a1a1d677c021a8487d567f832dea9d9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to lock a light lock.  <a href="#a1a1d677c021a8487d567f832dea9d9db">More...</a><br /></td></tr>
+<tr class="separator:a1a1d677c021a8487d567f832dea9d9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82283ae772ec2eac3a193b1431a681af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#a82283ae772ec2eac3a193b1431a681af">LightLock_Unlock</a> (<a class="el" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a> *lock)</td></tr>
 <tr class="memdesc:a82283ae772ec2eac3a193b1431a681af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks a light lock.  <a href="#a82283ae772ec2eac3a193b1431a681af">More...</a><br /></td></tr>
 <tr class="separator:a82283ae772ec2eac3a193b1431a681af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +171,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:afea61e6ff137d96934bb145d44095ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#afea61e6ff137d96934bb145d44095ccb">RecursiveLock_Lock</a> (<a class="el" href="structRecursiveLock.html">RecursiveLock</a> *lock)</td></tr>
 <tr class="memdesc:afea61e6ff137d96934bb145d44095ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks a recursive lock.  <a href="#afea61e6ff137d96934bb145d44095ccb">More...</a><br /></td></tr>
 <tr class="separator:afea61e6ff137d96934bb145d44095ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8808924fdee80220f83b6992bc5e104d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#a8808924fdee80220f83b6992bc5e104d">RecursiveLock_TryLock</a> (<a class="el" href="structRecursiveLock.html">RecursiveLock</a> *lock)</td></tr>
+<tr class="memdesc:a8808924fdee80220f83b6992bc5e104d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to lock a recursive lock.  <a href="#a8808924fdee80220f83b6992bc5e104d">More...</a><br /></td></tr>
+<tr class="separator:a8808924fdee80220f83b6992bc5e104d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529b21c4a974abeea24b1dcceb75cf62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="synchronization_8h.html#a529b21c4a974abeea24b1dcceb75cf62">RecursiveLock_Unlock</a> (<a class="el" href="structRecursiveLock.html">RecursiveLock</a> *lock)</td></tr>
 <tr class="memdesc:a529b21c4a974abeea24b1dcceb75cf62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks a recursive lock.  <a href="#a529b21c4a974abeea24b1dcceb75cf62">More...</a><br /></td></tr>
 <tr class="separator:a529b21c4a974abeea24b1dcceb75cf62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,6 +306,31 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a class="anchor" id="a1a1d677c021a8487d567f832dea9d9db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LightLock_TryLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="synchronization_8h.html#a940e6c13ff4d7870c4b3825a3fb131c9">LightLock</a> *&#160;</td>
+          <td class="paramname"><em>lock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempts to lock a light lock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lock</td><td>Pointer to the lock. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero on success, non-zero on failure. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a82283ae772ec2eac3a193b1431a681af"></a>
 <div class="memitem">
 <div class="memproto">
@@ -369,6 +400,31 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a8808924fdee80220f83b6992bc5e104d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RecursiveLock_TryLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRecursiveLock.html">RecursiveLock</a> *&#160;</td>
+          <td class="paramname"><em>lock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempts to lock a recursive lock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lock</td><td>Pointer to the lock. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero on success, non-zero on failure. </dd></dl>
 
 </div>
 </div>
