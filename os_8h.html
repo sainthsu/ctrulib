@@ -89,7 +89,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">os.h File Reference</div>  </div>
@@ -104,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOS__VersionBin.html">OS_VersionBin</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. Format of the system version: &quot;<major>.<minor>.<build>-<nupver><region>&quot;. ">OS_VersionBin</a>. Format of the system version: "&lt;major&gt;.&lt;minor&gt;.&lt;build&gt;-&lt;nupver&gt;&lt;region&gt;".  <a href="structOS__VersionBin.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a>.  <a href="structOS__VersionBin.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -126,21 +125,6 @@ Macros</h2></td></tr>
 <tr class="memdesc:ac7e2448695a0c735dee58ad61f73f172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the revision version from a packed system version. <br /></td></tr>
 <tr class="separator:ac7e2448695a0c735dee58ad61f73f172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ac4f63d4e584005af063b41bc55bb92eb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a> { <br />
-&#160;&#160;<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eba87d800dfa880eb2c7606cbc6e88cdfc9">MEMREGION_ALL</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92ebaa6dca7f0283dc36043000cf009b3037d">MEMREGION_APPLICATION</a> = 1, 
-<br />
-&#160;&#160;<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eba3593cd195de87cfb8d9ef3a8d4aa4d61">MEMREGION_SYSTEM</a> = 2, 
-<br />
-&#160;&#160;<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eba71250d7c703bed890cb5c41e6a04b292">MEMREGION_BASE</a> = 3
-<br />
- }<tr class="memdesc:ac4f63d4e584005af063b41bc55bb92eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory regions.  <a href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">More...</a><br /></td></tr>
-<tr class="separator:ac4f63d4e584005af063b41bc55bb92eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad5be83050dcdaf4ba7824a2afd420866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#ad5be83050dcdaf4ba7824a2afd420866">osConvertVirtToPhys</a> (const void *vaddr)</td></tr>
@@ -158,15 +142,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a19f063780d025bae2b9c169440eb7598"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#a19f063780d025bae2b9c169440eb7598">osGetKernelVersion</a> (void)</td></tr>
 <tr class="memdesc:a19f063780d025bae2b9c169440eb7598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the system's kernel version.  <a href="#a19f063780d025bae2b9c169440eb7598">More...</a><br /></td></tr>
 <tr class="separator:a19f063780d025bae2b9c169440eb7598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c11685ada809c00648ff3fa9d9c8d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#a84c11685ada809c00648ff3fa9d9c8d8">osGetMemRegionSize</a> (<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a> region)</td></tr>
-<tr class="memdesc:a84c11685ada809c00648ff3fa9d9c8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the specified memory region.  <a href="#a84c11685ada809c00648ff3fa9d9c8d8">More...</a><br /></td></tr>
-<tr class="separator:a84c11685ada809c00648ff3fa9d9c8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affca3762494bdfd269c133e170a1a117"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#affca3762494bdfd269c133e170a1a117">osGetMemRegionUsed</a> (<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a> region)</td></tr>
-<tr class="memdesc:affca3762494bdfd269c133e170a1a117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of used bytes within the specified memory region.  <a href="#affca3762494bdfd269c133e170a1a117">More...</a><br /></td></tr>
-<tr class="separator:affca3762494bdfd269c133e170a1a117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56481c955fe45f6b53d471bd273cb6ef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#a56481c955fe45f6b53d471bd273cb6ef">osGetMemRegionFree</a> (<a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a> region)</td></tr>
-<tr class="memdesc:a56481c955fe45f6b53d471bd273cb6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of free bytes within the specified memory region.  <a href="#a56481c955fe45f6b53d471bd273cb6ef">More...</a><br /></td></tr>
-<tr class="separator:a56481c955fe45f6b53d471bd273cb6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05661250c79188dc1c54cd2776d9fb21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8h.html#a05661250c79188dc1c54cd2776d9fb21">osGetTime</a> (void)</td></tr>
 <tr class="memdesc:a05661250c79188dc1c54cd2776d9fb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current time.  <a href="#a05661250c79188dc1c54cd2776d9fb21">More...</a><br /></td></tr>
 <tr class="separator:a05661250c79188dc1c54cd2776d9fb21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,36 +163,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OS related stuff. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ac4f63d4e584005af063b41bc55bb92eb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Memory regions. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac4f63d4e584005af063b41bc55bb92eba87d800dfa880eb2c7606cbc6e88cdfc9"></a>MEMREGION_ALL&#160;</td><td class="fielddoc">
-<p>All regions. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac4f63d4e584005af063b41bc55bb92ebaa6dca7f0283dc36043000cf009b3037d"></a>MEMREGION_APPLICATION&#160;</td><td class="fielddoc">
-<p>APPLICATION memory. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac4f63d4e584005af063b41bc55bb92eba3593cd195de87cfb8d9ef3a8d4aa4d61"></a>MEMREGION_SYSTEM&#160;</td><td class="fielddoc">
-<p>SYSTEM memory. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ac4f63d4e584005af063b41bc55bb92eba71250d7c703bed890cb5c41e6a04b292"></a>MEMREGION_BASE&#160;</td><td class="fielddoc">
-<p>BASE memory. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a41ed4b6791dc260649c69b1c065f232e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -353,97 +299,6 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a56481c955fe45f6b53d471bd273cb6ef"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="types_8h.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a> osGetMemRegionFree </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a>&#160;</td>
-          <td class="paramname"><em>region</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the number of free bytes within the specified memory region. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">region</td><td>Memory region to check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of free bytes of memory. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a84c11685ada809c00648ff3fa9d9c8d8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> osGetMemRegionSize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a>&#160;</td>
-          <td class="paramname"><em>region</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the size of the specified memory region. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">region</td><td>Memory region to check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The size of the memory region, in bytes. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="affca3762494bdfd269c133e170a1a117"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a> osGetMemRegionUsed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="os_8h.html#ac4f63d4e584005af063b41bc55bb92eb">MemRegion</a>&#160;</td>
-          <td class="paramname"><em>region</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the number of used bytes within the specified memory region. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">region</td><td>Memory region to check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of used bytes of memory. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ac3bc6073f0b8a41926ad0de5a2a4d4cb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -471,8 +326,8 @@ Functions</h2></td></tr>
 <p>Gets the NAND system-version stored in NVer/CVer. </p>
 <p>The romfs device must not be already initialized(via romfsInit*()) at the time this function is called, since this code uses the romfs device. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. Format of the system version: &quot;<major>.<minor>.<build>-<nupver><region>&quot;. ">OS_VersionBin</a> structure for the data read from NVer. </td></tr>
-    <tr><td class="paramname">cver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. Format of the system version: &quot;<major>.<minor>.<build>-<nupver><region>&quot;. ">OS_VersionBin</a> structure for the data read from CVer. </td></tr>
+    <tr><td class="paramname">nver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from NVer. </td></tr>
+    <tr><td class="paramname">cver_versionbin</td><td>Output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from CVer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -519,8 +374,8 @@ Functions</h2></td></tr>
 <p>This is a wrapper for osGetSystemVersionData. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. Format of the system version: &quot;<major>.<minor>.<build>-<nupver><region>&quot;. ">OS_VersionBin</a> structure for the data read from NVer, can be NULL. </td></tr>
-    <tr><td class="paramname">cver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. Format of the system version: &quot;<major>.<minor>.<build>-<nupver><region>&quot;. ">OS_VersionBin</a> structure for the data read from CVer, can be NULL. </td></tr>
+    <tr><td class="paramname">nver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from NVer, can be NULL. </td></tr>
+    <tr><td class="paramname">cver_versionbin</td><td>Optional output <a class="el" href="structOS__VersionBin.html" title="OS_VersionBin. ">OS_VersionBin</a> structure for the data read from CVer, can be NULL. </td></tr>
     <tr><td class="paramname">sysverstr</td><td>Output string where the printed system-version will be written, in the same format displayed by the System Settings title. </td></tr>
     <tr><td class="paramname">sysverstr_maxsize</td><td>Max size of the above string buffer, <em>including</em> NULL-terminator. </td></tr>
   </table>
