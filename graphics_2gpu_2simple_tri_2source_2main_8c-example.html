@@ -158,12 +158,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a21"></a><a class="code" href="gpu-old_8h.html#a8c32fb10ed5457b2e3a9273db61187d3">GPU_SetDepthTestAndWriteMask</a>(<span class="keyword">true</span>, <a name="a22"></a><a class="code" href="enums_8h.html#ad964a2dd9f856d413d01dc81d5712618a939d397eee5556dccc012bddfd0dd46a">GPU_GREATER</a>, <a name="a23"></a><a class="code" href="enums_8h.html#a7fffcfca8e93491a90d7b54cce719cd3ae6311b606a2db6df1e7358ad79e297a0">GPU_WRITE_ALL</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// This is unknown</span></div>
-<div class="line">    <a name="a24"></a><a class="code" href="gpu_8h.html#a9042ca3f0e361abe2a2ede7206376cb5">GPUCMD_AddMaskedWrite</a>(<a name="a25"></a><a class="code" href="registers_8h.html#a3277f667dc9f64cc3919a17905739ee5">GPUREG_0062</a>, 0x1, 0);</div>
-<div class="line">    <a name="a26"></a><a class="code" href="gpu_8h.html#a1251c8456a0f92b49eecbe2c21f0a9a0">GPUCMD_AddWrite</a>(<a name="a27"></a><a class="code" href="registers_8h.html#a92f1665426a2f0932997457dab412e3e">GPUREG_0118</a>, 0);</div>
+<div class="line">    <a name="a24"></a><a class="code" href="gpu_8h.html#a9042ca3f0e361abe2a2ede7206376cb5">GPUCMD_AddMaskedWrite</a>(GPUREG_0062, 0x1, 0);</div>
+<div class="line">    <a name="a25"></a><a class="code" href="gpu_8h.html#a1251c8456a0f92b49eecbe2c21f0a9a0">GPUCMD_AddWrite</a>(GPUREG_0118, 0);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Configure alpha blending and test</span></div>
-<div class="line">    <a name="a28"></a><a class="code" href="gpu-old_8h.html#ac9bf249df1e7a27a56a4e57c81d19e1c">GPU_SetAlphaBlending</a>(<a name="a29"></a><a class="code" href="enums_8h.html#ade416bc8de7b235e270c76f371d3cfb5a39318f81ae768d8a6119e7965a11bd50">GPU_BLEND_ADD</a>, <a class="code" href="enums_8h.html#ade416bc8de7b235e270c76f371d3cfb5a39318f81ae768d8a6119e7965a11bd50">GPU_BLEND_ADD</a>, <a name="a30"></a><a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1af2ec416dc4e7e8562e61d5f7963e8a36">GPU_SRC_ALPHA</a>, <a name="a31"></a><a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1a7bf978d71679e5507689e4570d3d85b2">GPU_ONE_MINUS_SRC_ALPHA</a>, <a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1af2ec416dc4e7e8562e61d5f7963e8a36">GPU_SRC_ALPHA</a>, <a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1a7bf978d71679e5507689e4570d3d85b2">GPU_ONE_MINUS_SRC_ALPHA</a>);</div>
-<div class="line">    <a name="a32"></a><a class="code" href="gpu-old_8h.html#aec1714fa8c2684020ab10a4da8e784e0">GPU_SetAlphaTest</a>(<span class="keyword">false</span>, <a class="code" href="enums_8h.html#ad964a2dd9f856d413d01dc81d5712618a2021d04562bc3b47a305c57dff840c2e">GPU_ALWAYS</a>, 0x00);</div>
+<div class="line">    <a name="a26"></a><a class="code" href="gpu-old_8h.html#ac9bf249df1e7a27a56a4e57c81d19e1c">GPU_SetAlphaBlending</a>(<a name="a27"></a><a class="code" href="enums_8h.html#ade416bc8de7b235e270c76f371d3cfb5a39318f81ae768d8a6119e7965a11bd50">GPU_BLEND_ADD</a>, <a class="code" href="enums_8h.html#ade416bc8de7b235e270c76f371d3cfb5a39318f81ae768d8a6119e7965a11bd50">GPU_BLEND_ADD</a>, <a name="a28"></a><a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1af2ec416dc4e7e8562e61d5f7963e8a36">GPU_SRC_ALPHA</a>, <a name="a29"></a><a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1a7bf978d71679e5507689e4570d3d85b2">GPU_ONE_MINUS_SRC_ALPHA</a>, <a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1af2ec416dc4e7e8562e61d5f7963e8a36">GPU_SRC_ALPHA</a>, <a class="code" href="enums_8h.html#a2a140d854f0e7c97cec2b38f4a226fe1a7bf978d71679e5507689e4570d3d85b2">GPU_ONE_MINUS_SRC_ALPHA</a>);</div>
+<div class="line">    <a name="a30"></a><a class="code" href="gpu-old_8h.html#aec1714fa8c2684020ab10a4da8e784e0">GPU_SetAlphaTest</a>(<span class="keyword">false</span>, <a class="code" href="enums_8h.html#ad964a2dd9f856d413d01dc81d5712618a2021d04562bc3b47a305c57dff840c2e">GPU_ALWAYS</a>, 0x00);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> i;</div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 6; i ++)</div>
@@ -173,30 +173,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordtype">void</span> gpuFrameEnd(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Finish rendering</span></div>
-<div class="line">    <a name="a33"></a><a class="code" href="gpu-old_8h.html#a0c6bf377d3b218402cca69bb16778fd5">GPU_FinishDrawing</a>();</div>
-<div class="line">    <a name="a34"></a><a class="code" href="gpu_8h.html#a418b5471dc141d47267cbc9b8facc4a3">GPUCMD_Finalize</a>();</div>
-<div class="line">    <a name="a35"></a><a class="code" href="gpu_8h.html#a7a806155f4e52af7775737d45d9342d5">GPUCMD_FlushAndRun</a>();</div>
-<div class="line">    <a name="a36"></a><a class="code" href="gspgpu_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">gspWaitForP3D</a>(); <span class="comment">// Wait for the rendering to complete</span></div>
+<div class="line">    <a name="a31"></a><a class="code" href="gpu-old_8h.html#a0c6bf377d3b218402cca69bb16778fd5">GPU_FinishDrawing</a>();</div>
+<div class="line">    <a name="a32"></a><a class="code" href="gpu_8h.html#a418b5471dc141d47267cbc9b8facc4a3">GPUCMD_Finalize</a>();</div>
+<div class="line">    <a name="a33"></a><a class="code" href="gpu_8h.html#a7a806155f4e52af7775737d45d9342d5">GPUCMD_FlushAndRun</a>();</div>
+<div class="line">    <a name="a34"></a><a class="code" href="gspgpu_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">gspWaitForP3D</a>(); <span class="comment">// Wait for the rendering to complete</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Transfer the GPU output to the framebuffer</span></div>
-<div class="line">    <a name="a37"></a><a class="code" href="gx_8h.html#a4de1f2c27d7984b8cf5b93c8913a499b">GX_DisplayTransfer</a>(</div>
-<div class="line">        colorBuf, <a name="a38"></a><a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
-<div class="line">        (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)<a name="a39"></a><a class="code" href="gfx_8h.html#a332447352568e250a75397a1b2e452db">gfxGetFramebuffer</a>(<a name="a40"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09caf9d44178134d07cf9c5923200e14af09">GFX_TOP</a>, <a name="a41"></a><a class="code" href="gfx_8h.html#ab9bacc1d598f0f6e4d5ef8bbeb466b03a1bfda6a35adc49eb4631246ea4e637e1">GFX_LEFT</a>, NULL, NULL), <a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
+<div class="line">    <a name="a35"></a><a class="code" href="gx_8h.html#a4de1f2c27d7984b8cf5b93c8913a499b">GX_DisplayTransfer</a>(</div>
+<div class="line">        colorBuf, <a name="a36"></a><a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
+<div class="line">        (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)<a name="a37"></a><a class="code" href="gfx_8h.html#a332447352568e250a75397a1b2e452db">gfxGetFramebuffer</a>(<a name="a38"></a><a class="code" href="gfx_8h.html#a356112d87f5cf6bbba3ea3b6b010e09caf9d44178134d07cf9c5923200e14af09">GFX_TOP</a>, <a name="a39"></a><a class="code" href="gfx_8h.html#ab9bacc1d598f0f6e4d5ef8bbeb466b03a1bfda6a35adc49eb4631246ea4e637e1">GFX_LEFT</a>, NULL, NULL), <a class="code" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(240, 400),</div>
 <div class="line">        DISPLAY_TRANSFER_FLAGS);</div>
-<div class="line">    <a name="a42"></a><a class="code" href="gspgpu_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">gspWaitForPPF</a>(); <span class="comment">// Wait for the transfer to complete</span></div>
+<div class="line">    <a name="a40"></a><a class="code" href="gspgpu_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">gspWaitForPPF</a>(); <span class="comment">// Wait for the transfer to complete</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Reset the command buffer</span></div>
-<div class="line">    <a name="a43"></a><a class="code" href="gpu_8h.html#a42142a7ec0fd6ac9941d454f7e18415a">GPUCMD_SetBufferOffset</a>(0);</div>
+<div class="line">    <a name="a41"></a><a class="code" href="gpu_8h.html#a42142a7ec0fd6ac9941d454f7e18415a">GPUCMD_SetBufferOffset</a>(0);</div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> GPU_SetDummyTexEnv(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line">{</div>
-<div class="line">    <a name="a44"></a><a class="code" href="gpu-old_8h.html#a7b61022c85fa068574fd6b61d55f9530">GPU_SetTexEnv</a>(<span class="keywordtype">id</span>,</div>
-<div class="line">        <a name="a45"></a><a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a name="a46"></a><a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a1b960db2c45d309c5e4d9c899d051936">GPU_PREVIOUS</a>, 0, 0),</div>
+<div class="line">    <a name="a42"></a><a class="code" href="gpu-old_8h.html#a7b61022c85fa068574fd6b61d55f9530">GPU_SetTexEnv</a>(<span class="keywordtype">id</span>,</div>
+<div class="line">        <a name="a43"></a><a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a name="a44"></a><a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a1b960db2c45d309c5e4d9c899d051936">GPU_PREVIOUS</a>, 0, 0),</div>
 <div class="line">        <a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a1b960db2c45d309c5e4d9c899d051936">GPU_PREVIOUS</a>, 0, 0),</div>
-<div class="line">        <a name="a47"></a><a class="code" href="enums_8h.html#a4f2c9311619707a1276457d94b06a983">GPU_TEVOPERANDS</a>(0, 0, 0),</div>
+<div class="line">        <a name="a45"></a><a class="code" href="enums_8h.html#a4f2c9311619707a1276457d94b06a983">GPU_TEVOPERANDS</a>(0, 0, 0),</div>
 <div class="line">        <a class="code" href="enums_8h.html#a4f2c9311619707a1276457d94b06a983">GPU_TEVOPERANDS</a>(0, 0, 0),</div>
-<div class="line">        <a name="a48"></a><a class="code" href="enums_8h.html#a07c36c673c5ca75d946367821c8afdd0a1c5123d469abc61be2501b97b512cc11">GPU_REPLACE</a>,</div>
+<div class="line">        <a name="a46"></a><a class="code" href="enums_8h.html#a07c36c673c5ca75d946367821c8afdd0a1c5123d469abc61be2501b97b512cc11">GPU_REPLACE</a>,</div>
 <div class="line">        <a class="code" href="enums_8h.html#a07c36c673c5ca75d946367821c8afdd0a1c5123d469abc61be2501b97b512cc11">GPU_REPLACE</a>,</div>
 <div class="line">        0xFFFFFFFF);</div>
 <div class="line">}</div>
@@ -484,8 +484,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#define vertex_list_count (sizeof(vertex_list)/sizeof(vertex_list[0]))</span></div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <a name="_a49"></a><a class="code" href="structDVLB__s.html">DVLB_s</a>* vshader_dvlb;</div>
-<div class="line"><span class="keyword">static</span> <a name="_a50"></a><a class="code" href="structshaderProgram__s.html">shaderProgram_s</a> program;</div>
+<div class="line"><span class="keyword">static</span> <a name="_a47"></a><a class="code" href="structDVLB__s.html">DVLB_s</a>* vshader_dvlb;</div>
+<div class="line"><span class="keyword">static</span> <a name="_a48"></a><a class="code" href="structshaderProgram__s.html">shaderProgram_s</a> program;</div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> uLoc_projection;</div>
 <div class="line"><span class="keyword">static</span> matrix_4x4 projection;</div>
 <div class="line"></div>
@@ -494,12 +494,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> sceneInit(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Load the vertex shader and create a shader program</span></div>
-<div class="line">    vshader_dvlb = <a name="a51"></a><a class="code" href="shbin_8h.html#afd50bf30516e9e3acffd3b62cd061cb0">DVLB_ParseFile</a>((<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)vshader_shbin, vshader_shbin_size);</div>
-<div class="line">    <a name="a52"></a><a class="code" href="shaderProgram_8h.html#a4907e3572c644efe27c130a8c37bddf0">shaderProgramInit</a>(&amp;program);</div>
-<div class="line">    <a name="a53"></a><a class="code" href="shaderProgram_8h.html#a3ca416a2e6bc3c2aaae1895435e8452c">shaderProgramSetVsh</a>(&amp;program, &amp;vshader_dvlb-&gt;<a name="a54"></a><a class="code" href="structDVLB__s.html#a1934abe9c4109579746d57c5b20b5834">DVLE</a>[0]);</div>
+<div class="line">    vshader_dvlb = <a name="a49"></a><a class="code" href="shbin_8h.html#afd50bf30516e9e3acffd3b62cd061cb0">DVLB_ParseFile</a>((<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)vshader_shbin, vshader_shbin_size);</div>
+<div class="line">    <a name="a50"></a><a class="code" href="shaderProgram_8h.html#a4907e3572c644efe27c130a8c37bddf0">shaderProgramInit</a>(&amp;program);</div>
+<div class="line">    <a name="a51"></a><a class="code" href="shaderProgram_8h.html#a3ca416a2e6bc3c2aaae1895435e8452c">shaderProgramSetVsh</a>(&amp;program, &amp;vshader_dvlb-&gt;<a name="a52"></a><a class="code" href="structDVLB__s.html#a1934abe9c4109579746d57c5b20b5834">DVLE</a>[0]);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get the location of the projection matrix uniform</span></div>
-<div class="line">    uLoc_projection = <a name="a55"></a><a class="code" href="shaderProgram_8h.html#afc98c295e7c2634daad923f159ddf604">shaderInstanceGetUniformLocation</a>(program.<a name="a56"></a><a class="code" href="structshaderProgram__s.html#a607da7b7218dbc29d5bd811ecfe7f8f0">vertexShader</a>, <span class="stringliteral">&quot;projection&quot;</span>);</div>
+<div class="line">    uLoc_projection = <a name="a53"></a><a class="code" href="shaderProgram_8h.html#afc98c295e7c2634daad923f159ddf604">shaderInstanceGetUniformLocation</a>(program.<a name="a54"></a><a class="code" href="structshaderProgram__s.html#a607da7b7218dbc29d5bd811ecfe7f8f0">vertexShader</a>, <span class="stringliteral">&quot;projection&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Compute the projection matrix</span></div>
 <div class="line">    m4x4_ortho_tilt(&amp;projection, 0.0, 400.0, 0.0, 240.0, 0.0, 1.0);</div>
@@ -512,12 +512,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> sceneRender(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Bind the shader program</span></div>
-<div class="line">    <a name="a57"></a><a class="code" href="shaderProgram_8h.html#a29749780857245eb8860fe1bda3bcc97">shaderProgramUse</a>(&amp;program);</div>
+<div class="line">    <a name="a55"></a><a class="code" href="shaderProgram_8h.html#a29749780857245eb8860fe1bda3bcc97">shaderProgramUse</a>(&amp;program);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Configure the first fragment shading substage to just pass through the vertex color</span></div>
 <div class="line">    <span class="comment">// See https://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml for more insight</span></div>
 <div class="line">    <a class="code" href="gpu-old_8h.html#a7b61022c85fa068574fd6b61d55f9530">GPU_SetTexEnv</a>(0,</div>
-<div class="line">        <a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a name="a58"></a><a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>), <span class="comment">// RGB channels</span></div>
+<div class="line">        <a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a name="a56"></a><a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>), <span class="comment">// RGB channels</span></div>
 <div class="line">        <a class="code" href="enums_8h.html#abb62754733c37a8490767fd8e004b903">GPU_TEVSOURCES</a>(<a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>, <a class="code" href="enums_8h.html#a43f47361b7edcab3c6b7d064c09ae7d0a73b71da440440b42a6c282c39e566a0d">GPU_PRIMARY_COLOR</a>), <span class="comment">// Alpha</span></div>
 <div class="line">        <a class="code" href="enums_8h.html#a4f2c9311619707a1276457d94b06a983">GPU_TEVOPERANDS</a>(0, 0, 0), <span class="comment">// RGB</span></div>
 <div class="line">        <a class="code" href="enums_8h.html#a4f2c9311619707a1276457d94b06a983">GPU_TEVOPERANDS</a>(0, 0, 0), <span class="comment">// Alpha</span></div>
@@ -525,10 +525,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        0xFFFFFFFF);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Configure the &quot;attribute buffers&quot; (that is, the vertex input buffers)</span></div>
-<div class="line">    <a name="a59"></a><a class="code" href="gpu-old_8h.html#ac81475073183a797d1e723770f5cf6b4">GPU_SetAttributeBuffers</a>(</div>
+<div class="line">    <a name="a57"></a><a class="code" href="gpu-old_8h.html#ac81475073183a797d1e723770f5cf6b4">GPU_SetAttributeBuffers</a>(</div>
 <div class="line">        1, <span class="comment">// Number of inputs per vertex</span></div>
 <div class="line">        (<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>*)<a class="code" href="os_8h.html#ad5be83050dcdaf4ba7824a2afd420866">osConvertVirtToPhys</a>((<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>)vbo_data), <span class="comment">// Location of the VBO</span></div>
-<div class="line">        <a name="a60"></a><a class="code" href="enums_8h.html#aaa7337c142b909e470bbf1ce3c8e9e03">GPU_ATTRIBFMT</a>(0, 3, <a name="a61"></a><a class="code" href="enums_8h.html#a3a62c2be4e88ff3de7c69f1b660d1634af3631e2c847a62946c82604c2faec246">GPU_FLOAT</a>), <span class="comment">// Format of the inputs (in this case the only input is a 3-element float vector)</span></div>
+<div class="line">        <a name="a58"></a><a class="code" href="enums_8h.html#aaa7337c142b909e470bbf1ce3c8e9e03">GPU_ATTRIBFMT</a>(0, 3, <a name="a59"></a><a class="code" href="enums_8h.html#a3a62c2be4e88ff3de7c69f1b660d1634af3631e2c847a62946c82604c2faec246">GPU_FLOAT</a>), <span class="comment">// Format of the inputs (in this case the only input is a 3-element float vector)</span></div>
 <div class="line">        0xFFE, <span class="comment">// Unused attribute mask, in our case bit 0 is cleared since it is used</span></div>
 <div class="line">        0x0, <span class="comment">// Attribute permutations (here it is the identity)</span></div>
 <div class="line">        1, <span class="comment">// Number of buffers</span></div>
@@ -537,10 +537,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        (<a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>[])  { 1 }); <span class="comment">// Number of attributes for each buffer</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Upload the projection matrix</span></div>
-<div class="line">    GPU_SetFloatUniformMatrix(<a name="a62"></a><a class="code" href="enums_8h.html#a178882ce0f114a22e19ff7f0ee842de5a6545b908fe67bb2d298e7468135ef71f">GPU_VERTEX_SHADER</a>, uLoc_projection, &amp;projection);</div>
+<div class="line">    GPU_SetFloatUniformMatrix(<a name="a60"></a><a class="code" href="enums_8h.html#a178882ce0f114a22e19ff7f0ee842de5a6545b908fe67bb2d298e7468135ef71f">GPU_VERTEX_SHADER</a>, uLoc_projection, &amp;projection);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Draw the VBO</span></div>
-<div class="line">    <a name="a63"></a><a class="code" href="gpu-old_8h.html#a4aecce954e20dee2e37e2e774361e9dd">GPU_DrawArray</a>(<a name="a64"></a><a class="code" href="enums_8h.html#a94bdee50fa003d70dd3888f347397806abee71ba286bcf6b5222049ac7beb2d8b">GPU_TRIANGLES</a>, 0, vertex_list_count);</div>
+<div class="line">    <a name="a61"></a><a class="code" href="gpu-old_8h.html#a4aecce954e20dee2e37e2e774361e9dd">GPU_DrawArray</a>(<a name="a62"></a><a class="code" href="enums_8h.html#a94bdee50fa003d70dd3888f347397806abee71ba286bcf6b5222049ac7beb2d8b">GPU_TRIANGLES</a>, 0, vertex_list_count);</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> sceneExit(<span class="keywordtype">void</span>)</div>
@@ -549,14 +549,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="linear_8h.html#aeb28d4069fd209e0067ac185fb9b83e2">linearFree</a>(vbo_data);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Free the shader program</span></div>
-<div class="line">    <a name="a65"></a><a class="code" href="shaderProgram_8h.html#a57cbd903975f5ccce6169159f89714d8">shaderProgramFree</a>(&amp;program);</div>
-<div class="line">    <a name="a66"></a><a class="code" href="shbin_8h.html#a60c02d561312081aefb2096f2b005643">DVLB_Free</a>(vshader_dvlb);</div>
+<div class="line">    <a name="a63"></a><a class="code" href="shaderProgram_8h.html#a57cbd903975f5ccce6169159f89714d8">shaderProgramFree</a>(&amp;program);</div>
+<div class="line">    <a name="a64"></a><a class="code" href="shbin_8h.html#a60c02d561312081aefb2096f2b005643">DVLB_Free</a>(vshader_dvlb);</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Initialize graphics</span></div>
-<div class="line">    <a name="a67"></a><a class="code" href="gfx_8h.html#a236a005ae029247c8bfe4a4a649206fc">gfxInitDefault</a>();</div>
+<div class="line">    <a name="a65"></a><a class="code" href="gfx_8h.html#a236a005ae029247c8bfe4a4a649206fc">gfxInitDefault</a>();</div>
 <div class="line">    gpuInit();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Initialize the scene</span></div>
@@ -564,15 +564,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    gpuClearBuffers(CLEAR_COLOR);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Main loop</span></div>
-<div class="line">    <span class="keywordflow">while</span> (<a name="a68"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
+<div class="line">    <span class="keywordflow">while</span> (<a name="a66"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a69"></a><a class="code" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();  <span class="comment">// Synchronize with the start of VBlank</span></div>
-<div class="line">        <a name="a70"></a><a class="code" href="gfx_8h.html#a3306df28835a647734cf8e299f041527">gfxSwapBuffersGpu</a>(); <span class="comment">// Swap the framebuffers so that the frame that we rendered last frame is now visible</span></div>
-<div class="line">        <a name="a71"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();      <span class="comment">// Read the user input</span></div>
+<div class="line">        <a name="a67"></a><a class="code" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">gspWaitForVBlank</a>();  <span class="comment">// Synchronize with the start of VBlank</span></div>
+<div class="line">        <a name="a68"></a><a class="code" href="gfx_8h.html#a3306df28835a647734cf8e299f041527">gfxSwapBuffersGpu</a>(); <span class="comment">// Swap the framebuffers so that the frame that we rendered last frame is now visible</span></div>
+<div class="line">        <a name="a69"></a><a class="code" href="hid_8h.html#abbbf0e1f3a79a75e459e19f85a66bee6">hidScanInput</a>();      <span class="comment">// Read the user input</span></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Respond to user input</span></div>
-<div class="line">        <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> kDown = <a name="a72"></a><a class="code" href="hid_8h.html#aa2cababf764bf0b4297dc2e2fffe2a76">hidKeysDown</a>();</div>
-<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a73"></a><a class="code" href="hid_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
+<div class="line">        <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> kDown = <a name="a70"></a><a class="code" href="hid_8h.html#aa2cababf764bf0b4297dc2e2fffe2a76">hidKeysDown</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> (kDown &amp; <a name="a71"></a><a class="code" href="hid_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4a616a1f5c4ed36080ca954453084aea3b">KEY_START</a>)</div>
 <div class="line">            <span class="keywordflow">break</span>; <span class="comment">// break in order to return to hbmenu</span></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Render the scene</span></div>
@@ -590,7 +590,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// Deinitialize graphics</span></div>
 <div class="line">    gpuExit();</div>
-<div class="line">    <a name="a74"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
+<div class="line">    <a name="a72"></a><a class="code" href="gfx_8h.html#aa446ccfdfdd4c575e648956ae96f2a3b">gfxExit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
