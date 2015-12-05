@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">shaderProgram.h File Reference</div>  </div>
@@ -112,6 +113,21 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structshaderProgram__s.html">shaderProgram_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes an instance of a full shader program.  <a href="structshaderProgram__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a521deb90d2712091e138c64d10b92835"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835">geoShaderMode</a> { <br />
+&#160;&#160;<a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835a1ea07bec61249ec09f4e723ea97b6a1f">GSH_NORMAL</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835a1aff00edae6f665993dc92034902af4a">GSH_PARTICLE</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835a1399212f935d2a436b4abeddd16e39be">GSH_SUBDIVISION_LOOP</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835ae007be325c1f0d0c90a33370a107f4d1">GSH_SUBDIVISION_CATMULL_CLARK</a> = 3
+<br />
+ }<tr class="memdesc:a521deb90d2712091e138c64d10b92835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry shader operation modes.  <a href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835">More...</a><br /></td></tr>
+<tr class="separator:a521deb90d2712091e138c64d10b92835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -145,6 +161,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6695d885a673c1157c9790f2a732323d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shaderProgram_8h.html#a6695d885a673c1157c9790f2a732323d">shaderProgramSetGshInputPermutation</a> (<a class="el" href="structshaderProgram__s.html">shaderProgram_s</a> *sp, <a class="el" href="types_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a> permutation)</td></tr>
 <tr class="memdesc:a6695d885a673c1157c9790f2a732323d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the permutation of the input attributes of the geometry shader of a shader program.  <a href="#a6695d885a673c1157c9790f2a732323d">More...</a><br /></td></tr>
 <tr class="separator:a6695d885a673c1157c9790f2a732323d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f772524fd9cac56ff0d1e17931ddaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shaderProgram_8h.html#a15f772524fd9cac56ff0d1e17931ddaa">shaderProgramSetGshMode</a> (<a class="el" href="structshaderProgram__s.html">shaderProgram_s</a> *sp, <a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835">geoShaderMode</a> mode)</td></tr>
+<tr class="memdesc:a15f772524fd9cac56ff0d1e17931ddaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the operation mode of the geometry shader of a shader program.  <a href="#a15f772524fd9cac56ff0d1e17931ddaa">More...</a><br /></td></tr>
+<tr class="separator:a15f772524fd9cac56ff0d1e17931ddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae086b40996896135d182f0676e4cdcfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shaderProgram_8h.html#ae086b40996896135d182f0676e4cdcfe">shaderProgramConfigure</a> (<a class="el" href="structshaderProgram__s.html">shaderProgram_s</a> *sp, bool sendVshCode, bool sendGshCode)</td></tr>
 <tr class="memdesc:ae086b40996896135d182f0676e4cdcfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the shader units to use the specified shader program.  <a href="#ae086b40996896135d182f0676e4cdcfe">More...</a><br /></td></tr>
 <tr class="separator:ae086b40996896135d182f0676e4cdcfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +173,36 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions for working with shaders. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a521deb90d2712091e138c64d10b92835"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835">geoShaderMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Geometry shader operation modes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a521deb90d2712091e138c64d10b92835a1ea07bec61249ec09f4e723ea97b6a1f"></a>GSH_NORMAL&#160;</td><td class="fielddoc">
+<p>Normal operation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a521deb90d2712091e138c64d10b92835a1aff00edae6f665993dc92034902af4a"></a>GSH_PARTICLE&#160;</td><td class="fielddoc">
+<p>Particle system. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a521deb90d2712091e138c64d10b92835a1399212f935d2a436b4abeddd16e39be"></a>GSH_SUBDIVISION_LOOP&#160;</td><td class="fielddoc">
+<p>Loop subdivision surface. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a521deb90d2712091e138c64d10b92835ae007be325c1f0d0c90a33370a107f4d1"></a>GSH_SUBDIVISION_CATMULL_CLARK&#160;</td><td class="fielddoc">
+<p>Catmull-Clark subdivision surface. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a813803dc45a4e1232e0092cc5b92e3f2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -498,6 +546,41 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sp</td><td>Shader program to use. </td></tr>
     <tr><td class="paramname">permutation</td><td>Attribute permutation to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a15f772524fd9cac56ff0d1e17931ddaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> shaderProgramSetGshMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structshaderProgram__s.html">shaderProgram_s</a> *&#160;</td>
+          <td class="paramname"><em>sp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="shaderProgram_8h.html#a521deb90d2712091e138c64d10b92835">geoShaderMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the operation mode of the geometry shader of a shader program. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sp</td><td>Shader program to use. </td></tr>
+    <tr><td class="paramname">mode</td><td>Operation mode to use. </td></tr>
   </table>
   </dd>
 </dl>
