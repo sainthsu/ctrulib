@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *threadStack = memalign(32, STACKSIZE);</div>
 <div class="line">    <a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> ret = <a name="a8"></a><a class="code" href="svc_8h.html#a3f62a8f1822c6a78fab2e2cb03c46893">svcCreateThread</a>(&amp;threadHandle, threadMain, 0, &amp;threadStack[STACKSIZE/4], 0x3f, 0);</div>
 <div class="line"></div>
-<div class="line">    printf(<span class="stringliteral">&quot;thread create returned %x\n&quot;</span>, ret);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;thread create returned %lx\n&quot;</span>, ret);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Main loop</span></div>
 <div class="line">    <span class="keywordflow">while</span> (<a name="a9"></a><a class="code" href="apt_8h.html#a84808c36d9a8c389896ecf241c7f89cb">aptMainLoop</a>())</div>
