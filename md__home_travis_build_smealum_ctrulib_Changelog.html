@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libctru
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -81,7 +81,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changelog </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Version 1.0.0</h2>
+<div class="textblock"><h2>Version 1.1.0</h2>
+<ul>
+<li>Additions:<ul>
+<li>GSPGPU/GX code was revised and enhanced:<ul>
+<li>Screens can be buffer-swapped independently using the new gfxConfigScreen function.</li>
+<li>Added gspSetEventCallback for running event code directly on the GSP thread.</li>
+<li>Added gspWaitForAnyEvent for waiting for any GSP event.</li>
+<li>Added gfxIs3D for retrieving 3D-enable status.</li>
+</ul>
+</li>
+<li>Added AM_InstallFirm.</li>
+<li>Added __sync_get_arbiter.</li>
+<li>Added support for usleep.</li>
+</ul>
+</li>
+<li>Changes:<ul>
+<li>NDSP thread priority has been increasing, therefore mitigating potential sound issues due to high CPU usage on the main thread.</li>
+<li>RomFS initialization no longer makes romfs:/ the default device.</li>
+</ul>
+</li>
+<li>Bug fixes:<ul>
+<li>Fixed the timeout parameter in svcArbitrateAddress.</li>
+<li>Fixed svcSetTimer.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 1.0.0</h2>
 <ul>
 <li>New features:<ul>
 <li>libctru documentation is now available at <a href="http://smealum.github.io/ctrulib/">http://smealum.github.io/ctrulib/</a></li>

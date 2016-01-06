@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libctru
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -157,143 +157,160 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a1de71253d8f3e3ea0f504ab6cc621f98">gspExit</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * @brief Initializes the GSPGPU event handler.</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> * @param gspEvent Event handle to use.</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> * @param gspSharedMem GSP shared memory.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> * @param gspThreadId ID of the GSP thread.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa8b40b9b5550a1ed61528c05b586fb6c">gspInitEventHandler</a>(<a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> gspEvent, <a class="code" href="types_8h.html#a1a2a3100a902c32a55d8b08915bce044">vu8</a>* gspSharedMem, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> gspThreadId);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/// Exits the GSPGPU event handler.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a842bbd15e91a9d4e1aa8481106c67e07">gspExitEventHandler</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * @brief Waits for a GSPGPU event to occur.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @param id ID of the event.</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> * @param Whether to discard the current event and wait for the next event.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a91a03ad378747bc554ff611742727958">gspWaitForEvent</a>(<a class="code" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> nextEvent);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/// Waits for PSC0</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a704e891a5d988f4964c24dc2b8bac787">   85</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPSC0() gspWaitForEvent(GSPGPU_EVENT_PSC0, false)</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">/// Waits for PSC1</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a8a6e23746817c80d092cefd439d490f6">   88</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPSC1() gspWaitForEvent(GSPGPU_EVENT_PSC1, false)</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/// Waits for VBlank.</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">   91</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank() gspWaitForVBlank0()</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * @brief Configures a callback to run when a GSPGPU event occurs.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> * @param id ID of the event.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> * @param cb Callback to run.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> * @param data Data to be passed to the callback.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> * @param oneShot When true, the callback is only executed once. When false, the callback is executed every time the event occurs.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a38080f47e69bd240156ca043c7946b29">gspSetEventCallback</a>(<a class="code" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> <span class="keywordtype">id</span>, <a class="code" href="types_8h.html#a857e4e893f41191500e83c00058df64e">ThreadFunc</a> cb, <span class="keywordtype">void</span>* data, <span class="keywordtype">bool</span> oneShot);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * @brief Initializes the GSPGPU event handler.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> * @param gspEvent Event handle to use.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * @param gspSharedMem GSP shared memory.</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @param gspThreadId ID of the GSP thread.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa8b40b9b5550a1ed61528c05b586fb6c">gspInitEventHandler</a>(<a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> gspEvent, <a class="code" href="types_8h.html#a1a2a3100a902c32a55d8b08915bce044">vu8</a>* gspSharedMem, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> gspThreadId);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/// Exits the GSPGPU event handler.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a842bbd15e91a9d4e1aa8481106c67e07">gspExitEventHandler</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * @brief Waits for a GSPGPU event to occur.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> * @param id ID of the event.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * @param nextEvent Whether to discard the current event and wait for the next event.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gspgpu_8h.html#a91a03ad378747bc554ff611742727958">gspWaitForEvent</a>(<a class="code" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> nextEvent);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/// Waits for VBlank0.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#ac999e7889bfe880d47ef787aa4ad36ff">   94</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank0() gspWaitForEvent(GSPGPU_EVENT_VBlank0, true)</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/// Waits for VBlank1.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a109b22fd311cb108387d59c298d5acef">   97</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank1() gspWaitForEvent(GSPGPU_EVENT_VBlank1, true)</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">/// Waits for PPF.</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">  100</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPPF() gspWaitForEvent(GSPGPU_EVENT_PPF, false)</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">/// Waits for P3D.</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">  103</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForP3D() gspWaitForEvent(GSPGPU_EVENT_P3D, false)</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">/// Waits for DMA.</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a95267f3508badebdcd0788cf262c99d8">  106</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForDMA() gspWaitForEvent(GSPGPU_EVENT_DMA, false)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"> * @brief Submits a GX command.</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"> * @param sharedGspCmdBuf Command buffer to use.</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * @param gxCommand GX command to execute.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa4e931a0de3b33497503fc063127af0c">gspSubmitGxCommand</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* sharedGspCmdBuf, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> gxCommand[0x8]);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * @brief Acquires GPU rights.</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> * @param flags Flags to acquire with.</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a317950e5ea5dabed8569ae5683075fc6">GSPGPU_AcquireRight</a>(<a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> flags);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">/// Releases GPU rights.</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa163710b32591debd191e2cbf04e5374">GSPGPU_ReleaseRight</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * @brief Retrieves display capture info.</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> * @param captureinfo Pointer to output capture info to.</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a6677e4b4467934a07320c556f4d103f2">GSPGPU_ImportDisplayCaptureInfo</a>(<a class="code" href="structGSPGPU__CaptureInfo.html">GSPGPU_CaptureInfo</a>*captureinfo);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/// Sames the VRAM sys area.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a6217cefdce79c05f2ae4fdadfac817b0">GSPGPU_SaveVramSysArea</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">/// Restores the VRAM sys area.</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a663f1bd4b15c96bf426ccbda06810fba">GSPGPU_RestoreVramSysArea</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * @brief Sets whether to force the LCD to black.</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> * @param flags Whether to force the LCD to black. (0 = no, non-zero = yes)</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a0be2d830a9eccca7b59bf927b7c5e002">GSPGPU_SetLcdForceBlack</a>(<a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> flags);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * @brief Updates a screen&#39;s framebuffer state.</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> * @param screenid ID of the screen to update.</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> * @param framebufinfo Framebuffer information to update with.</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#ae010c996a4eb9bbd21d9e76d1ef14cbc">GSPGPU_SetBufferSwap</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> screenid, <a class="code" href="structGSPGPU__FramebufferInfo.html">GSPGPU_FramebufferInfo</a>*framebufinfo);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> * @brief Flushes memory from the data cache.</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> * @param adr Address to flush.</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"> * @param size Size of the memory to flush.</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a24f1c78fad4e1108ddc56fb3674cdba2">GSPGPU_FlushDataCache</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* adr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"> * @brief Invalidates memory in the data cache.</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"> * @param adr Address to invalidate.</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"> * @param size Size of the memory to invalidate.</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#abfd8bb5bde8d3072a9041884d599665e">GSPGPU_InvalidateDataCache</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* adr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"> * @brief Writes to GPU hardware registers.</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"> * @param regAddr Register address to write to.</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment"> * @param data Data to write.</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"> * @param size Size of the data to write.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a682c120ccc45f5f6a8d65ef74886206a">GSPGPU_WriteHWRegs</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> size);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"> * @brief Writes to GPU hardware registers with a mask.</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"> * @param regAddr Register address to write to.</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"> * @param data Data to write.</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"> * @param datasize Size of the data to write.</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"> * @param maskdata Data of the mask.</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"> * @param masksize Size of the mask.</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a250b3be40bc03360272d18830de6721e">GSPGPU_WriteHWRegsWithMask</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> datasize, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* maskdata, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> masksize);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment"> * @brief Reads from GPU hardware registers.</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> * @param regAddr Register address to read from.</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"> * @param data Buffer to read data to.</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> * @param size Size of the buffer.</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#ae554cb598da7d9be11dd4345902c43a5">GSPGPU_ReadHWRegs</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> size);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"> * @brief Registers the interrupt relay queue.</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"> * @param eventHandle Handle of the GX command event.</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> * @param flags Flags to register with.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"> * @param outMemHandle Pointer to output the shared memory handle to.</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"> * @param threadID Pointer to output the GSP thread ID to.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * @brief Waits for any GSPGPU event to occur.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * @return The ID of the event that occurred.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> * The function returns immediately if there are unprocessed events at the time of call.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<a class="code" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> <a class="code" href="gspgpu_8h.html#a7280943da0262bb75eacc779bf54be87">gspWaitForAnyEvent</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/// Waits for PSC0</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a704e891a5d988f4964c24dc2b8bac787">  102</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPSC0() gspWaitForEvent(GSPGPU_EVENT_PSC0, false)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/// Waits for PSC1</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a8a6e23746817c80d092cefd439d490f6">  105</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPSC1() gspWaitForEvent(GSPGPU_EVENT_PSC1, false)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/// Waits for VBlank.</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#abf0a992835649b5fe90e95d8a58b8c45">  108</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank() gspWaitForVBlank0()</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/// Waits for VBlank0.</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#ac999e7889bfe880d47ef787aa4ad36ff">  111</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank0() gspWaitForEvent(GSPGPU_EVENT_VBlank0, true)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/// Waits for VBlank1.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a109b22fd311cb108387d59c298d5acef">  114</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForVBlank1() gspWaitForEvent(GSPGPU_EVENT_VBlank1, true)</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">/// Waits for PPF.</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a2f2aca81b76a88b6ebb121ec54f76b7e">  117</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForPPF() gspWaitForEvent(GSPGPU_EVENT_PPF, false)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/// Waits for P3D.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#aba84a82e0137f5dc7a5c9d0ece41d9b7">  120</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForP3D() gspWaitForEvent(GSPGPU_EVENT_P3D, false)</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/// Waits for DMA.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="gspgpu_8h.html#a95267f3508badebdcd0788cf262c99d8">  123</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define gspWaitForDMA() gspWaitForEvent(GSPGPU_EVENT_DMA, false)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> * @brief Submits a GX command.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> * @param sharedGspCmdBuf Command buffer to use.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> * @param gxCommand GX command to execute.</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa4e931a0de3b33497503fc063127af0c">gspSubmitGxCommand</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* sharedGspCmdBuf, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> gxCommand[0x8]);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> * @brief Acquires GPU rights.</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> * @param flags Flags to acquire with.</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a317950e5ea5dabed8569ae5683075fc6">GSPGPU_AcquireRight</a>(<a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> flags);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">/// Releases GPU rights.</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa163710b32591debd191e2cbf04e5374">GSPGPU_ReleaseRight</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> * @brief Retrieves display capture info.</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * @param captureinfo Pointer to output capture info to.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a6677e4b4467934a07320c556f4d103f2">GSPGPU_ImportDisplayCaptureInfo</a>(<a class="code" href="structGSPGPU__CaptureInfo.html">GSPGPU_CaptureInfo</a>*captureinfo);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">/// Sames the VRAM sys area.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a6217cefdce79c05f2ae4fdadfac817b0">GSPGPU_SaveVramSysArea</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/// Restores the VRAM sys area.</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a663f1bd4b15c96bf426ccbda06810fba">GSPGPU_RestoreVramSysArea</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"> * @brief Sets whether to force the LCD to black.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"> * @param flags Whether to force the LCD to black. (0 = no, non-zero = yes)</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a0be2d830a9eccca7b59bf927b7c5e002">GSPGPU_SetLcdForceBlack</a>(<a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> flags);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"> * @brief Updates a screen&#39;s framebuffer state.</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment"> * @param screenid ID of the screen to update.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"> * @param framebufinfo Framebuffer information to update with.</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#ae010c996a4eb9bbd21d9e76d1ef14cbc">GSPGPU_SetBufferSwap</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> screenid, <a class="code" href="structGSPGPU__FramebufferInfo.html">GSPGPU_FramebufferInfo</a>*framebufinfo);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"> * @brief Flushes memory from the data cache.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"> * @param adr Address to flush.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"> * @param size Size of the memory to flush.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a24f1c78fad4e1108ddc56fb3674cdba2">GSPGPU_FlushDataCache</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* adr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"> * @brief Invalidates memory in the data cache.</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"> * @param adr Address to invalidate.</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"> * @param size Size of the memory to invalidate.</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#abfd8bb5bde8d3072a9041884d599665e">GSPGPU_InvalidateDataCache</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* adr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> size);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"> * @brief Writes to GPU hardware registers.</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment"> * @param regAddr Register address to write to.</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> * @param data Data to write.</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"> * @param size Size of the data to write.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a682c120ccc45f5f6a8d65ef74886206a">GSPGPU_WriteHWRegs</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> size);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"> * @brief Writes to GPU hardware registers with a mask.</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"> * @param regAddr Register address to write to.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"> * @param data Data to write.</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> * @param datasize Size of the data to write.</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"> * @param maskdata Data of the mask.</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"> * @param masksize Size of the mask.</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a5ebccf501024a721b2f1ff96abe397ff">GSPGPU_RegisterInterruptRelayQueue</a>(<a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> eventHandle, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> flags, <a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a>* outMemHandle, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* threadID);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a250b3be40bc03360272d18830de6721e">GSPGPU_WriteHWRegsWithMask</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> datasize, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* maskdata, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> masksize);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">/// Unregisters the interrupt relay queue.</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a70ca61cd22140cadbf54c55da13eb48c">GSPGPU_UnregisterInterruptRelayQueue</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">/// Triggers a handling of commands written to shared memory.</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa5d37db7ffdd14031b5f19c6de49f933">GSPGPU_TriggerCmdReqQueue</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"> * @brief Reads from GPU hardware registers.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment"> * @param regAddr Register address to read from.</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment"> * @param data Buffer to read data to.</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> * @param size Size of the buffer.</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#ae554cb598da7d9be11dd4345902c43a5">GSPGPU_ReadHWRegs</a>(<a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> regAddr, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>* data, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> size);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"> * @brief Registers the interrupt relay queue.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"> * @param eventHandle Handle of the GX command event.</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment"> * @param flags Flags to register with.</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment"> * @param outMemHandle Pointer to output the shared memory handle to.</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment"> * @param threadID Pointer to output the GSP thread ID to.</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a5ebccf501024a721b2f1ff96abe397ff">GSPGPU_RegisterInterruptRelayQueue</a>(<a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> eventHandle, <a class="code" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> flags, <a class="code" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a>* outMemHandle, <a class="code" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>* threadID);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">/// Unregisters the interrupt relay queue.</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#a70ca61cd22140cadbf54c55da13eb48c">GSPGPU_UnregisterInterruptRelayQueue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">/// Triggers a handling of commands written to shared memory.</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"></span><a class="code" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a> <a class="code" href="gspgpu_8h.html#aa5d37db7ffdd14031b5f19c6de49f933">GSPGPU_TriggerCmdReqQueue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
 <div class="ttc" id="structGSPGPU__CaptureInfoEntry_html_a09e23bcfb56d75309bf7a547b85c56b0"><div class="ttname"><a href="structGSPGPU__CaptureInfoEntry.html#a09e23bcfb56d75309bf7a547b85c56b0">GSPGPU_CaptureInfoEntry::framebuf1_vaddr</a></div><div class="ttdeci">u32 * framebuf1_vaddr</div><div class="ttdoc">Right framebuffer. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:35</div></div>
 <div class="ttc" id="gspgpu_8h_html_a02ba699764336c8df7f8910921d478cb"><div class="ttname"><a href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a></div><div class="ttdeci">GSPGPU_Event</div><div class="ttdoc">GSPGPU events. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:47</div></div>
 <div class="ttc" id="gspgpu_8h_html_a02ba699764336c8df7f8910921d478cba1bf23df97456715e279a4254b39c49b2"><div class="ttname"><a href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cba1bf23df97456715e279a4254b39c49b2">GSPGPU_EVENT_MAX</a></div><div class="ttdoc">Used to know how many events there are. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:57</div></div>
@@ -303,6 +320,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structGSPGPU__CaptureInfoEntry_html_a067ad2df1b3b46e4e06b26f8f905bdd0"><div class="ttname"><a href="structGSPGPU__CaptureInfoEntry.html#a067ad2df1b3b46e4e06b26f8f905bdd0">GSPGPU_CaptureInfoEntry::format</a></div><div class="ttdeci">u32 format</div><div class="ttdoc">Framebuffer format. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:36</div></div>
 <div class="ttc" id="gspgpu_8h_html_a4c8d43241faec4b99bf24791375c3708a7d05a3900d34338a30c681f67c35093b"><div class="ttname"><a href="gspgpu_8h.html#a4c8d43241faec4b99bf24791375c3708a7d05a3900d34338a30c681f67c35093b">GSP_RGBA4_OES</a></div><div class="ttdoc">RGBA4. (2 bytes) </div><div class="ttdef"><b>Definition:</b> gspgpu.h:28</div></div>
 <div class="ttc" id="structGSPGPU__FramebufferInfo_html_a4e0899ea0a76864a9268a8a938b122ec"><div class="ttname"><a href="structGSPGPU__FramebufferInfo.html#a4e0899ea0a76864a9268a8a938b122ec">GSPGPU_FramebufferInfo::format</a></div><div class="ttdeci">u32 format</div><div class="ttdoc">Framebuffer format, this u16 is written to the low u16 for LCD register 0x1EF00X70. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:16</div></div>
+<div class="ttc" id="types_8h_html_a857e4e893f41191500e83c00058df64e"><div class="ttname"><a href="types_8h.html#a857e4e893f41191500e83c00058df64e">ThreadFunc</a></div><div class="ttdeci">void(* ThreadFunc)(void *)</div><div class="ttdoc">Thread entrypoint function. </div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="gspgpu_8h_html_a38080f47e69bd240156ca043c7946b29"><div class="ttname"><a href="gspgpu_8h.html#a38080f47e69bd240156ca043c7946b29">gspSetEventCallback</a></div><div class="ttdeci">void gspSetEventCallback(GSPGPU_Event id, ThreadFunc cb, void *data, bool oneShot)</div><div class="ttdoc">Configures a callback to run when a GSPGPU event occurs. </div></div>
 <div class="ttc" id="gspgpu_8h_html_a02ba699764336c8df7f8910921d478cba5f7bd78a3019e3d57bac1cfee8cef768"><div class="ttname"><a href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cba5f7bd78a3019e3d57bac1cfee8cef768">GSPGPU_EVENT_PPF</a></div><div class="ttdoc">Display transfer finished. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:53</div></div>
 <div class="ttc" id="gspgpu_8h_html_a70ca61cd22140cadbf54c55da13eb48c"><div class="ttname"><a href="gspgpu_8h.html#a70ca61cd22140cadbf54c55da13eb48c">GSPGPU_UnregisterInterruptRelayQueue</a></div><div class="ttdeci">Result GSPGPU_UnregisterInterruptRelayQueue(void)</div><div class="ttdoc">Unregisters the interrupt relay queue. </div></div>
 <div class="ttc" id="gspgpu_8h_html_a0be2d830a9eccca7b59bf927b7c5e002"><div class="ttname"><a href="gspgpu_8h.html#a0be2d830a9eccca7b59bf927b7c5e002">GSPGPU_SetLcdForceBlack</a></div><div class="ttdeci">Result GSPGPU_SetLcdForceBlack(u8 flags)</div><div class="ttdoc">Sets whether to force the LCD to black. </div></div>
@@ -322,6 +341,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structGSPGPU__FramebufferInfo_html_ad33ec3ca41e404b967416c78c7aa7db8"><div class="ttname"><a href="structGSPGPU__FramebufferInfo.html#ad33ec3ca41e404b967416c78c7aa7db8">GSPGPU_FramebufferInfo::framebuf_dispselect</a></div><div class="ttdeci">u32 framebuf_dispselect</div><div class="ttdoc">Value for 0x1EF00X78, controls which framebuffer is displayed. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:17</div></div>
 <div class="ttc" id="gspgpu_8h_html_a02ba699764336c8df7f8910921d478cba767fab5a8e58912ea84f192dff6926af"><div class="ttname"><a href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cba767fab5a8e58912ea84f192dff6926af">GSPGPU_EVENT_DMA</a></div><div class="ttdoc">TODO. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:55</div></div>
 <div class="ttc" id="gspgpu_8h_html_a4c8d43241faec4b99bf24791375c3708af2acd7de248add1481404d4cd1fdf816"><div class="ttname"><a href="gspgpu_8h.html#a4c8d43241faec4b99bf24791375c3708af2acd7de248add1481404d4cd1fdf816">GSP_RGB565_OES</a></div><div class="ttdoc">RGB565. (2 bytes) </div><div class="ttdef"><b>Definition:</b> gspgpu.h:26</div></div>
+<div class="ttc" id="gspgpu_8h_html_a7280943da0262bb75eacc779bf54be87"><div class="ttname"><a href="gspgpu_8h.html#a7280943da0262bb75eacc779bf54be87">gspWaitForAnyEvent</a></div><div class="ttdeci">GSPGPU_Event gspWaitForAnyEvent(void)</div><div class="ttdoc">Waits for any GSPGPU event to occur. </div></div>
 <div class="ttc" id="types_8h_html_afaa62991928fb9fb18ff0db62a040aba"><div class="ttname"><a href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdoc">32-bit unsigned integer </div><div class="ttdef"><b>Definition:</b> types.h:23</div></div>
 <div class="ttc" id="structGSPGPU__CaptureInfoEntry_html"><div class="ttname"><a href="structGSPGPU__CaptureInfoEntry.html">GSPGPU_CaptureInfoEntry</a></div><div class="ttdoc">Capture info entry. </div><div class="ttdef"><b>Definition:</b> gspgpu.h:32</div></div>
 <div class="ttc" id="gspgpu_8h_html_aa8b40b9b5550a1ed61528c05b586fb6c"><div class="ttname"><a href="gspgpu_8h.html#aa8b40b9b5550a1ed61528c05b586fb6c">gspInitEventHandler</a></div><div class="ttdeci">Result gspInitEventHandler(Handle gspEvent, vu8 *gspSharedMem, u8 gspThreadId)</div><div class="ttdoc">Initializes the GSPGPU event handler. </div></div>

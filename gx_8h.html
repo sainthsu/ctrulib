@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libctru
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -104,9 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad34237bd30a2a96a6074e8967840d4fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad34237bd30a2a96a6074e8967840d4fc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(w,  h)&#160;&#160;&#160;(((h)&lt;&lt;16)|((w)&amp;0xFFFF))</td></tr>
-<tr class="memdesc:ad34237bd30a2a96a6074e8967840d4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a buffer dimension parameter from width and height values. <br /></td></tr>
+<tr class="memitem:ad34237bd30a2a96a6074e8967840d4fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gx_8h.html#ad34237bd30a2a96a6074e8967840d4fc">GX_BUFFER_DIM</a>(w,  h)&#160;&#160;&#160;(((h)&lt;&lt;16)|((w)&amp;0xFFFF))</td></tr>
+<tr class="memdesc:ad34237bd30a2a96a6074e8967840d4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a buffer dimension parameter from width and height values.  <a href="#ad34237bd30a2a96a6074e8967840d4fc">More...</a><br /></td></tr>
 <tr class="separator:ad34237bd30a2a96a6074e8967840d4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b4c4ad91299256a7c285e9ba7673b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b4c4ad91299256a7c285e9ba7673b9"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gx_8h.html#a19b4c4ad91299256a7c285e9ba7673b9">GX_TRANSFER_FLIP_VERT</a>(x)&#160;&#160;&#160;((x)&lt;&lt;0)</td></tr>
@@ -212,7 +211,44 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>GX commands. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ad34237bd30a2a96a6074e8967840d4fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GX_BUFFER_DIM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">h&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((h)&lt;&lt;16)|((w)&amp;0xFFFF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a buffer dimension parameter from width and height values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>buffer width for GX_DisplayTransfer, linesize for GX_TextureCopy </td></tr>
+    <tr><td class="paramname">h</td><td>buffer height for GX_DisplayTransfer, gap for GX_TextureCopy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="graphics_2gpu_2gpusprites_2source_2main_8c-example.html#a14">graphics/gpu/gpusprites/source/main.c</a>.</dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="af2a0de60baddb7fc1528a62e4e555273"></a>
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +393,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="graphics_2gpu_2geoshader_2source_2main_8c-example.html#a35">graphics/gpu/geoshader/source/main.c</a>, <a class="el" href="graphics_2gpu_2simple_tri_2source_2main_8c-example.html#a35">graphics/gpu/simple_tri/source/main.c</a>, and <a class="el" href="graphics_2gpu_2textured_cube_2source_2main_8c-example.html#a35">graphics/gpu/textured_cube/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="graphics_2gpu_2gpusprites_2source_2main_8c-example.html#a13">graphics/gpu/gpusprites/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -498,8 +534,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="graphics_2gpu_2geoshader_2source_2main_8c-example.html#a7">graphics/gpu/geoshader/source/main.c</a>, <a class="el" href="graphics_2gpu_2simple_tri_2source_2main_8c-example.html#a7">graphics/gpu/simple_tri/source/main.c</a>, and <a class="el" href="graphics_2gpu_2textured_cube_2source_2main_8c-example.html#a7">graphics/gpu/textured_cube/source/main.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2346e838070d5029faf7e57a9fdf69bf"></a>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libctru
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -199,6 +199,9 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#a1de71253d8f3e3ea0f504ab6cc621f98">gspExit</a> (void)</td></tr>
 <tr class="memdesc:a1de71253d8f3e3ea0f504ab6cc621f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits GSPGPU. <br /></td></tr>
 <tr class="separator:a1de71253d8f3e3ea0f504ab6cc621f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38080f47e69bd240156ca043c7946b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#a38080f47e69bd240156ca043c7946b29">gspSetEventCallback</a> (<a class="el" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> id, <a class="el" href="types_8h.html#a857e4e893f41191500e83c00058df64e">ThreadFunc</a> cb, void *data, bool oneShot)</td></tr>
+<tr class="memdesc:a38080f47e69bd240156ca043c7946b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a callback to run when a GSPGPU event occurs.  <a href="#a38080f47e69bd240156ca043c7946b29">More...</a><br /></td></tr>
+<tr class="separator:a38080f47e69bd240156ca043c7946b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8b40b9b5550a1ed61528c05b586fb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#aa8b40b9b5550a1ed61528c05b586fb6c">gspInitEventHandler</a> (<a class="el" href="types_8h.html#ab6d744c6b5de129f12937e482dc674fb">Handle</a> gspEvent, <a class="el" href="types_8h.html#a1a2a3100a902c32a55d8b08915bce044">vu8</a> *gspSharedMem, <a class="el" href="types_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> gspThreadId)</td></tr>
 <tr class="memdesc:aa8b40b9b5550a1ed61528c05b586fb6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the GSPGPU event handler.  <a href="#aa8b40b9b5550a1ed61528c05b586fb6c">More...</a><br /></td></tr>
 <tr class="separator:aa8b40b9b5550a1ed61528c05b586fb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,6 +212,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspg
 <tr class="memitem:a91a03ad378747bc554ff611742727958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#a91a03ad378747bc554ff611742727958">gspWaitForEvent</a> (<a class="el" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> id, bool nextEvent)</td></tr>
 <tr class="memdesc:a91a03ad378747bc554ff611742727958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for a GSPGPU event to occur.  <a href="#a91a03ad378747bc554ff611742727958">More...</a><br /></td></tr>
 <tr class="separator:a91a03ad378747bc554ff611742727958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7280943da0262bb75eacc779bf54be87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#a7280943da0262bb75eacc779bf54be87">gspWaitForAnyEvent</a> (void)</td></tr>
+<tr class="memdesc:a7280943da0262bb75eacc779bf54be87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for any GSPGPU event to occur.  <a href="#a7280943da0262bb75eacc779bf54be87">More...</a><br /></td></tr>
+<tr class="separator:a7280943da0262bb75eacc779bf54be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e931a0de3b33497503fc063127af0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ac830bf5a4f2cf8273f61ab99a46cf163">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspgpu_8h.html#aa4e931a0de3b33497503fc063127af0c">gspSubmitGxCommand</a> (<a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> *sharedGspCmdBuf, <a class="el" href="types_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> gxCommand[0x8])</td></tr>
 <tr class="memdesc:aa4e931a0de3b33497503fc063127af0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a GX command.  <a href="#aa4e931a0de3b33497503fc063127af0c">More...</a><br /></td></tr>
 <tr class="separator:aa4e931a0de3b33497503fc063127af0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,7 +400,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspg
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="audio_2mic_2source_2main_8c-example.html#a24">audio/mic/source/main.c</a>, and <a class="el" href="mvd_2source_2main_8c-example.html#a5">mvd/source/main.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="audio_2mic_2source_2main_8c-example.html#a24">audio/mic/source/main.c</a>, <a class="el" href="graphics_2gpu_2gpusprites_2source_2main_8c-example.html#a11">graphics/gpu/gpusprites/source/main.c</a>, and <a class="el" href="mvd_2source_2main_8c-example.html#a5">mvd/source/main.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -748,6 +754,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspg
 
 </div>
 </div>
+<a class="anchor" id="a38080f47e69bd240156ca043c7946b29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gspSetEventCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a857e4e893f41191500e83c00058df64e">ThreadFunc</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>oneShot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures a callback to run when a GSPGPU event occurs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of the event. </td></tr>
+    <tr><td class="paramname">cb</td><td>Callback to run. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to be passed to the callback. </td></tr>
+    <tr><td class="paramname">oneShot</td><td>When true, the callback is only executed once. When false, the callback is executed every time the event occurs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aa4e931a0de3b33497503fc063127af0c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -783,6 +838,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspg
 
 </div>
 </div>
+<a class="anchor" id="a7280943da0262bb75eacc779bf54be87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gspgpu_8h.html#a02ba699764336c8df7f8910921d478cb">GSPGPU_Event</a> gspWaitForAnyEvent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits for any GSPGPU event to occur. </p>
+<dl class="section return"><dt>Returns</dt><dd>The ID of the event that occurred.</dd></dl>
+<p>The function returns immediately if there are unprocessed events at the time of call. </p>
+
+</div>
+</div>
 <a class="anchor" id="a91a03ad378747bc554ff611742727958"></a>
 <div class="memitem">
 <div class="memproto">
@@ -811,7 +886,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gspg
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>ID of the event. </td></tr>
-    <tr><td class="paramname">Whether</td><td>to discard the current event and wait for the next event. </td></tr>
+    <tr><td class="paramname">nextEvent</td><td>Whether to discard the current event and wait for the next event. </td></tr>
   </table>
   </dd>
 </dl>
