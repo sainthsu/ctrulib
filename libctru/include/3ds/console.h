@@ -18,6 +18,7 @@
 
 #include <3ds/types.h>
 #include <3ds/gfx.h>
+#include <3ds/gbk_font.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,8 +35,15 @@ extern "C" {
 #define CONSOLE_CYAN    CONSOLE_ESC(36;1m)
 #define CONSOLE_WHITE   CONSOLE_ESC(37;1m)
 
+#define CONSOLE_CTYPE_UTF8 0
+
+#define CONSOLE_LOCALE_EN 0
+#define CONSOLE_LOCALE_CN 1
+
 /// A callback for printing a character.
 typedef bool(*ConsolePrint)(void* con, int c);
+typedef int (*GetFontCell)(u16 unicode, FONT_CELL* cell);
+
 
 /// A font struct for the console.
 typedef struct ConsoleFont
@@ -75,7 +83,7 @@ typedef struct ConsoleFont
  */
 typedef struct PrintConsole
 {
-	ConsoleFont font;        ///< Font of the console
+    GetFontCell getFontCell;        ///< get Font cell function of the console
 
 	u16 *frameBuffer;        ///< Framebuffer address
 
@@ -125,7 +133,7 @@ typedef enum {
  * @param console Pointer to the console to update, if NULL it will update the current console.
  * @param font The font to load.
  */
-void consoleSetFont(PrintConsole* console, ConsoleFont* font);
+void consoleSetFont(PrintConsole* console, GetFontCell getfontFunc);
 
 /**
  * @brief Sets the print window.

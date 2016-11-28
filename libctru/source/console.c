@@ -5,7 +5,9 @@
 #include <3ds/console.h>
 #include <3ds/svc.h>
 
-#include "default_font_bin.h"
+#include <3ds/util/utf.h>
+
+extern int gbk_get_font_cell(u16 unicode, FONT_CELL* cell);
 
 //set up the palette for color printing
 static u16 colorTable[] = {
@@ -40,11 +42,12 @@ static u16 colorTable[] = {
 PrintConsole defaultConsole =
 {
 	//Font:
-	{
-		(u8*)default_font_bin, //font gfx
-		0, //first ascii character in the set
-		256 //number of characters in the font set
-	},
+    //{
+    //	(u8*)default_font_bin, //font gfx
+    //	0, //first ascii character in the set
+    //	256 //number of characters in the font set
+    //},
+    gbk_get_font_cell,
 	(u16*)NULL,
 	0,0,	//cursorX cursorY
 	0,0,	//prevcursorX prevcursorY
@@ -68,8 +71,8 @@ PrintConsole* currentConsole = &currentCopy;
 
 PrintConsole* consoleGetDefault(void){return &defaultConsole;}
 
-void consolePrintChar(int c);
-void consoleDrawChar(int c);
+void consolePrintChar(u16 c);
+void consoleDrawChar(u16 c);
 
 //---------------------------------------------------------------------------------
 static void consoleCls(char mode) {
@@ -184,19 +187,26 @@ ssize_t con_write(struct _reent *r,int fd,const char *ptr, size_t len) {
 
 	char chr;
 
-	int i, count = 0;
+    int i,length,count = 0;
 	char *tmp = (char*)ptr;
 
 	if(!tmp || len<=0) return -1;
 
 	i = 0;
+    u16 unicode;
 
 	while(i<len) {
+        uint32_t code;
 
-		chr = *(tmp++);
-		i++; count++;
+        length = decode_utf8(&code, (const u8*)tmp);
+        i += length;count++;
+        tmp += length;
+        if(code >= 0x10000 || code < 0) {
+            continue;
+        }
+        unicode = code;
 
-		if ( chr == 0x1b && *tmp == '[' ) {
+        if ( unicode == 0x1b && *tmp == '[' ) {
 			bool escaping = true;
 			char *escapeseq	= tmp++;
 			int escapelen = 1;
@@ -453,7 +463,7 @@ ssize_t con_write(struct _reent *r,int fd,const char *ptr, size_t len) {
 			continue;
 		}
 
-		consolePrintChar(chr);
+        consolePrintChar(unicode);
 	}
 
 	return count;
@@ -577,12 +587,12 @@ PrintConsole *consoleSelect(PrintConsole* console){
 }
 
 //---------------------------------------------------------------------------------
-void consoleSetFont(PrintConsole* console, ConsoleFont* font){
+void consoleSetFont(PrintConsole* console, GetFontCell getfontFunc) {
 //---------------------------------------------------------------------------------
 
 	if(!console) console = currentConsole;
 
-	console->font = *font;
+    console->getFontCell = getfontFunc;
 
 }
 
@@ -613,12 +623,11 @@ static void newRow() {
 	}
 }
 //---------------------------------------------------------------------------------
-void consoleDrawChar(int c) {
+void consoleDrawChar(u16 c) {
 //---------------------------------------------------------------------------------
-	c -= currentConsole->font.asciiOffset;
-	if ( c < 0 || c > currentConsole->font.numChars ) return;
-
-	u8 *fontdata = currentConsole->font.gfx + (8 * c);
+    FONT_CELL cell;
+    int result = currentConsole->getFontCell(c,&cell);
+    if(result < 0) return;
 
 	int writingColor = currentConsole->fg;
 	int screenColor = currentConsole->bg;
@@ -638,21 +647,48 @@ void consoleDrawChar(int c) {
 	u16 bg = colorTable[screenColor];
 	u16 fg = colorTable[writingColor];
 
-	u8 b1 = *(fontdata++);
-	u8 b2 = *(fontdata++);
-	u8 b3 = *(fontdata++);
-	u8 b4 = *(fontdata++);
-	u8 b5 = *(fontdata++);
-	u8 b6 = *(fontdata++);
-	u8 b7 = *(fontdata++);
-	u8 b8 = *(fontdata++);
+    u8 b11 = *(cell.glyphData++);
+    u8 b12 = *(cell.glyphData++);
+    u8 b21 = *(cell.glyphData++);
+    u8 b22 = *(cell.glyphData++);
+    u8 b31 = *(cell.glyphData++);
+    u8 b32 = *(cell.glyphData++);
+    u8 b41 = *(cell.glyphData++);
+    u8 b42 = *(cell.glyphData++);
+    u8 b51 = *(cell.glyphData++);
+    u8 b52 = *(cell.glyphData++);
+    u8 b61 = *(cell.glyphData++);
+    u8 b62 = *(cell.glyphData++);
+    u8 b71 = *(cell.glyphData++);
+    u8 b72 = *(cell.glyphData++);
+    u8 b81 = *(cell.glyphData++);
+    u8 b82 = *(cell.glyphData++);
+    u8 b91 = *(cell.glyphData++);
+    u8 b92 = *(cell.glyphData++);
+    u8 b101 = *(cell.glyphData++);
+    u8 b102 = *(cell.glyphData++);
+    u8 b111 = *(cell.glyphData++);
+    u8 b112 = *(cell.glyphData++);
+    u8 b121 = *(cell.glyphData++);
+    u8 b122 = *(cell.glyphData++);
+    u8 b131 = *(cell.glyphData++);
+    u8 b132 = *(cell.glyphData++);
+    u8 b141 = *(cell.glyphData++);
+    u8 b142 = *(cell.glyphData++);
+    u8 b151 = *(cell.glyphData++);
+    u8 b152 = *(cell.glyphData++);
+    u8 b161 = *(cell.glyphData++);
+    u8 b162 = *(cell.glyphData++);
 
-	if (currentConsole->flags & CONSOLE_UNDERLINE) b8 = 0xff;
+    if (currentConsole->flags & CONSOLE_UNDERLINE) {
+        b161 = 0xff;b162 = 0xff;
+    }
 
-	if (currentConsole->flags & CONSOLE_CROSSED_OUT) b4 = 0xff;
+    if (currentConsole->flags & CONSOLE_CROSSED_OUT) {
+        b81 = 0xff;b82 = 0xff;
+    }
 
 	u8 mask = 0x80;
-
 
 	int i;
 
@@ -661,23 +697,47 @@ void consoleDrawChar(int c) {
 
 	u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 7))];
 
-	for (i=0;i<8;i++) {
-		if (b8 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b7 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b6 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b5 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b4 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b3 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b2 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		if (b1 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+    for (i=0;i<32;i++) {
+        if (b162 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b161 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b152 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b151 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b142 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b141 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b132 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b131 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b122 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b121 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b112 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b111 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b102 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b101 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b92 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b91 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b82 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b81 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b72 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b71 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b62 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b61 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b52 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b51 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b42 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b41 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b32 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b31 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b22 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b21 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b12 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        if (b11 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
 		mask >>= 1;
-		screen += 240 - 8;
+        screen += 240 - 32;
 	}
 
 }
 
 //---------------------------------------------------------------------------------
-void consolePrintChar(int c) {
+void consolePrintChar(u16 c) {
 //---------------------------------------------------------------------------------
 	if (c==0) return;
 
@@ -726,7 +786,7 @@ void consolePrintChar(int c) {
 			gfxFlushBuffers();
 			break;
 		default:
-			consoleDrawChar(c);
+            consoleDrawChar(c);
 			++currentConsole->cursorX ;
 			break;
 	}
