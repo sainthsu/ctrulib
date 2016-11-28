@@ -199,7 +199,7 @@ ssize_t con_write(struct _reent *r,int fd,const char *ptr, size_t len) {
         uint32_t code;
 
         length = decode_utf8(&code, (const u8*)tmp);
-        i += length;count++;
+        i += length;count += length;
         tmp += length;
         if(code >= 0x10000 || code < 0) {
             continue;
@@ -629,7 +629,7 @@ void consoleDrawChar(u16 c) {
     int result = currentConsole->getFontCell(c,&cell);
     if(result < 0) return;
 
-    u8 data[32];
+    u16 data[16];
     memcpy(data,cell.glyphData,32);
 
 	int writingColor = currentConsole->fg;
@@ -651,14 +651,14 @@ void consoleDrawChar(u16 c) {
 	u16 fg = colorTable[writingColor];
 
     if (currentConsole->flags & CONSOLE_UNDERLINE) {
-        data[30] = 0xff;data[31] = 0xff;
+        data[15] = 0xffff;
     }
 
     if (currentConsole->flags & CONSOLE_CROSSED_OUT) {
-        data[14] = 0xff;data[15] = 0xff;
+        data[7] = 0xffff;
     }
 
-	u8 mask = 0x80;
+    u16 mask = 0x8000;
 
     int i,j;
 
@@ -667,20 +667,15 @@ void consoleDrawChar(u16 c) {
 
     u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 15))];
 
-    u8 tmp;
+    u16 tmp;
     for(i = 0;i < 16; i++) {
-        tmp = data[i*2];
-
-        for(j = 0; j < 8; j++) {
+	
+        for(j = 15; j >= 0; j--) {
+	    tmp = ((data[j]&0x00FF)<<8)|((data[j]&0xFF00)>>8);
             if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-            mask >>= 1;
         }
-        tmp = data[i*2 + 1];
-
-        for(j = 0; j < 8; j++) {
-            if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-            mask >>= 1;
-        }
+        mask >>= 1;
+	
         screen += 240 - 16;
     }
 
