@@ -51,13 +51,13 @@ PrintConsole defaultConsole =
 	(u16*)NULL,
 	0,0,	//cursorX cursorY
 	0,0,	//prevcursorX prevcursorY
-	40,		//console width
-	30,		//console height
+    20,		//console width
+    15,		//console height
 	0,		//window x
 	0,		//window y
-	40,		//window width
-	30,		//window height
-	3,		//tab size
+    20,		//window width
+    15,		//window height
+    2,		//tab size
 	7,		// foreground color
 	0,		// background color
 	0,		// flags
@@ -190,7 +190,7 @@ ssize_t con_write(struct _reent *r,int fd,const char *ptr, size_t len) {
     int i,length,count = 0;
 	char *tmp = (char*)ptr;
 
-	if(!tmp || len<=0) return -1;
+    if(!tmp || len <= 0) return -1;
 
 	i = 0;
     u16 unicode;
@@ -544,8 +544,8 @@ PrintConsole* consoleInit(gfxScreen_t screen, PrintConsole* console) {
 	console->frameBuffer = (u16*)gfxGetFramebuffer(screen, GFX_LEFT, NULL, NULL);
 
 	if(screen==GFX_TOP) {
-		console->consoleWidth = 50;
-		console->windowWidth = 50;
+        console->consoleWidth = 25;
+        console->windowWidth = 25;
 	}
 
 
@@ -606,15 +606,15 @@ static void newRow() {
 
 	if(currentConsole->cursorY  >= currentConsole->windowHeight)  {
 		currentConsole->cursorY --;
-		u16 *dst = &currentConsole->frameBuffer[(currentConsole->windowX * 8 * 240) + (239 - (currentConsole->windowY * 8))];
+        u16 *dst = &currentConsole->frameBuffer[(currentConsole->windowX * 16 * 240) + (239 - (currentConsole->windowY * 16))];
 		u16 *src = dst - 8;
 
 		int i,j;
 
-		for (i=0; i<currentConsole->windowWidth*8; i++) {
+        for (i=0; i<currentConsole->windowWidth*16; i++) {
 			u32 *from = (u32*)((int)src & ~3);
 			u32 *to = (u32*)((int)dst & ~3);
-			for (j=0;j<(((currentConsole->windowHeight-1)*8)/2);j++) *(to--) = *(from--);
+            for (j=0;j<(((currentConsole->windowHeight-1)*16)/2);j++) *(to--) = *(from--);
 			dst += 240;
 			src += 240;
 		}
@@ -628,6 +628,9 @@ void consoleDrawChar(u16 c) {
     FONT_CELL cell;
     int result = currentConsole->getFontCell(c,&cell);
     if(result < 0) return;
+
+    u8 data[32];
+    memcpy(data,cell.glyphData,32);
 
 	int writingColor = currentConsole->fg;
 	int screenColor = currentConsole->bg;
@@ -647,92 +650,39 @@ void consoleDrawChar(u16 c) {
 	u16 bg = colorTable[screenColor];
 	u16 fg = colorTable[writingColor];
 
-    u8 b11 = *(cell.glyphData++);
-    u8 b12 = *(cell.glyphData++);
-    u8 b21 = *(cell.glyphData++);
-    u8 b22 = *(cell.glyphData++);
-    u8 b31 = *(cell.glyphData++);
-    u8 b32 = *(cell.glyphData++);
-    u8 b41 = *(cell.glyphData++);
-    u8 b42 = *(cell.glyphData++);
-    u8 b51 = *(cell.glyphData++);
-    u8 b52 = *(cell.glyphData++);
-    u8 b61 = *(cell.glyphData++);
-    u8 b62 = *(cell.glyphData++);
-    u8 b71 = *(cell.glyphData++);
-    u8 b72 = *(cell.glyphData++);
-    u8 b81 = *(cell.glyphData++);
-    u8 b82 = *(cell.glyphData++);
-    u8 b91 = *(cell.glyphData++);
-    u8 b92 = *(cell.glyphData++);
-    u8 b101 = *(cell.glyphData++);
-    u8 b102 = *(cell.glyphData++);
-    u8 b111 = *(cell.glyphData++);
-    u8 b112 = *(cell.glyphData++);
-    u8 b121 = *(cell.glyphData++);
-    u8 b122 = *(cell.glyphData++);
-    u8 b131 = *(cell.glyphData++);
-    u8 b132 = *(cell.glyphData++);
-    u8 b141 = *(cell.glyphData++);
-    u8 b142 = *(cell.glyphData++);
-    u8 b151 = *(cell.glyphData++);
-    u8 b152 = *(cell.glyphData++);
-    u8 b161 = *(cell.glyphData++);
-    u8 b162 = *(cell.glyphData++);
-
     if (currentConsole->flags & CONSOLE_UNDERLINE) {
-        b161 = 0xff;b162 = 0xff;
+        data[30] = 0xff;data[31] = 0xff;
     }
 
     if (currentConsole->flags & CONSOLE_CROSSED_OUT) {
-        b81 = 0xff;b82 = 0xff;
+        data[14] = 0xff;data[15] = 0xff;
     }
 
 	u8 mask = 0x80;
 
-	int i;
+    int i,j;
 
-	int x = (currentConsole->cursorX + currentConsole->windowX) * 8;
-	int y = ((currentConsole->cursorY + currentConsole->windowY) *8 );
+    int x = (currentConsole->cursorX + currentConsole->windowX) * 16;
+    int y = ((currentConsole->cursorY + currentConsole->windowY) * 16 );
 
-	u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 7))];
+    u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 15))];
 
-    for (i=0;i<32;i++) {
-        if (b162 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b161 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b152 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b151 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b142 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b141 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b132 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b131 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b122 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b121 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b112 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b111 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b102 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b101 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b92 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b91 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b82 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b81 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b72 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b71 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b62 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b61 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b52 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b51 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b42 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b41 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b32 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b31 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b22 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b21 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b12 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        if (b11 & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-		mask >>= 1;
-        screen += 240 - 32;
-	}
+    u8 tmp;
+    for(i = 0;i < 16; i++) {
+        tmp = data[i*2];
+
+        for(j = 0; j < 8; j++) {
+            if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+            mask >>= 1;
+        }
+        tmp = data[i*2 + 1];
+
+        for(j = 0; j < 8; j++) {
+            if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+            mask >>= 1;
+        }
+        screen += 240 - 16;
+    }
 
 }
 
