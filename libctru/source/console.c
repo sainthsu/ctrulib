@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/iosupport.h>
 #include <3ds/gfx.h>
@@ -629,9 +630,8 @@ u8 consoleDrawChar(u16 c) {
     int result = currentConsole->getFontCell(c,&cell);
     if(result < 0) return 0;
 
-	int w = cell.width/8;
-    u8 data[16*w];
-    memcpy(data,cell.glyphData,16*w);
+    int w = cell.width/8;
+    u8* data = cell.glyphData;
 
 	int writingColor = currentConsole->fg;
 	int screenColor = currentConsole->bg;
@@ -676,20 +676,21 @@ u8 consoleDrawChar(u16 c) {
 
     u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 15))];
 
-    u8 tmp;
+    u8 tmp = 0;
     for(i = 0;i < w; i++) {
-		mask = 0x80;
-		for(j=0;j<8;j++) {
+	mask = 0x80;
+	for(j=0;j<8;j++) {
         	for(k = 15; k >= 0; k--) {
 	    		tmp = data[k*w + i];
-            	if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+            		if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
         	}
         	mask >>= 1;
-			screen += 240 - 16;
-		}
+		screen += 240 - 16;
+	}
     }
+    free(data);
 
-	return w;
+    return w;
 }
 
 //---------------------------------------------------------------------------------
