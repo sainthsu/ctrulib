@@ -7,7 +7,7 @@
 
 #include <3ds/util/utf.h>
 
-extern int gbk_get_font_cell(u16 unicode, FONT_CELL* cell);
+extern int unifont_get_cell(u16 unicode, FontCell* cell);
 
 //set up the palette for color printing
 static u16 colorTable[] = {
@@ -47,17 +47,17 @@ PrintConsole defaultConsole =
     //	0, //first ascii character in the set
     //	256 //number of characters in the font set
     //},
-    gbk_get_font_cell,
+    unifont_get_cell,
 	(u16*)NULL,
 	0,0,	//cursorX cursorY
 	0,0,	//prevcursorX prevcursorY
-    20,		//console width
+    40,		//console width
     15,		//console height
 	0,		//window x
 	0,		//window y
-    20,		//window width
+    40,		//window width
     15,		//window height
-    2,		//tab size
+    4,		//tab size
 	7,		// foreground color
 	0,		// background color
 	0,		// flags
@@ -72,7 +72,7 @@ PrintConsole* currentConsole = &currentCopy;
 PrintConsole* consoleGetDefault(void){return &defaultConsole;}
 
 void consolePrintChar(u16 c);
-void consoleDrawChar(u16 c);
+u8 consoleDrawChar(u16 c);
 
 //---------------------------------------------------------------------------------
 static void consoleCls(char mode) {
@@ -201,7 +201,7 @@ ssize_t con_write(struct _reent *r,int fd,const char *ptr, size_t len) {
         length = decode_utf8(&code, (const u8*)tmp);
         i += length;count += length;
         tmp += length;
-        if(code >= 0x10000 || code < 0) {
+        if(code > 0xfffe || code < 0) {
             continue;
         }
         unicode = code;
@@ -544,8 +544,8 @@ PrintConsole* consoleInit(gfxScreen_t screen, PrintConsole* console) {
 	console->frameBuffer = (u16*)gfxGetFramebuffer(screen, GFX_LEFT, NULL, NULL);
 
 	if(screen==GFX_TOP) {
-        console->consoleWidth = 25;
-        console->windowWidth = 25;
+        console->consoleWidth = 50;
+        console->windowWidth = 50;
 	}
 
 
@@ -606,12 +606,12 @@ static void newRow() {
 
 	if(currentConsole->cursorY  >= currentConsole->windowHeight)  {
 		currentConsole->cursorY --;
-        u16 *dst = &currentConsole->frameBuffer[(currentConsole->windowX * 16 * 240) + (239 - (currentConsole->windowY * 16))];
+        u16 *dst = &currentConsole->frameBuffer[(currentConsole->windowX * 8 * 240) + (239 - (currentConsole->windowY * 16))];
 		u16 *src = dst - 8;
 
 		int i,j;
 
-        for (i=0; i<currentConsole->windowWidth*16; i++) {
+        for (i=0; i<currentConsole->windowWidth*8; i++) {
 			u32 *from = (u32*)((int)src & ~3);
 			u32 *to = (u32*)((int)dst & ~3);
             for (j=0;j<(((currentConsole->windowHeight-1)*16)/2);j++) *(to--) = *(from--);
@@ -623,14 +623,15 @@ static void newRow() {
 	}
 }
 //---------------------------------------------------------------------------------
-void consoleDrawChar(u16 c) {
+u8 consoleDrawChar(u16 c) {
 //---------------------------------------------------------------------------------
-    FONT_CELL cell;
+    FontCell cell;
     int result = currentConsole->getFontCell(c,&cell);
-    if(result < 0) return;
+    if(result < 0) return 0;
 
-    u16 data[16];
-    memcpy(data,cell.glyphData,32);
+	int w = cell.width/8;
+    u8 data[16*w];
+    memcpy(data,cell.glyphData,16*w);
 
 	int writingColor = currentConsole->fg;
 	int screenColor = currentConsole->bg;
@@ -651,34 +652,44 @@ void consoleDrawChar(u16 c) {
 	u16 fg = colorTable[writingColor];
 
     if (currentConsole->flags & CONSOLE_UNDERLINE) {
-        data[15] = 0xffff;
+        if(w==1){
+			data[15] = 0xff;
+		}else {
+			data[30] = data[31] = 0xff;
+		}
     }
 
     if (currentConsole->flags & CONSOLE_CROSSED_OUT) {
-        data[7] = 0xffff;
+        if(w==1) {
+			data[7] = 0xff;
+		}else {
+			data[14] = data[15] = 0xff;
+		}
     }
 
-    u16 mask = 0x8000;
+    u8 mask;
 
-    int i,j;
+    int i,j,k;
 
-    int x = (currentConsole->cursorX + currentConsole->windowX) * 16;
+    int x = (currentConsole->cursorX + currentConsole->windowX) * 8;
     int y = ((currentConsole->cursorY + currentConsole->windowY) * 16 );
 
     u16 *screen = &currentConsole->frameBuffer[(x * 240) + (239 - (y + 15))];
 
-    u16 tmp;
-    for(i = 0;i < 16; i++) {
-	
-        for(j = 15; j >= 0; j--) {
-	    tmp = ((data[j]&0x00FF)<<8)|((data[j]&0xFF00)>>8);
-            if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
-        }
-        mask >>= 1;
-	
-        screen += 240 - 16;
+    u8 tmp;
+    for(i = 0;i < w; i++) {
+		mask = 0x80;
+		for(j=0;j<8;j++) {
+        	for(k = 15; k >= 0; k--) {
+	    		tmp = data[k*w + i];
+            	if (tmp & mask) { *(screen++) = fg; }else{ *(screen++) = bg; }
+        	}
+        	mask >>= 1;
+			screen += 240 - 16;
+		}
     }
 
+	return w;
 }
 
 //---------------------------------------------------------------------------------
@@ -731,8 +742,7 @@ void consolePrintChar(u16 c) {
 			gfxFlushBuffers();
 			break;
 		default:
-            consoleDrawChar(c);
-			++currentConsole->cursorX ;
+			currentConsole->cursorX += consoleDrawChar(c);
 			break;
 	}
 }

@@ -18,7 +18,7 @@
 
 #include <3ds/types.h>
 #include <3ds/gfx.h>
-#include <3ds/gbk_font.h>
+#include <3ds/unifont.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -42,7 +42,7 @@ extern "C" {
 
 /// A callback for printing a character.
 typedef bool(*ConsolePrint)(void* con, int c);
-typedef int (*GetFontCell)(u16 unicode, FONT_CELL* cell);
+typedef int (*GetFontCell)(u16 unicode, FontCell* cell);
 
 
 /// A font struct for the console.
