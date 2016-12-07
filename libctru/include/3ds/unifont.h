@@ -18,3 +18,4 @@ typedef struct font_cell {
 }FontCell;
 
 int unifont_get_cell(u16 unicode, FontCell* cell);
+int unifont_get_size(int *width, int* height, u16 unicode);
