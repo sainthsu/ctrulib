@@ -40,7 +40,7 @@ static u16 colorTable[] = {
 	RGB8_to_565( 96, 96, 96),	// faint white
 };
 
-PrintConsole defaultConsole =
+PrintConsole defaultTopConsole =
 {
 	//Font:
     //{
@@ -66,11 +66,37 @@ PrintConsole defaultConsole =
 	false	//console initialized
 };
 
+PrintConsole defaultBottomConsole =
+{
+	//Font:
+	//{
+	//	(u8*)default_font_bin, //font gfx
+	//	0, //first ascii character in the set
+	//	256 //number of characters in the font set
+	//},
+	unifont_get_cell,
+	(u16*)NULL,
+	0,0,	//cursorX cursorY
+	0,0,	//prevcursorX prevcursorY
+	40,		//console width
+	15,		//console height
+	0,		//window x
+	0,		//window y
+	40,		//window width
+	15,		//window height
+	4,		//tab size
+	7,		// foreground color
+	0,		// background color
+	0,		// flags
+	0,		//print callback
+	false	//console initialized
+};
+
 PrintConsole currentCopy;
 
 PrintConsole* currentConsole = &currentCopy;
 
-PrintConsole* consoleGetDefault(void){return &defaultConsole;}
+PrintConsole* consoleGetDefault(void){return &defaultBottomConsole;}
 
 void consolePrintChar(u16 c);
 u8 consoleDrawChar(u16 c);
@@ -530,23 +556,25 @@ PrintConsole* consoleInit(gfxScreen_t screen, PrintConsole* console) {
 	if(console) {
 		currentConsole = console;
 	} else {
-		console = currentConsole;
+		if (screen == GFX_TOP) {
+			currentConsole = &defaultTopConsole;
+		} else {
+			currentConsole = &defaultBottomConsole;
+		}
 	}
 
-	*currentConsole = defaultConsole;
-
-	console->consoleInitialised = 1;
+	currentConsole->consoleInitialised = 1;
 
 	gfxSetScreenFormat(screen,GSP_RGB565_OES);
 	gfxSetDoubleBuffering(screen,false);
 	gfxSwapBuffersGpu();
 	gspWaitForVBlank();
 
-	console->frameBuffer = (u16*)gfxGetFramebuffer(screen, GFX_LEFT, NULL, NULL);
+	currentConsole->frameBuffer = (u16*)gfxGetFramebuffer(screen, GFX_LEFT, NULL, NULL);
 
 	if(screen==GFX_TOP) {
-        console->consoleWidth = 50;
-        console->windowWidth = 50;
+		currentConsole->consoleWidth = 50;
+		currentConsole->windowWidth = 50;
 	}
 
 
